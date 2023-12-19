@@ -1,0 +1,233 @@
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FreedomPop | Confirma tu pedido</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+
+    <link rel="stylesheet" href="main.css">
+    <script src="https://kit.fontawesome.com/987edafa85.js" crossorigin="anonymous"></script>
+    <script src="https://d58ohtx80p2sd.cloudfront.net/egov2/js/jquery.min.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@1.5.4/src/loadingoverlay.min.js"></script>
+    <script src="https://d1pt5ohyflo74l.cloudfront.net/js/constants.js"></script>
+    <script src="https://d1pt5ohyflo74l.cloudfront.net/js/utils.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.7/sweetalert2.all.min.js"></script>
+    <script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "k3LFlBnoHW");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
+
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P9FTRST');</script>
+    <!-- End Google Tag Manager -->
+    
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9FTRST"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</head>
+
+<body class="bg-gray-900">
+    <header class="flex flex-col ">
+        <div class="shadow-lg flex-row bg-white pt-4 pb-10 ">
+            <div class="flex justify-between px-32">
+                <div>
+                    <img src="https://d58ohtx80p2sd.cloudfront.net/egov2/img/dish-header.png">
+                </div>
+
+                <div class="text-right">
+                    <h4 class="text-md font-bold text-red-300">HOLA</h4>
+                    <h2 id="nombrePlaceHolder">
+                    </h2>
+                </div>
+
+            </div>
+            <div class="text-center mt-8">
+                <h1 class="text-2xl">Estás a punto de comenzar a disfrutar este beneficio</h1>
+                <h1 class="text-2xl font-bold">EXCLUSIVO POR SER SUSCRIPTOR DISH</h1>
+
+                <h2 class="font-bold text-2xl mt-12 text-red-300">CADA MES, AL REALIZAR TU PAGO PUNTUAL, <br>
+                    RECIBIRÁS DATOS MÓVILES Y MINUTOS GRATIS</h2>
+            </div>
+        </div>
+        <img src="https://d58ohtx80p2sd.cloudfront.net/egov2/img/triangulo.png" alt="flecha" class=" self-center">
+    </header>
+    <div class="mt-16 text-center flex flex-col">
+        <span class="">Por gastos de envío del chip se tendrá que pagar <strong class="text-red-100 font-thin"> $25
+                pesos,</strong> <br> por única vez</span>
+        <label class="mt-4 block text-gray-500 font-bold">
+            <input class="mr-2 leading-tight border border-red-100" type="checkbox" id="checkControl">
+            <span class="text-sm">
+                Acepto el cargo de $25 pesos del chip a mi estado de cuenta.
+            </span>
+        </label>
+
+        <div class="mt-8">
+            <button class="w-3/12 bg-red-300 text-white py-3 px-8 rounded-sm" type="button" id="solicitar"
+                onClick="enviarConfirmacion()">ACEPTAR</button>
+        </div>
+        <img src=" https://d58ohtx80p2sd.cloudfront.net/egov2/img/ego.png" alt="flecha" class="self-center mt-24">
+    </div>
+
+    <div class="modal fade" id="porCorreo" class="modal" tabindex="-1" role="dialog" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-body" id="modalForm">
+                    <span>HOLA:
+                        <b id="nombrePlaceHolderModal"></b>
+                    </span>
+                    <hr>
+                    <p class=""><strong>Antes de continuar,</strong> valida que tus datos sean correctos:</p>
+                    <p>
+                    <div class="flex flex-row mt-6">
+                        <div class="text-sm">
+                            <p class="mr-4">NÚMERO DE SUSCRIPTOR:
+                                
+                            </p> 
+                            <p>TELÉFONO:
+                                
+                            </p>
+                            <p id="mailDiv" style="display: none">
+                                CORREO ELECTRÓNICO:
+                                
+                            </p>
+
+                        </div>
+                        <div>
+                            <p><b id="suscriptorPlaceHolder"></b></p>
+                            <p><b id="telefonoPlaceHolderModal"></b></p>
+                            <p><b id="correoPlaceHolderModal"></b></p>
+                        </div>
+
+
+                    </div>
+                    <form class="flex justify-center mt-8">
+                        <button class=" bg-red-300 text-white py-3 px-8 rounded-sm" type="button" id="solicitar"
+                        onClick="finalizaConfirmacion()">CONTINUAR</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <script>
+        $.holdReady(true);
+        $.LoadingOverlay("show");
+        var remoteJSONContent = null;
+        dataFetch();
+
+        function dataFetch() {
+            $.ajax({
+                type: "POST",
+                url: fpConstants.fp_url + "getnombresuscriptorporllave",
+                contentType: "application/json",
+                data: JSON.stringify({
+                    "llave": GetParameterValues('vsess'),
+                }),
+                success: function (response) {
+                    remoteJSONContent = response.infoSuscriptor;
+                    $('#nombrePlaceHolder').html(remoteJSONContent.nombresuscriptor);
+                    $.holdReady(false);
+                }
+            });
+        }
+
+        $(document).ready(function () {
+            var estatus = remoteJSONContent.estatussolicitud
+            switch (estatus) {
+                case 'R':
+                    window.location.assign("cliente_con_chip.html?vsess=" + response.llave);
+                    break;
+                case 'S':
+                    swal({
+                        imageUrl: 'https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png',
+                        text: 'Estimado suscriptor, ya cuentas con un proceso de solicitud de SIM concluido.'
+                    }).then(() => {
+                        window.location.assign(fpConstants.fp_home);
+                    })
+                    break;
+                case 'C':
+                    window.location.assign("no_cobertura.html?vsess=" + response.llave);
+                    break;
+                case 'M':
+                    window.location.assign("cliente_moroso.html?vsess=" + response.llave);
+                    break;
+                default:
+                    break;
+            }
+            $.LoadingOverlay("hide");
+        });
+
+        function enviarConfirmacion() {
+            $('#mailDiv').hide();
+            $('#suscriptorPlaceHolder').html(remoteJSONContent.numsuscriptor);
+            $('#nombrePlaceHolderModal').html(remoteJSONContent.nombresuscriptor);
+            $('#telefonoPlaceHolderModal').html(remoteJSONContent.telefono);
+            if (remoteJSONContent.correo.length > 0) {
+                $('#mailDiv').show();
+                $('#correoPlaceHolderModal').html(remoteJSONContent.correo);
+            }
+            $('#porCorreo').modal();
+        }
+
+        function finalizaConfirmacion() {
+            $('#modalForm').LoadingOverlay("show");
+            $.ajax({
+                type: "POST",
+                url: fpConstants.fp_url + "confirmasolicitud",
+                contentType: "application/json",
+                data: JSON.stringify({
+                    "llave": remoteJSONContent.llave,
+                    "numconfirmacion": remoteJSONContent.claveautorizar,
+                    "correo": remoteJSONContent.correo
+                }),
+                success: function (response) {
+                    $.ajax({
+                        type: "POST",
+                        url: fpConstants.fp_url + 'sendemailv3aws-confirmacion',
+                        contentType: "application/json",
+                        data: JSON.stringify({
+                            "correo": remoteJSONContent.correo,
+                            "asunto": "Solicitud de SIM FreedomPop recibida correctamente.",
+                            "llave": remoteJSONContent.llave
+                        }),
+                        success: function (response) {
+                            $('#modalForm').LoadingOverlay("hide");
+                            window.location.assign("TP.html");
+                        },
+                        error: function (xhr) {
+                            $('#modalForm').LoadingOverlay("hide");
+                            swal({
+                                imageUrl: 'https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png',
+                                text: 'Estimado suscriptor, ocurrió un error: ' + xhr.responseJSON.errorMessage
+                            })
+                        }
+                    });
+                },
+                error: function (xhr) {
+                    $('#dataForm').LoadingOverlay("hide");
+                    $('#modalForm').LoadingOverlay("hide");
+                    swal({
+                        imageUrl: 'https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png',
+                        text: 'Estimado suscriptor, ocurrió un error: ' + xhr.responseJSON.errorMessage + ', por favor verifica los datos e intenta de nuevo.'
+                    })
+                }
+            });
+        }
+
+        function mySubmitFunction() {
+            return false;
+        }
+    </script>
+    <script data-account="mu7FQ5EoOF" src="https://cdn.userway.org/widget.js"></script>
+</body>
+
+</html>

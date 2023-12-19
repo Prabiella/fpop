@@ -1,0 +1,394 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreedomPop</title>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+
+  <link rel="stylesheet" href="main.css" />
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/vueperslides"></script>
+  <link href="https://unpkg.com/vueperslides/dist/vueperslides.css" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+  <script src="https://kit.fontawesome.com/987edafa85.js" crossorigin="anonymous"></script>
+
+  <script src="https://d58ohtx80p2sd.cloudfront.net/egov2/js/scriptsv2.js"></script>
+  <script src="https://d58ohtx80p2sd.cloudfront.net/egov2/js/jquery.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@1.5.4/src/loadingoverlay.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.19.3/moment.min.js"></script>
+
+  <script src="https://d1pt5ohyflo74l.cloudfront.net/js/constants.js"></script>
+  <script src="https://d1pt5ohyflo74l.cloudfront.net/js/utils.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.7/sweetalert2.all.min.js"></script>
+
+  <script>(function (d) { var s = d.createElement("script"); s.setAttribute("data-account", "k3LFlBnoHW"); s.setAttribute("src", "https://cdn.userway.org/widget.js"); (d.body || d.head).appendChild(s); })(document)</script>
+  <noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website
+      accessibility</a></noscript>
+
+      <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-P9FTRST');</script>
+  <!-- End Google Tag Manager -->
+  
+  
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9FTRST"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+</head>
+
+<body class="bg-gray-900">
+  <header class="flex flex-col">
+    <div class="shadow-lg grid bg-white pt-4 pb-10 justify-items-center" id="top">
+      <img src="https://d58ohtx80p2sd.cloudfront.net/egov2/img/dish-header.png" />
+      <div class="mt-8 border-b-2 border-gray-600 pb-6">
+        <h3 class="font-bold text-base md:text-xl text-center">CONSULTA EL ESTATUS DE TU SOLICITUD</h3>
+      </div>
+      <div class="mt-4 text-center flex-row">
+        <p>Ingresa alguno de los siguientes datos:</p>
+        <div class="flex justify-center items-center mt-6">
+          <input class="border text-xs md:text-2xl text-center py-4" type="number" name="folio" id="codChip"
+            placeholder="Folio de seguimiento" />
+          <div class="px-4">
+            <p class="">O</p>
+          </div>
+          <input class="border text-xs md:text-2xl py-4 text-center" type="number" name="cliente" id="numCliente"
+            placeholder="Número de suscriptor" />
+        </div>
+        <div class="row" style="text-align: center;">
+          <span class="error-val" id="error"></span>
+        </div>
+        <button class="bg-red-300 text-white py-3 px-8 rounded-sm mt-8" type="button" id="solicitar"
+          onclick="consultaFechaConfirmacion()">
+          CONSULTAR
+        </button>
+      </div>
+    </div>
+    <img src="https://d58ohtx80p2sd.cloudfront.net/egov2/img/triangulo.png" alt="flecha" class="self-center" />
+  </header>
+
+  <div class="text-center flex flex-col" id="nombre">
+    <div>
+      <br>
+      <br>
+      <h3 class="titulo_confirmacionTP">
+        <center>
+          <strong id="nombrePlaceHolder">¡HOLA!</strong>
+        </center>
+      </h3>
+      <p>
+      <div id="noDays">
+        <center>Recibirás tu chip en
+          <strong id="dRestantes"> 15 días </strong>
+        </center>
+      </div>
+      </p>
+    </div>
+  </div>
+
+  <div class="mt-16 text-center flex flex-col">
+    <div id="steps">
+      <ul class="progressbar">
+        <li style="width: 25%">
+          Ya recibimos tu solicitud y estamos procesando el envío del chip
+        </li>
+        <li style="width: 25%">Recibirás muy pronto tu chip.</li>
+        <li style="width: 25%">
+          Tenemos buenas noticias, ¡TU CHIP ESTA EN RUTA! ¡Espéralo!
+        </li>
+        <li style="width: 25%">Chip entregado</li>
+      </ul>
+    </div>
+  </div>
+</body>
+<style>
+  ul.progressbar>li {
+    color: transparent;
+  }
+
+  #nombre {
+    display: none;
+  }
+
+  #noDays {
+    display: none;
+  }
+
+  ul.progressbar {
+    height: 75px;
+    padding: 0;
+    counter-reset: step;
+
+  }
+
+  ul.progressbar li {
+    list-style-type: none;
+    color: transparent;
+    float: left;
+    position: relative;
+    text-align: center;
+    font-size: 15px;
+    padding: 0 20px;
+  }
+
+  ul.progressbar li.done {
+    color: #b5b5b5;
+  }
+
+  ul.progressbar li.current {
+    color: #000;
+  }
+
+  ul.progressbar li.current {
+    font-weight: bold;
+  }
+
+  ul.progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    color: #fff;
+    width: 42px;
+    height: 42px;
+    line-height: 42px;
+    border-radius: 50%;
+    display: block;
+    text-align: center;
+    margin: 0 auto 10px auto;
+    background: rgb(216, 216, 216);
+  }
+
+  ul.progressbar li:after {
+    content: "";
+    background: #d8d8d8;
+    position: absolute;
+    width: 100%;
+    height: 5px;
+    top: 17px;
+    right: -50%;
+    z-index: -1;
+  }
+
+  ul.progressbar li:last-child:after {
+    content: none;
+  }
+
+  ul.progressbar li.done:before,
+  ul.progressbar li.done:after {
+    background: #b52228;
+    color: #fff;
+  }
+
+  ul.progressbar li.current:before {
+    background: #b52228;
+    color: #fff;
+    font-size: xx-large;
+  }
+</style>
+<script>
+  function calculateProgress(current) {
+    $("ul.progressbar li").removeClass("done");
+    $("ul.progressbar li").removeClass("current");
+    i = 1;
+    while (i <= current) {
+      if (i < current) {
+        $("ul.progressbar li:nth-child(" + i + ")").addClass("done");
+      } else {
+        $("ul.progressbar li:nth-child(" + i + ")").addClass("current");
+      }
+      i++;
+    }
+  }
+
+  function consultaFechaConfirmacion() {
+    $("#steps").css("display", "none")
+    $("#nombre").css("display", "none")
+    $("#noDays").css("display", "none")
+
+    var strFolio = $("#codChip").val();
+    var strCliente = $("#numCliente").val();
+    var errorCount = 0;
+
+    $("#error").html("")
+
+    if (strFolio.length === 0 && strCliente.length === 0) {
+      $("#error").html("Debe ingresar un criterio de búsqueda.")
+      errorCount = errorCount + 1;
+    }
+
+    if (strFolio.length !== 0 && strCliente.length !== 0) {
+      $("#error").html("Debe ingresar solamente un criterio de búsqueda.")
+      errorCount = errorCount + 1;
+    }
+
+    if (errorCount > 0) {
+      return null;
+    }
+
+    $("#top").LoadingOverlay("show");
+    $.ajax({
+      type: "POST",
+      url: fpConstants.fp_url + "consultaconfirmacion",
+      contentType: "application/json",
+      data: JSON.stringify({
+        "c_cliente": strCliente,
+        "folio": strFolio
+      }),
+      success: function (response) {
+        if (response.codigoError) {
+          var codigoerror = parseInt(response.codigoError)
+          var strFolio = response.folio
+          var strMail = response.correo
+          switch (parseInt(response.codigoError)) {
+            case 0:
+              var fecha_actual = moment().format('YYYY-MM-DD');
+              var fecha_confirmacion = moment(response.f_confirmacion).format('YYYY-MM-DD');
+              var fecha_final = moment(fecha_confirmacion).add(15, 'days').format('YYYY-MM-DD');
+              var diferencia = moment(fecha_final, "YYYY-MM-DD").diff(moment(fecha_actual, "YYYY-MM-DD"), 'days')
+
+              if (response.sim.length > 0) {
+                var nodays = 'Tu chip ya fue entregado en tu domicilio.';
+                var text = '<p  style="font-size: 16px; margin: 5px; color: #b52228; text-align:center;"><b>Chip entregado.</b></p><p  style="font-size: 16px; margin: 5px; color: #b52228; text-align:center;">Si no has recibido tu chip, contáctanos al <b>01 55 9628 3474</b>.</p>';
+                var filaDuda = '';
+                $("#noDays").css("display", "none")
+                $('#nombrePlaceHolder').html("!HOLA " + response.nombre_suscriptor + '!');
+                $("#steps").fadeIn("slow");
+                $("#nombre").slideDown("slow");
+                calculateProgress(4);
+              } else {
+                if (diferencia > 10 && diferencia <= 16) {
+                  var nodays = 'Recibirás tu chip en <b>' + diferencia + 'días</b>';
+                  var text = '<p  style="font-size: 16px; margin: 5px; color: #b52228; text-align:center;">Ya recibimos tu solicitud y estamos procesando el envío de tu chip</p>';
+                  var filaDuda = '<tr><td colspan="4" style="text-align: center;"><h3 style="font-size: 14px; margin: 5px; font-weight:300; color: #555;">Si tienes alguna duda visita <a href="https://www.dish.com.mx/egos/faq.html" target="_blank">Preguntas frecuentes</a></h3></td></tr>'
+                  /// $("#noDays").css("display", "block")
+                  $('#nombrePlaceHolder').html('!HOLA ' + response.nombre_suscriptor + '!');
+                  $("#dRestantes").html(diferencia + " días")
+                  $("#steps").fadeIn("slow");
+                  $("#nombre").slideDown("slow");
+                  calculateProgress(1);
+                }
+                if (diferencia > 7 && diferencia <= 10) {
+                  var nodays = 'Recibirás tu chip en <b>' + diferencia + 'días</b>';
+                  var text = '<p  style="font-size: 16px; margin: 5px; color: #b52228; text-align:center;">Recibirás muy pronto tu chip</p>';
+                  var filaDuda = '<tr><td colspan="4" style="text-align: center;"><h3 style="font-size: 14px; margin: 5px; font-weight:300; color: #555;">Si tienes alguna duda visita <a href="https://www.dish.com.mx/egos/faq.html" target="_blank">Preguntas frecuentes</a></h3></td></tr>'
+                  // $("#noDays").css("display", "block")
+                  $('#nombrePlaceHolder').html('!HOLA ' + response.nombre_suscriptor + '!');
+                  $("#dRestantes").html(diferencia + " días")
+                  $("#steps").fadeIn("slow");
+                  $("#nombre").slideDown("slow");
+                  calculateProgress(2);
+                }
+                if (diferencia > 0 && diferencia <= 7) {
+                  var nodays = 'Recibirás tu chip en <b>' + diferencia + 'días</b>';
+                  var text = '<p  style="font-size: 16px; margin: 5px; color: #b52228; text-align:center;">Tenemos buenas noticias<br><b>¡TU CHIP ESTÁ EN RUTA!</b><br>¡Espéralo!</p>';
+                  var filaDuda = '<tr><td colspan="4" style="text-align: center;"><h3 style="font-size: 14px; margin: 5px; font-weight:300; color: #555;">Si tienes alguna duda visita <a href="https://www.dish.com.mx/egos/faq.html" target="_blank">Preguntas frecuentes</a></h3></td></tr>'
+                  // $("#noDays").css("display", "block")
+                  $('#nombrePlaceHolder').html('!HOLA ' + response.nombre_suscriptor + '!');
+                  if (diferencia === 1) {
+                    $("#dRestantes").html("1 día")
+                  } else {
+                    $("#dRestantes").html(diferencia + " días")
+                  }
+                  $("#steps").fadeIn("slow");
+                  $("#nombre").slideDown("slow");
+                  calculateProgress(3);
+                }
+                if (diferencia <= 0) {
+                  var nodays = 'Tu chip ya fue entregado en tu domicilio.';
+                  var text = '<p  style="font-size: 16px; margin: 5px; color: #b52228; text-align:center;"><b>Chip entregado.</b></p><p  style="font-size: 16px; margin: 5px; color: #b52228; text-align:center;">Si no has recibido tu chip, contáctanos al <b>01 55 9628 3474</b>.</p>';
+                  var filaDuda = '';
+                  $("#noDays").css("display", "none")
+                  $('#nombrePlaceHolder').html('!HOLA ' + response.nombre_suscriptor + '!');
+                  $("#steps").fadeIn("slow");
+                  $("#nombre").slideDown("slow");
+                  calculateProgress(4);
+                }
+              }
+              var htmlMail = fpConstants.templateMailStep.replace("V_NOMBRE", "HOLA " + response.nombre_suscriptor)
+                .replace("V_DIAS", nodays)
+                .replace("V_TEXTO", text)
+                .replace("V_FILA_DUDA", filaDuda);
+              $.ajax({
+                type: "POST",
+                url: fpConstants.fp_url + 'sendemailv3awssss',
+                contentType: "application/json",
+                data: JSON.stringify({
+                  "correo": strMail,
+                  "asunto": "Consulta de estatus entrega de SIM.",
+                  "mensaje": htmlMail,
+                  "consumer_key": "1d7328995ce083d672d25db1bac4ce420526ae454",
+                  "consumer_secret": "113a7f0c601f3d56b2cf4c9cca5ce636"
+                }),
+                success: function (response) {
+                  $("#top").LoadingOverlay("hide");
+                  window.location.assign("thankyou_page.html?vsess=" + remoteJSONContent.llave);
+                },
+                error: function (xhr) {
+                  $("#top").LoadingOverlay("hide");
+                  // swal({
+                  // imageUrl: 'https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png',
+                  // text: "ocurrió un error: " + xhr.responseJSON.errorMessage
+                  // })
+                }
+              });
+              break;
+            case 1:
+              if (response.sim.length > 0) {
+                $("#top").LoadingOverlay("hide");
+                var nodays = 'Tu chip ya fue entregado en tu domicilio.';
+                var text = '<p  style="font-size: 16px; margin: 5px; color: #b52228; text-align:center;"><b>Chip entregado.</b></p><p  style="font-size: 16px; margin: 5px; color: #b52228; text-align:center;">Si no has recibido tu chip, contáctanos al <b>01 55 9628 3474</b>.</p>';
+                var filaDuda = '';
+                $("#noDays").css("display", "none")
+                $('#nombrePlaceHolder').html("!HOLA " + response.nombre_suscriptor + '!');
+                $("#e").fadeOut("slow");
+                $("#nombre").slideDown("slow");
+                calculateProgress(4);
+              }
+              else {
+                $("#top").LoadingOverlay("hide");
+                window.location.fassign("cliente_chip_no_solicitado.html?conf=" + strFolio);
+                break;
+              }
+              break;
+            case 2:
+              $("#top").LoadingOverlay("hide");
+              window.location.assign("cliente_chip_no_solicitado.html?conf=" + strFolio);
+              break;
+            case 3:
+              $("#top").LoadingOverlay("hide");
+              window.location.assign("cliente_chip_no_solicitado.html");
+              break;
+            default:
+              // $("#top").LoadingOverlay("hide");
+              swal({
+                imageUrl: 'https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png',
+                text: 'Estimado suscriptor, ocurrió un error: ' + response.mensajeError
+              })
+          }
+        } else {
+          $("#top").LoadingOverlay("hide");
+          swal({
+            imageUrl: 'https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png',
+            text: 'Estimado suscriptor, ocurrió un error al ejecutar la petición, por favor intente nuevamente.'
+          })
+        }
+      },
+      error: function (xhr) {
+        $("#top").LoadingOverlay("hide");
+        swal({
+          imageUrl: 'https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png',
+          text: 'Estimado suscriptor, ocurrió un error: ' + xhr.responseJSON.errorMessage
+        })
+      }
+    });
+  }
+</script>
+
+</html>

@@ -1,0 +1,468 @@
+
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('fonts/gotham/Gotham-Bold.woff2') format('woff2'),
+        url('fonts/gotham/Gotham-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-Thin';
+    src: url('Gotham-Thin.woff2') format('woff2'),
+        url('Gotham-Thin.woff') format('woff');
+    font-weight: 100;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-Black';
+    src: url('Gotham-Black.woff2') format('woff2'),
+        url('Gotham-Black.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-Xlight';
+    src: url('Gotham-XLight.woff2') format('woff2'),
+        url('Gotham-XLight.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-Bold';
+    src: url('Gotham-Bold.woff2') format('woff2'),
+        url('Gotham-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-XLightItalic';
+    src: url('Gotham-XLightItalic.woff2') format('woff2'),
+        url('Gotham-XLightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-Book';
+    src: url('Gotham-Book.woff2') format('woff2'),
+        url('Gotham-Book.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-ThinItalic';
+    src: url('Gotham-ThinItalic.woff2') format('woff2'),
+        url('Gotham-ThinItalic.woff') format('woff');
+    font-weight: 100;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-BoldItalic';
+    src: url('Gotham-BoldItalic.woff2') format('woff2'),
+        url('Gotham-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-UltraItalic';
+    src: url('Gotham-UltraItalic.woff2') format('woff2'),
+        url('Gotham-UltraItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-BookItalic';
+    src: url('Gotham-BookItalic.woff2') format('woff2'),
+        url('Gotham-BookItalic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-Light';
+    src: url('Gotham-Light.woff2') format('woff2'),
+        url('Gotham-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: ''Gotham-LightItalic';
+    src: url('Gotham-LightItalic.woff2') format('woff2'),
+        url('Gotham-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-MediumItalic';
+    src: url('Gotham-MediumItalic.woff2') format('woff2'),
+        url('Gotham-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url('Gotham-Medium.woff2') format('woff2'),
+        url('Gotham-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Gotham-Medium';
+    src: url('Gotham-Medium.woff2') format('woff2'),
+        url('Gotham-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+
+
+.marco{
+    background-image: url(img/landing_celulares/back_main.jpg);
+    background-size: cover;
+    margin: 0 auto;
+    background-repeat: no-repeat;
+}
+
+.back_image{
+   padding:10px 10px 0 10px;
+}
+.info_content{
+    margin: 5% 0 ;
+}
+
+.logPlanes{
+
+    display: block;
+    margin: 0 auto;
+    width: 388px;
+
+
+}
+
+.personaje_cel{
+    max-width:700px;
+}
+
+.SmartTitle01{
+
+    margin-left: 30%;
+    margin-top: 5%;
+}
+
+.SmartTitle{
+    font-family: 'Gotham-Bold';
+    font-size: 2.6rem;
+    line-height: 40px;
+    font-weight: 700;
+    color:#464646;
+    letter-spacing: 2px;
+}
+
+.azul{
+    color: #00aeef;
+}
+
+.grisclaro{
+    color: #7e7e7e;
+}
+
+.peque{
+    font-size: 1.6rem;
+    letter-spacing: 2px;
+   
+}
+
+.fpysamsum{
+    margin-top: 2%;
+}
+
+.LogFpop{
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+.DispoCel{
+    display: block;
+    margin: 0 auto;
+}
+
+.DescripCel{
+margin: 10% 5% 0 10%;
+}
+
+
+.DescripCel h2
+{
+    text-align: right;
+    font-family: 'Gotham-Bold';
+    font-size: 2.0rem;
+    font-weight: 700;
+    color: #464646;
+    line-height: 30px;
+    letter-spacing: 1px;
+}
+
+.DescripCel h3
+{
+    text-align: right;
+    font-family: 'Gotham-Bold';
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #7e7e7e;
+  
+ 
+}
+
+.DescripCel .descFpop{
+    text-align: right;
+    font-family: 'Gotham-Bold';
+    font-size: 1.3rem;
+    font-weight: 700;
+    margin-top: 2%;
+}
+
+.DescripCel .caracte{
+    text-align: right;
+    font-family: 'Gotham-Bold';
+    font-size: 0.9rem;
+    font-weight: 700;
+    margin-top: 2%;
+}
+
+
+
+.divisor{
+    height: 1px;
+  margin-left:40%;
+  margin-right: 0%;
+}
+
+.precioUno{
+    width: auto;
+   float: right;
+   margin-top: 5%;
+}
+
+.MenCel{
+    margin: 0 5%;
+}
+
+.plazoMeses{
+    font-family: 'Gotham-Bold';
+    font-size: 1.5rem;
+}
+
+.DescripMes{
+ border: 1px solid #000;
+ padding: 2%;
+ margin: 4px;
+ background-color: #f9fbfc;
+}
+
+.DescripMes p{
+    text-align: left;
+    font-family: 'Gotham-Bold';
+    font-size: 0.9rem;
+    line-height: 15px;
+    padding: 5% 5% 0 5%;
+}
+
+.SeparadorHr{
+    height: 2px;
+   margin-top: 3%;
+   width: 99%;
+   background-color: #000;
+
+   
+}
+
+.foot{
+
+    background-color: #00aeef;
+    color: #f9fbfc;
+    padding-top: 1%;
+    margin-top: 2%;
+}
+
+.foot ul{
+    margin-top: 3%;
+}
+
+.foot ul li{
+    list-style: none;
+    display: inline-block;
+    margin-left: 5px;
+}
+
+.foot ul li img{
+   width: 80px;
+}
+
+.foot ul li p{
+    text-align: center;
+    font-family: 'Gotham-Bold';
+    font-size: 2.0rem;
+    line-height: 35px;
+ }
+
+.TelContact{
+    text-align: center;
+    font-family: 'Gotham-Book';
+    font-size: 2.6rem;
+    margin-top: 3%;
+    color: #000;
+
+}
+
+.boldText{
+    font-family: 'Gotham-Bold'
+}
+
+.LegaLand{
+    font-size: 0.7rem;
+    padding: 3%;
+    line-height: 15px;
+    text-align: justify;
+
+}
+
+@media only screen and (max-width:75em) and (min-width:48.0625em) { 
+
+/*Ajustes en desktop 1200 */	
+.SmartTitle01{
+
+    margin-left: 20%;
+    margin-top: 5%;
+}
+
+
+.SmartTitle{
+    font-family: 'Gotham-Bold';
+    font-size: 1.5rem;
+    line-height: 30px;
+    font-weight: 700;
+    color: #464646;
+    letter-spacing: 1px;
+}
+
+.LogFpop{
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+.personaje_cel{
+    max-width:99%;
+}
+
+}
+
+@media only screen and (max-width:48em) { 
+
+/*Ajustes en tablet */
+    .logPlanes{
+        display: block;
+        margin: 0 auto;
+        width: 288px;
+    
+    
+    }
+
+
+	.SmartTitle01{
+        margin-left: 15%;
+        margin-top: 5%;
+    }
+    
+    
+    .SmartTitle{
+        font-family: 'Gotham-Bold';
+        font-size: 1.3rem;
+        line-height: 30px;
+        font-weight: 700;
+        color: #464646;
+        letter-spacing: 1px;
+    }
+
+    
+.LogFpop{
+    width: 300px;
+    display: block;
+    margin: 0 auto;
+}
+
+.peque{
+    font-size: 0.9rem;
+    letter-spacing: 0px;
+}
+.personaje_cel{
+    max-width:99%;
+}
+
+}
+
+@media only screen and (max-width:26.5625em) and (min-width:20em) { 
+	/* moviles 425px a 320px */
+
+    .LogFpop{
+        width: 300px;
+        float: left;
+        margin-left: 5%;
+     
+    }
+
+    
+.DescripMes p{
+    text-align: center;
+    font-family: 'Gotham-Bold';
+    font-size: 0.6rem;
+    line-height: 15px;
+    padding: 5% 5% 0 5%;
+}
+
+.plazoMeses{
+    font-family: 'Gotham-Bold';
+    font-size: 1.0rem;
+}
+
+.foot ul li p{
+    text-align: center;
+    font-family: 'Gotham-Bold';
+    font-size: 1.5rem;
+    line-height: 30px;
+    margin-top:5%;
+ }
+
+
+}

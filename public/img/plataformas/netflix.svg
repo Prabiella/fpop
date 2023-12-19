@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="68.681" height="41.067" viewBox="0 0 68.681 41.067">
+  <defs>
+    <clipPath id="clip-path">
+      <rect id="Rectángulo_9933" data-name="Rectángulo 9933" width="49.635" height="13.336" fill="none"/>
+    </clipPath>
+  </defs>
+  <g id="Grupo_20613" data-name="Grupo 20613" transform="translate(-628 -1681)">
+    <rect id="Rectángulo_18532" data-name="Rectángulo 18532" width="68.681" height="41.067" rx="3" transform="translate(628 1681)" fill="#f9f7f8"/>
+    <g id="Netflix_Logo_CMYK" transform="translate(638 1695)">
+      <g id="Netflix_Logo_CMYK-2" data-name="Netflix_Logo_CMYK" transform="translate(0 0)" clip-path="url(#clip-path)">
+        <path id="Trazado_25345" data-name="Trazado 25345" d="M38.334,12.1q1.047.08,2.09.174V0h-2.09ZM4.71,7.548,1.986,0H0V13.336q1.043-.15,2.09-.285V5.8l2.421,6.953q1.141-.132,2.289-.25V0H4.71Zm4.1,4.762q2.89-.261,5.805-.431V9.816q-1.864.108-3.715.254V6.953c.81-.007,1.878-.031,2.821-.021V4.873c-.755,0-1.969.01-2.821.021V2.08h3.715V0H8.81ZM15.955,2.08h2.188v9.631q1.043-.038,2.09-.066V2.08h2.188V0H15.955Zm7.805,9.506h2.09V6.831h2.835V4.772H25.85V2.08h3.743V0H23.76ZM49.635,0h-2.3L45.826,3.51,44.466,0H42.205l2.431,6.268-2.654,6.15q1.1.108,2.2.23l1.544-3.576,1.527,3.941q1.193.153,2.383.323h0L46.915,6.313ZM33.026,0h-2.09V11.69q2.849.1,5.677.285V9.916q-1.788-.118-3.586-.2Z" fill="#df101d"/>
+      </g>
+    </g>
+  </g>
+</svg>

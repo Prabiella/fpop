@@ -1,0 +1,94 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreedomPop</title>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+
+  <link rel="stylesheet" href="main.css" />
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <script src="https://unpkg.com/vue"></script>
+  <script src="https://unpkg.com/vueperslides"></script>
+  <link href="https://unpkg.com/vueperslides/dist/vueperslides.css" rel="stylesheet" />
+  <link rel="stylesheet" href="main.css" />
+  <script src="https://kit.fontawesome.com/987edafa85.js" crossorigin="anonymous"></script>
+  <script src="https://d58ohtx80p2sd.cloudfront.net/egov2/js/jquery.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@1.5.4/src/loadingoverlay.min.js"></script>
+  <script src="https://d1pt5ohyflo74l.cloudfront.net/js/constants.js"></script>
+  <script src="https://d1pt5ohyflo74l.cloudfront.net/js/utils.js"></script>
+  <script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "k3LFlBnoHW");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
+
+  <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-P9FTRST');</script>
+  <!-- End Google Tag Manager -->
+  
+  
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9FTRST"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+</head>
+
+<body class="bg-gray-900">
+  <header class="flex flex-col">
+    <div class="shadow-lg grid bg-white pt-4 pb-10 justify-items-center">
+      <img src="https://d58ohtx80p2sd.cloudfront.net/egov2/img/dish-header.png" />
+    </div>
+    <img src="https://d58ohtx80p2sd.cloudfront.net/egov2/img/triangulo.png" alt="flecha" class="self-center" />
+  </header>
+  <div class="mt-16 text-center flex flex-col">
+    <h3 class="titulo_confirmacionTP">
+      <center><strong id="nombrePlaceHolder"></strong></center>
+    </h3>
+    <h3 class="font-bold text-2xl">
+      ¡Muchas gracias por registrarte para obtener tu línea gratis con Dish y
+      FreedomPop!
+    </h3>
+    <span>Para completar el proceso es necesario que te comuniques con Atención a
+      Clientes al número</span>
+    <div class="mt-12">
+      <a href="tel:55 96283474" class="
+            text-4xl text-blue-200
+            font-bold
+            hover:underline hover:text-blue-300
+          ">55 96283474</a>
+    </div>
+    <img src="https://d58ohtx80p2sd.cloudfront.net/egov2/img/ego.png" alt="flecha" class="self-center mt-24" />
+  </div>
+  <script>
+    $.holdReady(true);
+    $.LoadingOverlay("show");
+    var remoteJSONContent = null;
+    dataFetch();
+
+    function dataFetch() {
+      $.ajax({
+        type: "POST",
+        url: fpConstants.fp_url + "getinfosuscriptorllave",
+        contentType: "application/json",
+        data: JSON.stringify({
+          "llave": GetParameterValues('vsess'),
+        }),
+        success: function (response) {
+          remoteJSONContent = response.infoSuscriptor;
+          $('#nombrePlaceHolder').html('HOLA ' + remoteJSONContent.nombresuscriptor);
+          $.holdReady(false);
+        }
+      });
+    }
+
+    $(document).ready(function () {
+      $.LoadingOverlay("hide");
+    });
+  </script>
+  <script data-account="mu7FQ5EoOF" src="https://cdn.userway.org/widget.js"></script>
+</body>
+
+</html>

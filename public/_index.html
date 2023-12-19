@@ -1,0 +1,4202 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Dish Celular</title>
+
+  <link rel="stylesheet" href="main.css" />
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <script src="https://kit.fontawesome.com/987edafa85.js" crossorigin="anonymous"></script>
+  <link href="http://db.onlinewebfonts.com/c/0fecedcc2f33a0880b3f56b9290da4d5?family=Akzidenz+Grotesk+BE+Bold"
+    rel="stylesheet" type="text/css" />
+  <link href="http://127.0.0.1:5503/fonts/Berthold-akzidenz-grotesk-be-regular.ttf">
+  <script src="https://d58ohtx80p2sd.cloudfront.net/egov2/js/jquery.min.js"></script>
+  <script src="https://d58ohtx80p2sd.cloudfront.net/egov2/js/scriptsv2.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@1.5.4/src/loadingoverlay.min.js">
+  </script>
+
+  <script src="https://d1pt5ohyflo74l.cloudfront.net/js/constants.js"></script>
+  <script src="https://d1pt5ohyflo74l.cloudfront.net/js/utils.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.7/sweetalert2.all.min.js"></script>
+
+
+  <!-- Google Tag Manager -->
+  <style>
+    @supports (-webkit-touch-callout: none) {
+      @media screen and (min-width:320px) {
+        .precio-cliente-dish-m {
+          margin-top: 7rem;
+        }
+
+        .naranja-recargas-m {
+          margin-top: 8rem;
+        }
+
+        .membresia-txt {
+          padding: 0 5px;
+        }
+      }
+    }
+
+    html {
+      scroll-behavior: smooth;
+    }
+
+    .container-checkbox input:checked~.checkmark {
+      background-color: white;
+      left: 4px;
+      top: 2px;
+      width: 5px;
+      height: 10px;
+      border: solid red;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    .container-checkbox .checkmark {
+      position: absolute;
+      top: 0;
+      left: 0;
+      height: 15px;
+      width: 15px;
+      background-color: #eee;
+      border: 1px solid #d21b22;
+      margin: 5px 0 0 5px;
+    }
+
+    .container-checkbox {
+      /* display: block; */
+      position: relative;
+      padding-left: 31px;
+      margin-bottom: 0px;
+      cursor: pointer;
+      font-size: 1.1em;
+      -webkit-user-select: none;
+      -moz-user-select: none;
+      -ms-user-select: none;
+      user-select: none;
+      text-align: left;
+      margin-top: 25px;
+    }
+
+    .container-checkbox input {
+      position: absolute;
+      opacity: 0;
+      cursor: pointer;
+    }
+
+    .container-checkbox .checkmark::after {
+      left: 4px;
+      top: 2px;
+      width: 5px;
+      height: 10px;
+      border: solid white;
+      border-width: 0 2px 2px 0;
+      -webkit-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+      transform: rotate(45deg);
+    }
+
+    .TyCM {
+      font-size: 0.6rem;
+    }
+
+    @media screen and (min-width:768px) and (max-width:1024) {
+      .md-tiny {
+        font-size: 0.5rem;
+      }
+    }
+  </style>
+  <script>
+    (function (w, d, s, l, i) {
+      w[l] = w[l] || [];
+
+      w[l].push({
+        "gtm.start": new Date().getTime(),
+
+        event: "gtm.js",
+      });
+
+      var f = d.getElementsByTagName(s)[0],
+        j = d.createElement(s),
+        dl = l != "dataLayer" ? "&l=" + l : "";
+
+      j.async = true;
+
+      j.src = "https://www.googletagmanager.com/gtm.js?id=" + i + dl;
+
+      f.parentNode.insertBefore(j, f);
+    })(window, document, "script", "dataLayer", "GTM-MJWZL34");
+  </script>
+
+  <script async src="https://www.googletagmanager.com/gtag/js?id=UA-111483292-1"></script>
+
+  <script>
+    window.dataLayer = window.dataLayer || [];
+
+    function gtag() {
+      dataLayer.push(arguments);
+    }
+
+    gtag("js", new Date());
+
+    gtag("config", "UA-111483292-1");
+
+    ga("require", "displayfeatures");
+  </script>
+
+  <!-- End Google Tag Manager -->
+
+</head>
+
+<body>
+  <!-- Google Tag Manager (noscript) -->
+
+  <noscript>
+    <iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MJWZL34" height="0" width="0"
+      style="display: none; visibility: hidden"></iframe>
+  </noscript>
+
+  <!-- End Google Tag Manager (noscript) -->
+
+  <div class="w-full text-center font-sans-serif sticky top-0 z-50 bg-blue-100">
+    <a class="text-white text-base md:text-xl lg:text-2xl py-2" href="tel:5555123123">
+      CONTRATA AL <strong class="">55 55 123 123</strong>
+    </a>
+  </div>
+  <header x-data="{ mobileMenuOpen : false }" class="
+        font-serif
+        text-sm
+        md:text-xl
+        flex flex-wrap
+        z-10
+        md:z-0
+        flex-row
+        justify-between
+        md:items-center md:space-x-4
+        bg-white
+        py-6
+        px-6
+        relative
+      ">
+    <a href="index.html" class="block">
+      <img class="h-8 md:h-8 lg:h-12 " src="img/LOGOfpop.svg" alt="freedompop Logo" title="" />
+    </a>
+    <button @click="mobileMenuOpen = !mobileMenuOpen" class="inline-block sm:hidden w-8 h-8 bg-white text-gray-600 p-1">
+      <svg fill="currentColor" viewBox="0 0 20 20" xmlns="">
+        <path fill-rule="evenodd"
+          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </button>
+    <nav class="
+          absolute
+          flex
+          items-center
+          md:relative
+          top-16
+          left-0
+          md:top-0
+          z-20
+          md:flex
+          flex-col
+          md:flex-row md:space-x-6
+          w-full
+          md:w-auto
+          bg-white
+          shadow-md
+          rounded-lg
+          md:rounded-none md:shadow-none md:bg-transparent
+          p-6
+          pt-0
+          md:p-0
+        " :class="{ 'flex' : mobileMenuOpen , 'hidden' : !mobileMenuOpen}" @click.away="mobileMenuOpen = false">
+      <div class="options-menu flex flex-col md:flex-row self-end">
+        <a href="index.html"
+          class="text-sm md:text-xs lg:text-md xl:text-xl text-blue-100 hover:underline pr-5">Inicio</a>
+        <a href="promociones.html"
+          class="text-sm md:text-xs lg:text-md xl:text-xl text-blue-100 hover:underline pr-5">Promociones</a>
+        <a href="ayuda.html"
+          class="text-sm md:text-xs lg:text-md xl:text-xl text-blue-100 hover:underline pr-5">Ayuda</a>
+        <a href="lugares-pago.html"
+          class="text-sm md:text-xs lg:text-md xl:text-xl text-blue-100 hover:underline pr-5">Lugares de pago</a>
+        <a href="contacto.html"
+          class="text-sm md:text-xs lg:text-md xl:text-xl text-blue-100 hover:underline md:hidden block">Contacto</a>
+      </div>
+      <div class=" flex-col justify-center hidden md:block">
+        <img class="w-8 md:w-5 lg:w-7 2xl:w-6 mx-auto" src="img/contacto.svg" alt="" />
+        <a href="contacto.html" class="text-sm md:text-xs lg:text-md  xl:text-xl text-blue-100 hover:underline">
+          Contacto
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="">
+
+    <div class="flex">
+
+
+      <div id="panels" class="panels flex-grow">
+        <!--INICIA PLANES FP-->
+        <div id="pack-1" class=" pack-1 pack-content active bg-fondo1">
+          <div class="flex justify-center w-full">
+            <img class="hidden sm:block" src="img/sliders/banner-1.jpg" alt="" />
+            <img class="block sm:hidden" src="img/slider movil/425X425_FP_150.jpg" alt="">
+          </div>
+          <!--TRIPLE BOTÓN-->
+          <nav class="tabs mb-28  gap-0 md:gap-4 px-0 flex justify-around md:justify-center 
+     mt-0
+     md:-mt-6
+     absolute
+     right-0
+     left-0
+     z-0">
+            <!-- BOTON PRIMERO -->
+            <button data-target="pack-1" class="pack
+            bg-blue-100
+            text-white
+            flex
+            items-center
+            md:justify-around
+            justify-center
+            p-2
+            gap-2
+            md:px-6
+            lg:px-6
+            lg:py-3
+            xl:px-8
+            text-left
+            rounded-none
+            md:rounded-lg
+            shadow-btn
+            w-1/3
+            md:w-1/5
+            lg:w-1/6
+
+            hover:bg-blue-600
+            hover:border-orange-300 
+            border-2
+            border-blue-100
+            focus:bg-blue-600
+            pack
+            active
+            "><img class="w-3 md:w-8" src="img/botones/fp-btn1.svg" alt="" /><span
+                class="text-xs md:text-sm lg:text-base xl:text-xl">PLANES</span>
+              <i class="md:fas md:fa-caret-down md:text-3xl hidden md:visible"></i>
+            </button>
+
+            <!-- BOTON SEGUNDO -->
+            <button data-target="pack-2" class="pack
+          bg-blue-200
+          text-white
+          flex
+          items-center
+          md:justify-around
+          justify-center
+          gap-2
+          p-2
+          md:p-2
+          lg:px-10
+          lg:py-3
+          xl:p-4
+          text-left
+          rounded-none
+          md:rounded-lg
+          shadow-btn
+          
+          lg:w-1/6
+          md:w-1/5
+          w-1/3
+        hover:bg-blue-600
+        hover:border-orange-300 
+          border-2
+        border-blue-200
+        focus:bg-blue-600
+        pack
+        active
+        ">
+              <img class="w-3 md:w-8" src="img/botones/fp-recargas.svg" alt="" /><span
+                class="text-xs md:text-sm lg:text-base xl:text-xl active">RECARGAS</span><i
+                class="md:fas md:fa-caret-down md:text-3xl hidden md:block"></i></button>
+
+            <!-- BOTON TERCERO -->
+            <button data-target="pack-3" class="pack
+        bg-blue-300
+        text-white
+        flex
+        items-center
+        md:justify-around
+        justify-center
+        gap-2
+        p-2
+        md:p-2
+        lg:px-6
+        lg:py-3
+        xl:p-4
+        text-left
+        rounded-none
+        md:rounded-lg
+        shadow-btn
+        w-1/3
+        md:w-1/5
+        lg:w-1/6
+        hover:bg-blue-600
+        hover:border-orange-300 
+        border-2
+        border-blue-300
+        focus:bg-blue-600
+        pack
+        active
+        "><img class="w-3 md:w-8" src="img/botones/planes-esp.svg" alt="" /><span
+                class="text-xs md:text-sm lg:text-base xl:text-xl">PLANES ESPECIALES</span><i
+                class="md:fas md:fa-caret-down md:text-3xl hidden md:block"></i></button>
+
+          </nav>
+          <!--FIN TRIPLE BOTÓN-->
+
+          <!--paquetes-->
+          <div class="
+            grid grid-cols-1
+            md:grid-cols-2
+            lg:grid-cols-4
+            mt-12
+            p-3
+            pb-24
+            gap-1
+            pack-desktop
+            mx-12
+            lg:mt-20
+            xl:mt-28
+          ">
+            <div class="flex content-center justify-center flex-col">
+              <div
+                class="precio150 bg-gradient-to-r from-blue-400  via-blue-400 to-blue-500  precio-content  pt-3 pb-16 lg:pt-2 lg:mt-3 text-center ">
+                <span class="text-white text-md md:text-4xl italic font-bold">PLAN</span>
+                <div class="grid grid-cols-3 items-center">
+                  <span class="text-white text-md lg:text-4xl text-right">$</span><span
+                    class="text-white text-3xl lg:text-5xl font-bold">150</span>
+                </div>
+              </div>
+              <div
+                class="pleca-roja z-0 self-center grid grid-cols-2 p-3  h-20 content-center border-4 border-white rounded-3xl -mt-12 lg:-mt-9 shadow-lg">
+                <span class="text-white text-right text-xs md:text-base font-bold">PRECIO <br />
+                  CLIENTES DISH</span>
+                <div class="flex items-center">
+                  <span class="text-white text-3xl ml-2 lg:ml-4">$</span><span
+                    class="text-white text-2xl md:text-5xl lg:text-4xl font-bold">135</span>
+                </div>
+              </div>
+              <div class="bg-white text-center -mt-12 pt-14 text-gristxt">
+                <div class="banderas pb-6 m-6 flex flex-col items-center">
+                  <span class="text-sm md:text-xl lg:text-xs font-bold">MINUTOS Y SMS ILIMITADOS</span>
+                  <img class="p-2" src="img/Banderas-1.png" alt="" />
+                </div>
+                <div class="banderas pb-6 m-6">
+                  <span class="text-4xl md:text-3xl font-bold">3,500 MB</span><br />
+                  <span class="text-sm">PARA NAVEGAR</span><br />
+                  <span class="text-xs">(1,200 MB por promoción)</span>
+                </div>
+                <div class="m-6 flex flex-col items-center">
+                  <span class="text-sm md:text-xl lg:text-xs font-bold">REDES SOCIALES ILIMITADAS</span>
+                  <img class="p-2" src="img/redes-sociales.svg" alt="" />
+                  <span class="text-gray-500">(Para uso sólo en México)</span><br />
+                  <p class="vigencia text-grisazul">
+                    Vigencia: <strong> 1 Mes*</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex content-center justify-center flex-col">
+              <div class="precio200 precio-content pt-3 pb-16 lg:pt-2 lg:mt-3 text-center">
+                <span class="text-white text-md md:text-4xl italic font-bold">PLAN</span>
+                <div class="grid grid-cols-3 items-center">
+                  <span class="text-white text-md lg:text-4xl  text-right">$</span><span
+                    class="text-white text-3xl lg:text-5xl font-bold">200</span>
+                </div>
+              </div>
+              <div
+                class="pleca-roja z-0 self-center grid grid-cols-2 p-3  h-20 content-center border-4 border-white rounded-3xl -mt-12 lg:-mt-9 shadow-lg">
+                <span class="text-white text-right text-sm md:text-base font-bold">PRECIO <br />
+                  CLIENTES DISH</span>
+                <div class="flex items-center">
+                  <span class="text-white text-3xl ml-2 lg:ml-4">$</span><span
+                    class="text-white text-2xl md:text-5xl lg:text-4xl font-bold">180</span>
+                </div>
+              </div>
+              <div class="bg-white text-center -mt-12 pt-14 text-gristxt">
+                <div class="banderas pb-6 m-6 flex flex-col items-center">
+                  <span class="text-sm md:text-xl lg:text-xs font-bold">MINUTOS Y SMS ILIMITADOS</span>
+                  <img class="p-2" src="img/Banderas-1.png" alt="" />
+                </div>
+                <div class="banderas pb-6 m-6">
+                  <span class="text-4xl md:text-3xl font-bold">5,000 MB</span><br />
+                  <span class="text-sm">PARA NAVEGAR</span><br />
+                  <span class="text-xs">(1,550 MB por promoción)</span>
+                </div>
+                <div class="m-6 flex flex-col items-center">
+                  <span class="text-sm md:text-xl lg:text-xs font-bold">REDES SOCIALES ILIMITADAS</span>
+                  <img class="p-2" src="img/redes-sociales.svg" alt="" />
+                  <span class="text-gray-500">(Para uso sólo en México)</span><br />
+                  <p class="vigencia text-grisazul">
+                    Vigencia: <strong> 1 Mes*</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <div class="flex content-center justify-center flex-col">
+              <div class="precio300 precio-content  pb-20 text-center">
+                <div class="
+                  bg-orange-200
+                  text-center
+                  text-sm
+                  lg:text-sm
+                  pleca-naranja
+                  text-white
+                  w-full
+                ">
+                  EL MÁS PEDIDO
+                </div>
+
+                <span class="text-white text-md md:text-4xl italic font-bold">PLAN</span>
+                <div class="grid grid-cols-3 items-center">
+                  <span class="text-white text-md lg:text-4xl  text-right">$</span><span
+                    class="text-white text-3xl lg:text-5xl font-bold">300</span>
+                </div>
+              </div>
+              <div
+                class="pleca-roja z-0 self-center grid grid-cols-2 p-3  h-20 content-center border-4 border-white rounded-3xl -mt-12 shadow-lg">
+                <span class="text-white text-right text-sm md:text-base font-bold">PRECIO <br />
+                  CLIENTES DISH</span>
+                <div class="flex items-center">
+                  <span class="text-white text-3xl ml-2 lg:ml-4">$</span><span
+                    class="text-white text-2xl md:text-5xl lg:text-4xl font-bold">280</span>
+                </div>
+              </div>
+              <div class="bg-white text-center -mt-14 pt-14 text-gristxt">
+                <div class="banderas pb-6 m-6 flex flex-col items-center">
+                  <span class="text-sm md:text-xl lg:text-xs font-bold">MINUTOS Y SMS ILIMITADOS</span>
+                  <img class="p-2" src="img/Banderas-1.png" alt="" />
+                </div>
+                <div class="banderas pb-6 m-6">
+                  <span class="text-4xl md:text-3xl font-bold">7,000 MB</span><br />
+                  <span class="text-sm">PARA NAVEGAR</span><br />
+                  <span class="text-xs">(2,400 MB por promoción)</span>
+                </div>
+                <div class="m-6 flex flex-col items-center">
+                  <span class="text-sm md:text-xl lg:text-xs font-bold">REDES SOCIALES ILIMITADAS</span>
+                  <img class="p-2" src="img/redes-sociales.svg" alt="" />
+                  <span class="text-gray-500">(Para uso sólo en México)</span><br />
+                  <p class="vigencia text-grisazul">
+                    Vigencia: <strong> 1 Mes*</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex content-center justify-between flex-col">
+              <div class="precio500 precio-content pt-3 pb-16 lg:pt-2 lg:mt-3 text-center">
+                <span class="text-white text-md md:text-4xl italic font-bold">PLAN</span>
+                <div class="grid grid-cols-3 items-center">
+                  <span class="text-white text-md lg:text-4xl text-right">$</span><span
+                    class="text-white text-3xl lg:text-5xl font-bold">500</span>
+                </div>
+              </div>
+              <div
+                class="pleca-roja z-0 self-center grid grid-cols-2 p-3  h-20 content-center border-4 border-white rounded-3xl -mt-12 lg:-mt-8 shadow-lg">
+                <span class="text-white text-right text-sm md:text-base font-bold">PRECIO <br />
+                  CLIENTES DISH</span>
+                <div class="flex items-center">
+                  <span class="text-white text-3xl ml-2 lg:ml-4">$</span><span
+                    class="text-white text-2xl md:text-5xl lg:text-4xl font-bold">480</span>
+                </div>
+              </div>
+              <div class="bg-white text-center -mt-12 pt-14 text-gristxt">
+                <div class="banderas pb-6 m-6 flex flex-col items-center">
+                  <span class="text-sm md:text-xl lg:text-xs font-bold">MINUTOS Y SMS ILIMITADOS</span>
+                  <img class="p-2" src="img/Banderas-1.png" alt="" />
+                </div>
+                <div class="banderas pb-6 m-6">
+                  <span class="text-4xl md:text-3xl font-bold">12,000 MB</span><br />
+                  <span class="text-sm">PARA NAVEGAR</span><br />
+                  <span class="text-xs">(2,000 MB por promoción)</span>
+                </div>
+                <div class="m-6 flex flex-col items-center">
+                  <span class="text-sm md:text-xl lg:text-xs font-bold">REDES SOCIALES ILIMITADAS</span>
+                  <img class="p-2" src="img/redes-sociales.svg" alt="" />
+                  <span class="text-gray-500">(Para uso sólo en México)</span><br />
+                  <p class="vigencia text-grisazul">
+                    Vigencia: <strong> 1 Mes*</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--paquetes movil-->
+          <div class="pack-mov mb-12 mt-16 sticky mx-4 md:mx-28">
+            <div class="carousel relative z-30">
+              <div class="carousel-inner relative overflow-hidden w-full">
+                <!--Slide 1-->
+                <input class="carousel-open" type="radio" id="carousel-pack1" name="carouselpack" aria-hidden="true"
+                  hidden="" checked="checked" />
+                <div class="carousel-item absolute opacity-0">
+                  <div class="grid content-center">
+                    <div class="precio150 precio-content pt-3 pb-16 text-center">
+                      <span class="text-white text-3xl italic font-bold">PLAN</span>
+                      <div class="grid grid-cols-3 items-center">
+                        <span class="text-white text-3xl  text-right">$</span><span
+                          class="text-white text-6xl font-bold">150</span>
+                      </div>
+                      <div class="
+                        pleca-roja
+                        grid grid-cols-2
+                        p-3
+                        h-20
+                        items-center
+                        border-4 border-white
+                        rounded-3xl
+                        -mb-24
+                        absolute
+                        shadow-lg
+                        precio-cliente-dish-m
+                      ">
+                        <span class="
+                          text-white text-right text-sm
+                          md:text-base
+                          font-bold
+                        ">PRECIO <br />
+                          CLIENTES DISH</span>
+                        <div class="flex items-center">
+                          <span class="text-white text-1xl md:text-3xl ml-2">$</span><span
+                            class="text-white text-3xl md:text-5xl font-bold">135</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-white text-center -mt-2 pt-14 text-gristxt">
+                      <div class="banderas pb-6 m-6 flex flex-col items-center">
+                        <span class="text-sm sm:text-xl md:text-lg font-bold">MINUTOS Y SMS ILIMITADOS</span>
+                        <img class="p-2" src="img/Banderas-1.png" alt="" />
+                      </div>
+                      <div class="banderas pb-6 m-6">
+                        <span class="text-3xl  font-bold">3,500 MB</span><br />
+                        <span class="text-sm">PARA NAVEGAR</span><br />
+                        <span class="text-xs">(1,200 MB por promoción)</span>
+
+                      </div>
+                      <div class="m-6 flex flex-col items-center">
+                        <span class="text-lg md:text-base font-bold">REDES SOCIALES ILIMITADAS</span>
+                        <img class="p-2" src="img/redes-sociales.svg" alt="" />
+                        <span class="text-gray-500">(Para uso sólo en México)</span><br />
+                        <p class="vigencia text-grisazul">
+                          Vigencia: <strong> 1 Mes*</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <label for="carousel-pack3" class="
+                  prev
+                  control-1
+                  w-10
+                  h-10
+                  ml-2
+                  md:ml-1
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md text-morado
+                  font-bold
+                  hover:text-white
+                  rounded-full
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  left-0
+                  my-auto
+                ">‹</label>
+                <label for="carousel-pack2" class="
+                  next
+                  control-1
+                  w-10
+                  h-10
+                  mr-2
+                  md:mr-1
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md text-morado
+                  font-bold
+                  hover:text-white
+                  rounded-full
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  right-0
+                  my-auto
+                ">›</label>
+
+                <!--Slide 2-->
+                <input class="carousel-open" type="radio" id="carousel-pack2" name="carouselpack" aria-hidden="true"
+                  hidden="" />
+                <div class="carousel-item absolute opacity-0">
+                  <div class="grid content-center">
+                    <div class="precio200 precio-content pt-3 pb-16 text-center">
+                      <span class="text-white text-3xl md:text-4xl italic font-bold">PLAN</span>
+                      <div class="grid grid-cols-3 items-center">
+                        <span class="text-white text-3xl  text-right">$</span><span
+                          class="text-white text-6xl md:text-7xl font-bold">200</span>
+                      </div>
+                      <div class="
+                        pleca-roja
+                        grid grid-cols-2
+                        p-3
+                        h-20
+                        items-center
+                        border-4 border-white
+                        rounded-3xl
+                        -mb-24
+                        absolute
+                        shadow-lg
+                        precio-cliente-dish-m
+                      ">
+                        <span class="
+                          text-white text-right text-sm
+                          md:text-base
+                          font-bold
+                        ">PRECIO <br />
+                          CLIENTES DISH</span>
+                        <div class="flex items-center">
+                          <span class="text-white text-xl md:text-3xl ml-2">$</span><span
+                            class="text-white text-3xl md:text-5xl font-bold">180</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-white text-center -mt-2 pt-14 text-gristxt">
+                      <div class="banderas pb-6 m-6 flex flex-col items-center">
+                        <span class="text-sm sm:text-xl md:text-lg font-bold">MINUTOS Y SMS ILIMITADOS</span>
+                        <img class="p-2" src="img/Banderas-1.png" alt="" />
+                      </div>
+                      <div class="banderas pb-6 m-6">
+                        <span class="text-3xl  font-bold">5,000 MB</span><br />
+                        <span class="text-sm">PARA NAVEGAR</span><br />
+                        <span class="text-xs">(1,550 MB por promoción)</span>
+                      </div>
+                      <div class="m-6 flex flex-col items-center">
+                        <span class="text-lg md:text-base font-bold">REDES SOCIALES ILIMITADAS</span>
+                        <img class="p-2" src="img/redes-sociales.svg" alt="" />
+                        <span class="text-gray-500">(Para uso sólo en México)</span><br />
+                        <p class="vigencia text-grisazul">
+                          Vigencia: <strong> 1 Mes*</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <label for="carousel-pack1" class="
+                  prev
+                  control-2
+                  w-10
+                  h-10
+                  ml-2
+                  md:ml-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  left-0
+                  my-auto
+                ">‹</label>
+                <label for="carousel-pack3" class="
+                  next
+                  control-2
+                  w-10
+                  h-10
+                  mr-2
+                  md:mr-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  right-0
+                  my-auto
+                ">›</label>
+
+                <!--Slide 3-->
+                <input class="carousel-open" type="radio" id="carousel-pack3" name="carouselpack" aria-hidden="true"
+                  hidden="" />
+                <div class="carousel-item absolute opacity-0">
+                  <div class="grid content-center">
+                    <div class="precio300 precio-content pb-14 lg:pb-18 text-center">
+                      <div class="
+                        bg-orange-200
+                        text-center
+                        px-20
+                        md:px-32
+                        lg:px-16
+                        xl:px-28
+                        text-sm
+                        lg:text-sm
+                        pleca-naranja
+                        text-white
+                        w-full
+                      ">
+                        EL MÁS PEDIDO
+                      </div>
+                      <span class="text-white text-3x1 md:text-4xl italic font-bold">PLAN</span>
+                      <div class="grid grid-cols-3 items-center">
+                        <span class="text-white text-3x1  text-right">$</span><span
+                          class="text-white text-6xl md:text-7xl font-bold">300</span>
+                      </div>
+                      <div class="
+                        pleca-roja
+                        grid grid-cols-2
+                        p-3
+                        h-20
+                        items-center
+                        border-4 border-white
+                        rounded-3xl
+                        -mb-24
+                        absolute
+                        shadow-lg
+                        precio-cliente-dish-m
+                      ">
+                        <span class="
+                          text-white text-right text-sm
+                          md:text-base
+                          font-bold
+                        ">PRECIO <br />
+                          CLIENTES DISH</span>
+                        <div class="flex items-center">
+                          <span class="text-white text-1xl md:text-3xl ml-2">$</span><span
+                            class="text-white text-3xl md:text-5xl font-bold">280</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-white text-center -mt-2 pt-14 text-gristxt">
+                      <div class="banderas pb-6 m-6 flex flex-col items-center">
+                        <span class="text-sm sm:text-xl md:text-lg font-bold">MINUTOS Y SMS ILIMITADOS</span>
+                        <img class="p-2" src="img/Banderas-1.png" alt="" />
+                      </div>
+                      <div class="banderas pb-6 m-6">
+                        <span class="text-3xl  font-bold">7,000 MB</span><br />
+                        <span class="text-sm">PARA NAVEGAR</span><br />
+                        <span class="text-xs">(2,400 MB por promoción)</span>
+                      </div>
+                      <div class="m-6 flex flex-col items-center">
+                        <span class="text-lg md:text-base font-bold">REDES SOCIALES ILIMITADAS</span>
+                        <img class="p-2" src="img/redes-sociales.svg" alt="" />
+                        <span class="text-gray-500">(Para uso sólo en México)</span><br />
+                        <p class="vigencia text-grisazul">
+                          Vigencia: <strong> 1 Mes*</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <label for="carousel-pack2" class="
+                  prev
+                  control-3
+                  w-10
+                  h-10
+                  ml-2
+                  md:ml-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  left-0
+                  my-auto
+                ">‹</label>
+                <label for="carousel-pack4" class="
+                  next
+                  control-3
+                  w-10
+                  h-10
+                  mr-2
+                  md:mr-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  right-0
+                  my-auto
+                ">›</label>
+
+                <!--Slide 4-->
+                <input class="carousel-open" type="radio" id="carousel-pack4" name="carouselpack" aria-hidden="true"
+                  hidden="" />
+                <div class="carousel-item absolute opacity-0">
+                  <div class="grid content-center">
+                    <div class="precio500 precio-content pt-3 pb-16 text-center">
+                      <span class="text-white text-3x1 md:text-4xl italic font-bold">PLAN</span>
+                      <div class="grid grid-cols-3 items-center">
+                        <span class="text-white text-3x1  text-right">$</span><span
+                          class="text-white text-6xl md:text-7xl font-bold">500</span>
+                      </div>
+                      <div class="
+                        pleca-roja
+                        grid grid-cols-2
+                        p-3
+                        h-20
+                        items-center
+                        border-4 border-white
+                        rounded-3xl
+                        -mb-24
+                        absolute
+                        shadow-lg
+                        precio-cliente-dish-m
+                      ">
+                        <span class="
+                          text-white text-right text-sm
+                          md:text-base
+                          font-bold
+                        ">PRECIO <br />
+                          CLIENTES DISH</span>
+                        <div class="flex items-center">
+                          <span class="text-white text-1xl md:text-3xl ml-2">$</span><span
+                            class="text-white text-3xl md:text-5xl font-bold">480</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-white text-center -mt-2 pt-14 text-gristxt">
+                      <div class="banderas pb-6 m-6 flex flex-col items-center">
+                        <span class="text-sm sm:text-xl md:text-lg font-bold">MINUTOS Y SMS ILIMITADOS</span>
+                        <img class="p-2" src="img/Banderas-1.png" alt="" />
+                      </div>
+                      <div class="banderas pb-6 m-6">
+                        <span class="text-3xl md:text-xl font-bold">12,000 MB</span><br />
+                        <span class="text-sm">PARA NAVEGAR</span><br />
+                        <span class="text-xs">(2,000 MB por promoción)</span>
+                      </div>
+                      <div class="m-6 flex flex-col items-center">
+                        <span class="text-lg md:text-base font-bold">REDES SOCIALES ILIMITADAS</span>
+                        <img class="p-2" src="img/redes-sociales.svg" alt="" />
+                        <span class="text-gray-500">(Para uso sólo en México)</span><br />
+                        <p class="vigencia text-grisazul">
+                          Vigencia: <strong> 1 Mes*</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <label for="carousel-pack3" class="
+                  prev
+                  control-4
+                  w-10
+                  h-10
+                  ml-2
+                  md:ml-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  left-0
+                  my-auto
+                ">‹</label>
+                <label for="carousel-pack1" class="
+                  next
+                  control-4
+                  w-10
+                  h-10
+                  mr-2
+                  md:mr-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  right-0
+                  my-auto
+                ">›</label>
+              </div>
+            </div>
+          </div>
+
+          <!--SIN PLAZOS-->
+          <div class="grid grid-cols-6 md:grid-cols-3 text-center items-center">
+            <hr class="" style="border: 1px solid #00acec" />
+            <span class="
+              text-blue-100 text-xs
+              md:text-xl
+              lg:text-3xl
+              col-span-4
+              md:col-span-1
+            ">PLANES DE TELEFONÍA CELULAR <br />
+              <strong>¡SIN PLAZOS FORZOSOS!</strong>
+            </span>
+            <hr class="" style="border: 1px solid #00acec" />
+          </div>
+        </div>
+
+        <!--INICIA RECARGAS FP-->
+        <div id="pack-2" class="pack-2 pack-content">
+          <div class="w-full flex justify-center">
+            <img class="hidden sm:block" src="img/sliders/banner-2.jpg" alt="" />
+            <img class="block sm:hidden" src="img/slider movil/425X425_FP_DATEMAS.jpg" alt="">
+          </div>
+          <!--TRIPLE BOTÓN-->
+          <nav class="tabs mb-28  gap-0 md:gap-4 px-0 flex justify-around md:justify-center 
+     mt-0
+     md:-mt-6
+     absolute
+     right-0
+     left-0
+     z-0">
+            <!-- BOTON PRIMERO -->
+            <button data-target="pack-1" class="pack
+            bg-blue-100
+            text-white
+            flex
+            items-center
+            md:justify-around
+            justify-center
+            p-2
+            gap-2
+            md:px-6
+            lg:px-6
+            lg:py-3
+            xl:px-8
+            text-left
+            rounded-none
+            md:rounded-lg
+            shadow-btn
+            w-1/3
+            md:w-1/5
+            lg:w-1/6
+            hover:bg-blue-600
+            hover:border-orange-300 
+            border-2
+            border-blue-100
+            focus:bg-blue-600
+            pack
+            active
+            "><img class="w-3 md:w-8" src="img/botones/fp-btn1.svg" alt="" /><span
+                class="text-xs md:text-sm lg:text-base xl:text-xl">PLANES</span>
+              <i class="md:fas md:fa-caret-down md:text-3xl hidden md:visible"></i>
+            </button>
+
+            <!-- BOTON SEGUNDO -->
+            <button data-target="pack-2" class="pack
+          bg-blue-200
+          text-white
+          flex
+          items-center
+          md:justify-around
+          justify-center
+          gap-2
+          p-2
+          md:p-2
+          lg:px-10
+          lg:py-3
+          xl:p-4
+          text-left
+          rounded-none
+          md:rounded-lg
+          shadow-btn
+          
+          lg:w-1/6
+          md:w-1/5
+          w-1/3
+        hover:bg-blue-600
+        hover:border-orange-300 
+          border-2
+        border-blue-200
+        focus:bg-blue-600
+        pack
+        active
+        ">
+              <img class="w-3 md:w-8" src="img/botones/fp-recargas.svg" alt="" /><span
+                class="text-xs md:text-sm lg:text-base xl:text-xl active">RECARGAS</span><i
+                class="md:fas md:fa-caret-down md:text-3xl hidden md:block"></i></button>
+
+            <!-- BOTON TERCERO -->
+            <button data-target="pack-3" class="pack
+        bg-blue-300
+        text-white
+        flex
+        items-center
+        md:justify-around
+        justify-center
+        gap-2
+        p-2
+        md:p-2
+        lg:px-6
+        lg:py-3
+        xl:p-4
+        text-left
+        rounded-none
+        md:rounded-lg
+        shadow-btn
+        w-1/3
+        md:w-1/5
+        lg:w-1/6
+        hover:bg-blue-600
+        hover:border-orange-300 
+        border-2
+        border-blue-300
+        focus:bg-blue-600
+        pack
+        active
+        "><img class="w-3 md:w-8" src="img/botones/planes-esp.svg" alt="" /><span
+                class="text-xs md:text-sm lg:text-base xl:text-xl">PLANES ESPECIALES</span><i
+                class="md:fas md:fa-caret-down md:text-3xl hidden md:block"></i></button>
+
+
+
+          </nav>
+          <!--FIN TRIPLE BOTÓN-->
+
+          <!-- recargas desktop-->
+          <div class="
+            grid grid-cols-1
+            md:grid-cols-2
+            lg:grid-cols-3
+            mt-12
+            lg:mt-24
+            xl:mt-28
+            p-3
+            pb-24
+            gap-1 gap-y-8
+            md:px-12
+            lg:px-20
+            xl:px-44
+            fondo-recargas
+            pack-desktop-recargas
+          ">
+            <div class="flex justify-center flex-col recarga-content">
+              <div class="precio30r precio-content pt-3 pb-16 text-center">
+                <span class="text-white text-md md:text-3xl italic font-bold">RECARGA</span>
+                <div class="grid grid-cols-3 items-center">
+                  <span class="text-white text-md md:text-md text-right">$</span><span
+                    class="text-white text-3xl md:text-3xl font-bold">30</span>
+                </div>
+              </div>
+              <div
+                class="text-center z-0 bg-orange-100 grid p-3  h-auto md:w-64 xl:w-72 items-center border-4 border-white  rounded-3xl -mt-12 self-center shadow-lg ">
+                <span class="text-white text-sm md:text-3xl lg:text-xl italic font-bold">PROMOCIÓN</span>
+                <span class="text-white italic text-sm md:text-lg lg:text-xs">Recarga $30 cada mes y recibe <br
+                    class="md:hidden" />
+                  Beneficios de una recarga de </span>
+                <div class="flex items-center justify-center">
+                  <span class="text-white text-3xl md:text-3xl ml-2">$</span><span
+                    class="text-white text-5xl md:text-5xl font-bold">50</span>
+                </div>
+
+              </div>
+              <div class="bg-white text-center -mt-12 pt-12 text-gristxt">
+                <div class="banderas pb-6 m-6 flex flex-col items-center">
+                  <span class="text-sm md:text-xl font-bold">MINUTOS Y SMS ILIMITADOS</span>
+                  <img class="p-2" src="img/Banderas-1.png" alt="" />
+                </div>
+                <div class="pb-6 mx-6 my-8">
+                  <span class="text-4xl md:text-3xl font-bold mb-recargas">420 MB</span><br />
+                  <span class="text-grisrecargas">120 MB <strong>PARA NAVEGAR</strong> </span><br /><br />
+                  <span class="text-grisrecargas">300 MB <strong>REDES SOCIALES</strong>
+                  </span>
+                  <div class="grid">
+                    <img class="place-self-center w-40 mx-auto" src="img/whatsapp.svg" alt="" />
+                  </div>
+                </div>
+
+                <br />
+                <div class="m-6 flex flex-col items-center">
+                  <p class="vigencia text-grisazul">
+                    Vigencia: <strong>3 días*</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center flex-col recarga-content">
+              <div class="precio50r precio-content pt-3 pb-16 text-center">
+                <span class="text-white text-md md:text-3xl italic font-bold">RECARGA</span>
+                <div class="grid grid-cols-3 items-center">
+                  <span class="text-white text-md  text-right">$</span><span
+                    class="text-white text-3xl md:text-3xl font-bold">50</span>
+                </div>
+              </div>
+              <div
+                class="text-center z-0 bg-orange-100 grid p-3  h-auto md:w-64 xl:w-72 items-center border-4 border-white  rounded-3xl -mt-12 self-center shadow-lg ">
+                <span class="text-white text-sm md:text-3xl lg:text-xl italic font-bold">PROMOCIÓN</span>
+                <span class="text-white italic text-sm md:text-lg lg:text-xs">Recarga $50 cada mes y recibe <br
+                    class="md:hidden" />
+                  Beneficios de una recarga de</span>
+                <div class="flex items-center justify-center">
+                  <span class="text-white text-3xl md:text-3xl ml-2">$</span><span
+                    class="text-white text-5xl md:text-5xl font-bold">80</span>
+                </div>
+
+              </div>
+              <div class="bg-white text-center -mt-12 pt-12 text-gristxt">
+                <div class="banderas pb-6 m-6 flex flex-col items-center">
+                  <span class="text-sm md:text-xl font-bold">MINUTOS Y SMS ILIMITADOS</span>
+                  <img class="p-2" src="img/Banderas-1.png" alt="" />
+                </div>
+                <div class="pb-6 m-6">
+                  <span class="text-4xl md:text-3xl font-bold mb-recargas">1,300 MB</span><br />
+                  <span class="text-grisrecargas">800 MB <strong>PARA NAVEGAR</strong></span><br />
+                  <span class="text-xs">(400 MB POR PROMOCIÓN)</span><br /><br />
+                  <span class="text-grisrecargas">500 MB <strong>REDES SOCIALES</strong>
+                  </span>
+                  <div class="grid">
+                    <img class="place-self-center w-40 mx-auto" src="img/whatsapp.svg" alt="" />
+                  </div>
+                </div>
+                <br />
+                <div class="m-6 flex flex-col items-center">
+                  <p class="vigencia text-grisazul">
+                    Vigencia: <strong>7 días*</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center flex-col recarga-content">
+              <div class="precio80r precio-content pt-3 pb-16 text-center">
+                <span class="text-white text-md md:text-3xl italic font-bold">RECARGA</span>
+                <div class="grid grid-cols-3 items-center">
+                  <span class="text-white text-md  text-right">$</span><span
+                    class="text-white text-3xl md:text-3xl font-bold">80</span>
+                </div>
+              </div>
+              <div
+                class="text-center z-0 bg-orange-100 grid p-3  h-auto md:w-64 xl:w-72 items-center border-4 border-white  rounded-3xl -mt-12 self-center shadow-lg ">
+                <span class="text-white text-sm md:text-3xl lg:text-xl italic font-bold">PROMOCIÓN</span>
+                <span class="text-white italic text-sm md:text-lg lg:text-xs">Recarga $80 cada mes y recibe<br
+                    class="md:hidden" />
+                  Beneficios de una recarga de</span>
+                <div class="flex items-center justify-center">
+                  <span class="text-white text-3xl md:text-3xl ml-2">$</span><span
+                    class="text-white text-5xl md:text-5xl font-bold">100</span>
+                </div>
+
+              </div>
+              <div class="bg-white text-center -mt-12 pt-12 text-gristxt">
+                <div class="banderas pb-6 m-6 flex flex-col items-center">
+                  <span class="text-sm md:text-xl font-bold">MINUTOS Y SMS ILIMITADOS</span>
+                  <img class="p-2" src="img/Banderas-1.png" alt="" />
+                </div>
+                <div class="pb-6 m-6">
+                  <span class="text-4xl md:text-3xl font-bold mb-recargas">2,000 MB</span><br />
+                  <span class="text-grisrecargas">1,000 MB <strong>PARA NAVEGAR</strong><br /></span>
+                  <span class="text-xs">(500 MB POR PROMOCIÓN)</span><br /><br />
+                  <span class="text-grisrecargas">1000 MB <strong>REDES SOCIALES</strong>
+                  </span>
+                  <div class="grid">
+                    <img class="place-self-center w-40 mx-auto" src="img/whatsapp.svg" alt="" />
+                  </div>
+                </div>
+                <br />
+                <div class="m-6 flex flex-col items-center">
+                  <p class="vigencia text-grisazul">
+                    Vigencia: <strong>13 días*</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-between flex-col recarga-content">
+              <div class="precio100r precio-content md:pb-14 xl:pb-16 text-center">
+                <div class="
+                  bg-orange-200
+                  text-center
+                  px-20
+                  md:px-2
+                  lg:px-8
+                  xl:px-12
+                  text-sm
+                  lg:text-sm
+                  pleca-naranja
+                  text-white
+                  w-full
+                ">
+                  LA MÁS PEDIDA
+                </div>
+                <span class="text-white text-md md:text-3xl italic font-bold">RECARGA</span>
+                <div class="grid grid-cols-3 items-center">
+                  <span class="text-white text-md  text-right">$</span><span
+                    class="text-white text-3xl md:text-3xl font-bold">100</span>
+                </div>
+
+              </div>
+              <div
+                class="text-center z-0 bg-orange-100 grid p-3  h-auto md:w-64 xl:w-72 items-center border-4 border-white  rounded-3xl -mt-12 self-center shadow-lg ">
+                <span class="text-white text-sm md:text-3xl lg:text-xl italic font-bold">PROMOCIÓN</span>
+                <span class="text-white italic text-sm md:text-lg lg:text-xs">Recarga $100 cada mes y recibe Beneficios
+                  de una recarga
+                  de</span>
+                <div class="flex items-center justify-center">
+                  <span class="text-white text-3xl md:text-3xl ml-2">$</span><span
+                    class="text-white text-5xl md:text-5xl font-bold">150</span>
+                </div>
+              </div>
+              <div class="bg-white text-center -mt-16 pt-12 text-gristxt">
+                <div class="banderas pb-6 m-6 flex flex-col items-center">
+                  <span class="text-sm md:text-lg font-bold">MINUTOS Y SMS ILIMITADOS</span>
+                  <img class="p-2" src="img/Banderas-1.png" alt="" />
+                </div>
+                <div class="banderas pb-6 m-6">
+                  <span class="text-4xl md:text-3xl font-bold mb-recargas">2,000 MB</span><br />
+                  <span class="text-sm">PARA NAVEGAR</span><br />
+                  <span class="text-sm">(700 MB POR PROMOCIÓN)</span>
+                </div>
+                <div class="m-6 flex flex-col items-center">
+                  <span class="text-sm md:text-md font-bold">Redes sociales ilimitadas</span>
+                  <img class="p-2" src="img/redes-sociales.svg" alt="" />
+                  <span class="text-gray-500">(Para uso sólo en México)</span><br />
+                  <p class="vigencia text-grisazul">
+                    Vigencia: <strong> 15 días*</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-center flex-col recarga-content">
+              <div class="precio150r pt-5 precio-content pb-16 text-center">
+                <span class="text-white text-md md:text-3xl italic font-bold">RECARGA</span>
+                <div class="grid grid-cols-3 items-center">
+                  <span class="text-white text-md  text-right">$</span><span
+                    class="text-white text-3xl md:text-3xl font-bold">150</span>
+                </div>
+
+              </div>
+              <div
+                class="text-center z-0 bg-orange-100 grid p-3  h-auto md:w-64 xl:w-72 items-center border-4 border-white  rounded-3xl -mt-12 self-center shadow-lg ">
+                <span class="text-white text-sm md:text-3xl lg:text-xl italic font-bold">PROMOCIÓN</span>
+                <span class="text-white italic text-sm md:text-lg lg:text-xs">Recarga $150 cada mes y recibe Beneficios
+                  de una recarga
+                  de</span>
+                <div class="flex items-center justify-center">
+                  <span class="text-white text-3xl md:text-3xl ml-2">$</span><span
+                    class="text-white text-5xl md:text-5xl font-bold">200</span>
+                </div>
+              </div>
+              <div class="bg-white text-center -mt-12 pt-12 text-gristxt">
+                <div class="banderas pb-6 m-6 flex flex-col items-center">
+                  <span class="text-sm md:text-md font-bold">MINUTOS Y SMS ILIMITADOS</span>
+                  <img class="p-2" src="img/Banderas-1.png" alt="" />
+                </div>
+                <div class="banderas pb-6 m-6">
+                  <span class="text-4xl md:text-3xl font-bold mb-recargas">3,000 MB</span><br />
+                  <span class="text-sm">PARA NAVEGAR</span><br />
+                  <span class="text-sm">(1,000 MB POR PROMOCIÓN)</span>
+                </div>
+                <div class="m-6 flex flex-col items-center">
+                  <span class="text-sm md:text-md font-bold">Redes sociales ilimitadas</span>
+                  <img class="p-2" src="img/redes-sociales.svg" alt="" />
+                  <span class="text-gray-500">(Para uso sólo en México)</span><br />
+                  <p class="vigencia text-grisazul">
+                    Vigencia: <strong> 26 días*</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+            <div class="flex justify-between flex-col recarga-content">
+              <div class="precio200r precio-content pt-5 pb-16 text-center">
+                <span class="text-white text-md md:text-3xl italic font-bold">RECARGA</span>
+                <div class="grid grid-cols-3 items-center">
+                  <span class="text-white text-md  text-right">$</span><span
+                    class="text-white text-3xl md:text-3xl font-bold">200</span>
+                </div>
+              </div>
+              <div
+                class="text-center z-0 bg-orange-100 grid p-3  h-auto md:w-64 xl:w-72 items-center border-4 border-white  rounded-3xl -mt-12 self-center shadow-lg ">
+                <span class="text-white text-sm md:text-3xl lg:text-2xl italic font-bold">RECIBES</span>
+                <div class="flex items-center justify-center">
+                  <span class="text-white text-5xl md:text-5xl lg:text-5xl font-bold">1 GB</span>
+                </div>
+                <span class="text-white italic text-sm md:text-lg lg:text-xs">ADICIONAL <br class="md:hidden" />
+                  PARA NAVEGAR</span>
+              </div>
+              <div class="bg-white text-center -mt-12 pt-12 text-gristxt">
+                <div class="banderas pb-6 m-6 flex flex-col items-center">
+                  <span class="text-sm md:text-md font-bold">MINUTOS Y SMS ILIMITADOS</span>
+                  <img class="p-2" src="img/Banderas-1.png" alt="" />
+                </div>
+                <div class="banderas pb-6 m-6">
+                  <span class="text-4xl md:text-3xl font-bold mb-recargas">5,000 MB</span><br />
+                  <span class="text-sm">PARA NAVEGAR</span><br />
+                  <span class="text-xs">(2,000 MB POR PROMOCIÓN)</span>
+
+                </div>
+                <div class="m-6 flex flex-col items-center">
+                  <span class="text-sm md:text-md font-bold">Redes sociales ilimitadas</span>
+                  <img class="p-2" src="img/redes-sociales.svg" alt="" />
+                  <span class="text-gray-500">(Para uso sólo en México)</span><br />
+                  <p class="vigencia text-grisazul">
+                    Vigencia: <strong> 30 días*</strong>
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!--recargas movil-->
+
+          <div class="pack-mov-recargas sticky mb-12 mt-16 px-4 md:mx-28 fondo-recargas">
+            <div class="carousel relative z-30">
+              <div class="carousel-inner relative overflow-hidden w-full">
+                <!--Slide 1-->
+                <input class="carousel-open" type="radio" id="carousel-rec1" name="carouselpack-recargas"
+                  aria-hidden="true" hidden="" checked="checked" />
+                <div class="carousel-item absolute opacity-0">
+                  <div class="flex justify-center flex-col recarga-content">
+                    <div class="precio30r precio-content pt-3 pb-28 text-center">
+                      <span class="text-white text-3xl italic font-bold">RECARGA</span>
+                      <div class="grid grid-cols-3 items-center">
+                        <span class="text-white text-3xl  text-right">$</span><span
+                          class="text-white text-6xl  font-bold">30</span>
+                      </div>
+                      <div class="
+                        bg-orange-100
+                        grid
+                        p-3
+                        h-auto
+                        w-64
+                        items-center
+                        border-4 border-white
+                        rounded-3xl
+                        -mb-32
+                        absolute
+                        shadow-lg
+                        naranja-recargas-m
+                      ">
+                        <span class="text-white text-sm md:text-xl italic font-bold">PROMOCIÓN</span>
+                        <span class="text-white italic text-xs md:text-xs">Recarga $30 cada mes y recibe<br />
+                          beneficios de una recarga de </span>
+                        <div class="flex items-center justify-center">
+                          <span class="text-white text-1xl md:text-xl ml-2">$</span><span
+                            class="text-white text-3xl md:text-3xl font-bold">50</span>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="bg-white text-center -mt-12 pt-12 text-gristxt">
+                      <div class="banderas pb-6 m-6 flex flex-col items-center">
+                        <span class="text-sm md:text-3xl font-bold">MINUTOS Y SMS ILIMITADOS</span>
+                        <img class="p-2" src="img/Banderas-1.png" alt="" />
+                      </div>
+                      <div class="pb-6 m-6">
+                        <span class="text-4xl  font-bold mb-recargas">420 MB</span><br />
+                        <span class="text-grisrecargas">120 MB <strong>PARA NAVEGAR</strong> </span><br />
+                        <span class="text-grisrecargas">300 MB <strong>REDES SOCIALES</strong>
+                        </span>
+                        <div class="grid">
+                          <img class="place-self-center w-40 mx-auto" src="img/whatsapp.svg" alt="" />
+                        </div>
+                      </div>
+                      <br />
+                      <div class="m-6 flex flex-col items-center">
+                        <p class="vigencia text-grisazul">
+                          Vigencia: <strong>3 días*</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <label for="carousel-rec6" class="
+                  prev
+                  control-1
+                  w-10
+                  h-10
+                  ml-2
+                  md:ml-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  left-0
+                  my-auto
+                ">‹</label>
+                <label for="carousel-rec2" class="
+                  next
+                  control-1
+                  w-10
+                  h-10
+                  mr-2
+                  md:mr-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  right-0
+                  my-auto
+                ">›</label>
+
+                <!--Slide 2-->
+                <input class="carousel-open" type="radio" id="carousel-rec2" name="carouselpack-recargas"
+                  aria-hidden="true" hidden="" />
+                <div class="carousel-item absolute opacity-0">
+                  <div class="flex justify-center flex-col recarga-content">
+                    <div class="precio30r precio-content pt-3 pb-28 text-center">
+                      <span class="text-white text-3xl italic font-bold">RECARGA</span>
+                      <div class="grid grid-cols-3 items-center">
+                        <span class="text-white text-3xl  text-right">$</span><span
+                          class="text-white text-6xl  font-bold">50</span>
+                      </div>
+                      <div class="
+                        bg-orange-100
+                        grid
+                        p-3
+                        h-auto
+                        w-64
+                        items-center
+                        border-4 border-white
+                        rounded-3xl
+                        -mb-32
+                        absolute
+                        shadow-lg
+                        naranja-recargas-m
+                      ">
+                        <span class="text-white text-sm md:text-xl italic font-bold">PROMOCIÓN</span>
+                        <span class="text-white italic text-xs md:text-xs">Recarga $50 cada mes y recibe <br />
+                          Beneficios de una recarga</span>
+                        <div class="flex items-center justify-center">
+                          <span class="text-white text-1xl md:text-xl ml-2">$</span><span
+                            class="text-white text-3xl md:text-3xl font-bold">80</span>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="bg-white text-center -mt-12 pt-12 text-gristxt">
+                      <div class="banderas pb-6 m-6 flex flex-col items-center">
+                        <span class="text-sm md:text-3xl font-bold">MINUTOS Y SMS ILIMITADOS</span>
+                        <img class="p-2" src="img/Banderas-1.png" alt="" />
+                      </div>
+                      <div class="pb-6 m-6">
+                        <span class="text-4xl  font-bold mb-recargas">1,300 MB</span><br />
+                        <span class="text-grisrecargas">800 MB <strong>PARA NAVEGAR</strong> </span><br />
+                        <span class="text-xs">(400 MB POR PROMOCIÓN)</span><br /><br />
+                        <span class="text-grisrecargas">500 MB <strong>REDES SOCIALES</strong>
+                        </span>
+                        <div class="grid">
+                          <img class="place-self-center w-40 mx-auto" src="img/whatsapp.svg" alt="" />
+                        </div>
+                      </div>
+                      <br />
+                      <div class="m-6 flex flex-col items-center">
+                        <p class="vigencia text-grisazul">
+                          Vigencia: <strong>7 días*</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <label for="carousel-rec1" class="
+                  prev
+                  control-2
+                  w-10
+                  h-10
+                  ml-2
+                  md:ml-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  left-0
+                  my-auto
+                ">‹</label>
+                <label for="carousel-rec3" class="
+                  next
+                  control-2
+                  w-10
+                  h-10
+                  mr-2
+                  md:mr-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  right-0
+                  my-auto
+                ">›</label>
+
+                <!--Slide 3-->
+                <input class="carousel-open" type="radio" id="carousel-rec3" name="carouselpack-recargas"
+                  aria-hidden="true" hidden="" />
+                <div class="carousel-item absolute opacity-0">
+                  <div class="flex justify-center flex-col recarga-content">
+                    <div class="precio30r precio-content pt-3 pb-28 text-center">
+                      <span class="text-white text-3xl italic font-bold">RECARGA</span>
+                      <div class="grid grid-cols-3 items-center">
+                        <span class="text-white text-3xl  text-right">$</span><span
+                          class="text-white text-6xl  font-bold">80</span>
+                      </div>
+                      <div class="
+                        bg-orange-100
+                        grid
+                        p-3
+                        h-auto
+                        w-64
+                        items-center
+                        border-4 border-white
+                        rounded-3xl
+                        -mb-32
+                        absolute
+                        shadow-lg
+                        naranja-recargas-m
+                      ">
+                        <span class="text-white text-sm md:text-xl italic font-bold">PROMOCIÓN</span>
+                        <span class="text-white italic text-xs md:text-xs">Recarga $80 cada mes y recibe <br />
+                          Beneficios de una recarga de</span>
+                        <div class="flex items-center justify-center">
+                          <span class="text-white text-1xl md:text-xl ml-2">$</span><span
+                            class="text-white text-3xl md:text-3xl font-bold">100</span>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="bg-white text-center -mt-12 pt-12 text-gristxt">
+                      <div class="banderas pb-6 m-6 flex flex-col items-center">
+                        <span class="text-sm md:text-3xl font-bold">MINUTOS Y SMS ILIMITADOS</span>
+                        <img class="p-2" src="img/Banderas-1.png" alt="" />
+                      </div>
+                      <div class="pb-6">
+                        <span class="text-4xl  font-bold mb-recargas">2,000 MB</span><br />
+                        <span class="text-grisrecargas">1,000 MB <strong>PARA NAVEGAR</strong> </span><br />
+                        <span class="text-xs">(500 MB POR PROMOCIÓN)</span><br /><br />
+                        <span class="text-grisrecargas">1000 MB <strong>REDES SOCIALES</strong>
+                        </span>
+                        <div class="grid">
+                          <img class="place-self-center w-40 mx-auto" src="img/whatsapp.svg" alt="" />
+                        </div>
+                      </div>
+                      <br />
+                      <div class="m-6 flex flex-col items-center">
+                        <p class="vigencia text-grisazul">
+                          Vigencia: <strong>13 días*</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <label for="carousel-rec2" class="
+                  prev
+                  control-3
+                  w-10
+                  h-10
+                  ml-2
+                  md:ml-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  left-0
+                  my-auto
+                ">‹</label>
+                <label for="carousel-rec4" class="
+                  next
+                  control-3
+                  w-10
+                  h-10
+                  mr-2
+                  md:mr-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  right-0
+                  my-auto
+                ">›</label>
+
+                <!--Slide 4-->
+                <input class="carousel-open" type="radio" id="carousel-rec4" name="carouselpack-recargas"
+                  aria-hidden="true" hidden="" />
+                <div class="carousel-item absolute opacity-0">
+                  <div class="flex justify-center flex-col recarga-content">
+                    <div class="precio100r precio-content pb-28 text-center">
+                      <div class="
+                        bg-orange-200
+                        text-center
+                        px-20
+                        md:px-32
+                        lg:px-16
+                        xl:px-28
+                        text-sm
+                        lg:text-sm
+                        pleca-naranja
+                        text-white
+                        w-full
+                      ">
+                        LA MÁS PEDIDA
+                      </div>
+                      <span class="text-white text-3xl italic font-bold">RECARGA</span>
+                      <div class="grid grid-cols-3 items-center">
+                        <span class="text-white text-3xl  text-right">$</span><span
+                          class="text-white text-6xl  font-bold">100</span>
+                      </div>
+                      <div class="
+                        bg-orange-100
+                        grid
+                        p-3
+                        h-auto
+                        w-64
+                        items-center
+                        border-4 border-white
+                        rounded-3xl
+                        -mb-32
+                        absolute
+                        shadow-lg
+                        naranja-recargas-m
+                      ">
+                        <span class="text-white text-sm md:text-xl italic font-bold">PROMOCIÓN</span>
+                        <span class="text-white italic text-sm md:text-xs">Recarga $100 cada mes y recibe Beneficios de
+                          una
+                          recarga de</span>
+                        <div class="flex items-center justify-center">
+                          <span class="text-white text-1xl md:text-xl ml-2">$</span><span
+                            class="text-white text-3xl md:text-3xl font-bold">150</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-white text-center -mt-12 pt-12 text-gristxt">
+                      <div class="banderas pb-6 m-6 flex flex-col items-center">
+                        <span class="text-sm md:text-3xl font-bold">MINUTOS Y SMS ILIMITADOS</span>
+                        <img class="p-2" src="img/Banderas-1.png" alt="" />
+                      </div>
+                      <div class="banderas pb-6 m-6">
+                        <span class="text-4xl  font-bold mb-recargas">2,000 MB</span><br />
+                        <span class="text-sm">PARA NAVEGAR</span><br />
+                        <span class="text-xs">(700 MB POR PROMOCIÓN)</span><br /><br />
+
+                      </div>
+                      <div class="m-6 flex flex-col items-center">
+                        <span class="text-sm md:text-3xl font-bold">Redes sociales ilimitadas</span>
+                        <img class="p-2" src="img/redes-sociales.svg" alt="" />
+                        <span class="text-gray-500">(Para uso sólo en México)</span><br />
+                        <p class="vigencia text-grisazul">
+                          Vigencia: <strong> 15 días*</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <label for="carousel-rec3" class="
+                  prev
+                  control-4
+                  w-10
+                  h-10
+                  ml-2
+                  md:ml-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  left-0
+                  my-auto
+                ">‹</label>
+                <label for="carousel-rec5" class="
+                  next
+                  control-4
+                  w-10
+                  h-10
+                  mr-2
+                  md:mr-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  right-0
+                  my-auto
+                ">›</label>
+
+                <!--Slide 5-->
+                <input class="carousel-open" type="radio" id="carousel-rec5" name="carouselpack-recargas"
+                  aria-hidden="true" hidden="" />
+                <div class="carousel-item absolute opacity-0">
+                  <div class="flex justify-center flex-col recarga-content">
+                    <div class="precio150r precio-content pt-3 pb-28 text-center">
+                      <span class="text-white text-3xl italic font-bold">RECARGA</span>
+                      <div class="grid grid-cols-3 items-center">
+                        <span class="text-white text-3xl  text-right">$</span><span
+                          class="text-white text-6xl  font-bold">150</span>
+                      </div>
+                      <div class="
+                        bg-orange-100
+                        grid
+                        p-3
+                        h-auto
+                        w-64
+                        items-center
+                        border-4 border-white
+                        rounded-3xl
+                        -mb-32
+                        absolute
+                        shadow-lg
+                        naranja-recargas-m
+                      ">
+                        <span class="text-white text-sm md:text-xl italic font-bold">PROMOCIÓN</span>
+                        <span class="text-white italic text-sm md:text-xs">Recarga $150 cada mes y recibe Beneficios de
+                          una
+                          recarga de</span>
+                        <div class="flex items-center justify-center">
+                          <span class="text-white text-1xl md:text-xl ml-2">$</span><span
+                            class="text-white text-3xl md:text-3xl font-bold">200</span>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="bg-white text-center -mt-12 pt-12 text-gristxt">
+                      <div class="banderas pb-6 m-6 flex flex-col items-center">
+                        <span class="text-sm md:text-3xl font-bold">MINUTOS Y SMS ILIMITADOS</span>
+                        <img class="p-2" src="img/Banderas-1.png" alt="" />
+                      </div>
+                      <div class="banderas pb-6 m-6">
+                        <span class="text-4xl  font-bold mb-recargas">3,000 MB</span><br />
+                        <span class="text-sm">PARA NAVEGAR</span><br />
+                        <span class="text-xs">(1,000 MB POR PROMOCIÓN)</span><br /><br />
+                      </div>
+                      <div class="m-6 flex flex-col items-center">
+                        <span class="text-sm md:text-3xl font-bold">Redes sociales ilimitadas</span>
+                        <img class="p-2" src="img/redes-sociales.svg" alt="" />
+                        <span class="text-gray-500">(Para uso sólo en México)</span><br />
+                        <p class="vigencia text-grisazul">
+                          Vigencia: <strong> 26 días*</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <label for="carousel-rec4" class="
+                  prev
+                  control-5
+                  w-10
+                  h-10
+                  ml-2
+                  md:ml-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  left-0
+                  my-auto
+                ">‹</label>
+                <label for="carousel-rec6" class="
+                  next
+                  control-5
+                  w-10
+                  h-10
+                  mr-2
+                  md:mr-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  right-0
+                  my-auto
+                ">›</label>
+
+                <!--Slide 6-->
+                <input class="carousel-open" type="radio" id="carousel-rec6" name="carouselpack-recargas"
+                  aria-hidden="true" hidden="" />
+                <div class="carousel-item absolute opacity-0">
+                  <div class="flex justify-center flex-col recarga-content">
+                    <div class="precio200r precio-content pt-3 pb-28 text-center">
+                      <span class="text-white text-3xl italic font-bold">RECARGA</span>
+                      <div class="grid grid-cols-3 items-center">
+                        <span class="text-white text-3xl  text-right">$</span><span
+                          class="text-white text-6xl  font-bold">200</span>
+                      </div>
+                      <div class="
+                        bg-orange-100
+                        grid
+                        p-3
+                        h-auto
+                        w-64
+                        items-center
+                        border-4 border-white
+                        rounded-3xl
+                        -mb-32
+                        absolute
+                        shadow-lg
+                        naranja-recargas-m
+                      ">
+                        <span class="text-white text-sm md:text-lg italic font-bold">RECIBES</span>
+                        <div class="flex items-center justify-center">
+                          <span class="text-white text-3xl md:text-3xl font-bold">1 GB</span>
+                        </div>
+                        <span class="text-white italic text-xs md:text-xs">ADICIONAL <br />
+                          PARA NAVEGAR</span>
+                      </div>
+                    </div>
+                    <div class="bg-white text-center -mt-12 pt-12 text-gristxt">
+                      <div class="banderas pb-6 m-6 flex flex-col items-center">
+                        <span class="text-sm md:text-3xl font-bold">MINUTOS Y SMS ILIMITADOS</span>
+                        <img class="p-2" src="img/Banderas-1.png" alt="" />
+                      </div>
+                      <div class="banderas pb-6 m-6">
+                        <span class="text-4xl  font-bold mb-recargas">5,000 MB</span><br />
+                        <span class="text-sm">PARA NAVEGAR</span><br />
+                        <span class="text-xs">(2,000 MB POR PROMOCIÓN)</span><br /><br />
+                      </div>
+                      <div class="m-6 flex flex-col items-center">
+                        <span class="text-sm md:text-3xl font-bold">Redes sociales ilimitadas</span>
+                        <img class="p-2" src="img/redes-sociales.svg" alt="" />
+                        <span class="text-gray-500">(Para uso sólo en México)</span><br />
+                        <p class="vigencia text-grisazul">
+                          Vigencia: <strong> 30 días*</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <label for="carousel-rec5" class="
+                  prev
+                  control-6
+                  w-10
+                  h-10
+                  ml-2
+                  md:ml-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  left-0
+                  my-auto
+                ">‹</label>
+                <label for="carousel-rec1" class="
+                  next
+                  control-6
+                  w-10
+                  h-10
+                  mr-2
+                  md:mr-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  right-0
+                  my-auto
+                ">›</label>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!--INICIA PLANES ESPECIALES FP-->
+        <div id="pack-3" class="pack-3 pack-content">
+          <div class="w-full flex justify-center">
+            <img class="hidden sm:block" src="img/sliders/banner-3.jpg" alt="" />
+            <img class="block sm:hidden" src="img/slider movil/425X425_FP_amazonprimeincluido.jpg" alt="">
+          </div>
+          <!--TRIPLE BOTÓN-->
+          <nav class="tabs mb-28  gap-0 md:gap-4 px-0 flex justify-around md:justify-center 
+     mt-0
+     md:-mt-6
+     absolute
+     right-0
+     left-0
+     z-10">
+            <!-- BOTON PRIMERO -->
+            <button data-target="pack-1" class="pack
+            bg-blue-100
+            text-white
+            flex
+            items-center
+            md:justify-around
+            justify-center
+            p-2
+            gap-2
+            md:px-6
+            lg:px-6
+            lg:py-3
+            xl:px-8
+            text-left
+            rounded-none
+            md:rounded-lg
+            shadow-btn
+            w-1/3
+            md:w-1/5
+            lg:w-1/6
+            hover:bg-blue-600
+            hover:border-orange-300 
+            border-2
+            border-blue-100
+            focus:bg-blue-600
+            pack
+            active
+            "><img class="w-3 md:w-8" src="img/botones/fp-btn1.svg" alt="" /><span
+                class="text-xs md:text-sm lg:text-base xl:text-xl">PLANES</span>
+              <i class="md:fas md:fa-caret-down md:text-3xl hidden md:visible"></i>
+            </button>
+
+            <!-- BOTON SEGUNDO -->
+            <button data-target="pack-2" class="pack
+          bg-blue-200
+          text-white
+          flex
+          items-center
+          md:justify-around
+          justify-center
+          gap-2
+          p-2
+          md:p-2
+          lg:px-10
+          lg:py-3
+          xl:p-4
+          text-left
+          rounded-none
+          md:rounded-lg
+          shadow-btn
+          
+          lg:w-1/6
+          md:w-1/5
+          w-1/3
+        hover:bg-blue-600
+        hover:border-orange-300 
+          border-2
+        border-blue-200
+        focus:bg-blue-600
+        pack
+        active
+        ">
+              <img class="w-3 md:w-8" src="img/botones/fp-recargas.svg" alt="" /><span
+                class="text-xs md:text-sm lg:text-base xl:text-xl active">RECARGAS</span><i
+                class="md:fas md:fa-caret-down md:text-3xl hidden md:block"></i></button>
+
+            <!-- BOTON TERCERO -->
+            <button data-target="pack-3" class="pack
+        bg-blue-300
+        text-white
+        flex
+        items-center
+        md:justify-around
+        justify-center
+        gap-2
+        p-2
+        md:p-2
+        lg:px-6
+        lg:py-3
+        xl:p-4
+        text-left
+        rounded-none
+        md:rounded-lg
+        shadow-btn
+        w-1/3
+        md:w-1/5
+        lg:w-1/6
+        hover:bg-blue-600
+        hover:border-orange-300 
+        border-2
+        border-blue-300
+        focus:bg-blue-600
+        pack
+        active
+        "><img class="w-3 md:w-8" src="img/botones/planes-esp.svg" alt="" /><span
+                class="text-xs md:text-sm lg:text-base xl:text-xl">PLANES ESPECIALES</span><i
+                class="md:fas md:fa-caret-down md:text-3xl hidden md:block"></i></button>
+
+          </nav>
+          <!--FIN TRIPLE BOTÓN-->
+
+
+          <!--especiales desktop-->
+          <div class="
+            mt-12
+            lg:mt-24
+            xl:mt-28
+            p-3
+            pb-12
+            lg:px-4
+            xl:px-4
+            fondo-especiales
+            pack-desktop-esp
+          ">
+            <div class="flex justify-center">
+              <img class="" src="img/fp-amazon.svg" alt="" />
+            </div>
+            <div class="
+              grid grid-cols-1
+              md:grid-cols-2
+              lg:grid-cols-4
+              mt-8
+              gap-1 gap-y-8
+            ">
+              <div class="grid content-center special-packs">
+                <div class="precio150 precio-content py-8 text-center justify-center">
+                  <span class="text-white text-md md:text-3xl italic font-bold">PLAN</span>
+                  <div class="grid grid-cols-3 items-center">
+                    <span class="text-white text-md md:text-4xl text-right">$</span><span
+                      class="text-white text-3xl md:text-6xl font-bold">234</span>
+                  </div>
+                </div>
+                <div class="bg-white text-center text-gristxt">
+                  <div class="banderas2 pb-6 m-6 flex flex-col items-center">
+                    <span class="text-sm md:text-3xl font-bold">Incluye</span>
+                    <img class="p-2" src="img/amazon-logo2.svg" alt="" />
+                    <span>Envíos gratis, videos, música y juegos</span>
+                  </div>
+                  <div class="pb-6 m-6">
+                    <p class="text-1xl md:text-lg font-bold mb-6">
+                      Telefonía celular
+                    </p>
+                    <p class="mb-5">
+                      Minutos y SMS ilimitados <br />
+                      a México y EUA
+                    </p>
+                    <p class="text-4xl  font-bold">3,500 MB</p>
+                    <p class="">PARA NAVEGAR</p>
+                    <p class="text-xs">(1,200 MB por promoción)</p>
+                    <p class="text-sm md:text-xs mt-4 mb-6">
+                      REDES SOCIALES ILIMITADAS
+                    </p>
+                    <p class="vigencia text-grisazul">
+                      Vigencia: <strong> 1 Mes*</strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid content-center special-packs">
+                <div class="precio200 precio-content py-8 text-center justify-center">
+                  <span class="text-white text-md md:text-3xl italic font-bold">PLAN</span>
+                  <div class="grid grid-cols-3 items-center">
+                    <span class="text-white text-md md:text-4xl text-right">$</span><span
+                      class="text-white text-3xl md:text-6xl font-bold">279</span>
+                  </div>
+                </div>
+                <div class="bg-white text-center text-gristxt">
+                  <div class="banderas2 pb-6 m-6 flex flex-col items-center">
+                    <span class="text-sm md:text-3xl font-bold">Incluye</span>
+                    <img class="p-2" src="img/amazon-logo2.svg" alt="" />
+                    <span>Envíos gratis, videos, música y juegos</span>
+                  </div>
+                  <div class="pb-6 m-6">
+                    <p class="text-1xl md:text-lg font-bold mb-6">
+                      Telefonía celular
+                    </p>
+                    <p class="mb-5">
+                      Minutos y SMS ilimitados <br />
+                      a México y EUA
+                    </p>
+                    <p class="text-4xl  font-bold">5,000 MB</p>
+                    <p class="">PARA NAVEGAR</p>
+                    <p class="text-xs">(1,550 MB por promoción)</p>
+                    <p class="text-sm md:text-xs mt-4 mb-6">
+                      REDES SOCIALES ILIMITADAS
+                    </p>
+                    <p class="vigencia text-grisazul">
+                      Vigencia: <strong> 1 Mes*</strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid content-center special-packs">
+                <div class="precio300 precio-content py-8 text-center justify-center">
+                  <span class="text-white text-md md:text-3xl italic font-bold">PLAN</span>
+                  <div class="grid grid-cols-3 items-center">
+                    <span class="text-white text-md md:text-4xl text-right">$</span><span
+                      class="text-white text-3xl md:text-6xl font-bold">369</span>
+                  </div>
+                </div>
+                <div class="bg-white text-center text-gristxt">
+                  <div class="banderas2 pb-6 m-6 flex flex-col items-center">
+                    <span class="text-sm md:text-3xl font-bold">Incluye</span>
+                    <img class="p-2" src="img/amazon-logo2.svg" alt="" />
+                    <span>Envíos gratis, videos, música y juegos</span>
+                  </div>
+                  <div class="pb-6 m-6">
+                    <p class="text-1xl md:text-lg font-bold mb-6">
+                      Telefonía celular
+                    </p>
+                    <p class="mb-5">
+                      Minutos y SMS ilimitados <br />
+                      a México y EUA
+                    </p>
+                    <p class="text-4xl  font-bold">7,000 MB</p>
+                    <p class="">PARA NAVEGAR</p>
+                    <p class="text-xs">(2,400 MB por promoción)</p>
+                    <p class="text-sm md:text-xs mt-4 mb-6">
+                      REDES SOCIALES ILIMITADAS
+                    </p>
+                    <p class="vigencia text-grisazul">
+                      Vigencia: <strong> 1 Mes*</strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+              <div class="grid content-center special-packs">
+                <div class="precio500 precio-content py-8 text-center justify-center">
+                  <span class="text-white text-md md:text-3xl italic font-bold">PLAN</span>
+                  <div class="grid grid-cols-3 items-center">
+                    <span class="text-white text-md md:text-4xl text-right">$</span><span
+                      class="text-white text-3xl md:text-6xl font-bold">549</span>
+                  </div>
+                </div>
+                <div class="bg-white text-center text-gristxt">
+                  <div class="banderas2 pb-6 m-6 flex flex-col items-center">
+                    <span class="text-sm md:text-3xl font-bold">Incluye</span>
+                    <img class="p-2" src="img/amazon-logo2.svg" alt="" />
+                    <span>Envíos gratis, videos, música y juegos</span>
+                  </div>
+                  <div class="pb-6 m-6">
+                    <p class="text-1xl md:text-lg font-bold mb-6">
+                      Telefonía celular
+                    </p>
+                    <p class="mb-5">
+                      Minutos y SMS ilimitados <br />
+                      a México y EUA
+                    </p>
+                    <p class="text-4xl  font-bold">12,000 MB</p>
+                    <p class="">PARA NAVEGAR</p>
+                    <p class="text-xs">(2,000 MB por promoción)</p>
+                    <p class="text-sm md:text-xs mt-4 mb-6">
+                      REDES SOCIALES ILIMITADAS
+                    </p>
+                    <p class="vigencia text-grisazul">
+                      Vigencia: <strong> 1 Mes*</strong>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="fondo h-52 z-20 absolute"></div>
+          </div>
+
+          <!--especiales movil-->
+
+          <div class="pack-mov-esp mb-1 px-4 md:mx-28 mt-16 md:mt-16 sticky fondo-especiales pb-12">
+            <div class="carousel relative z-30">
+              <div class="carousel-inner relative overflow-hidden w-full">
+                <!--Slide 1-->
+                <input class="carousel-open" type="radio" id="carousel-esp1" name="carouselpack-esp" aria-hidden="true"
+                  hidden="" checked="checked" />
+                <div class="carousel-item absolute opacity-0">
+                  <div class="grid content-center special-packs">
+                    <div class="
+                      precio150
+                      precio-content
+                      py-2
+                      text-center
+                      justify-center
+                    ">
+                      <span class="text-white text-3xl italic font-bold">PLAN</span>
+                      <div class="grid grid-cols-3 items-center">
+                        <span class="text-white text-right text-3xl">$</span><span
+                          class="text-white text-6xl font-bold">234</span>
+                      </div>
+                    </div>
+                    <div class="bg-white text-center text-gristxt">
+                      <div class="banderas2 pb-6 m-6 flex flex-col items-center">
+                        <span class="text-sm md:text-3xl font-bold">Incluye</span>
+                        <img class="p-2" src="img/amazon-logo2.svg" alt="" />
+                        <span>Envíos gratis, videos, música y juegos</span>
+                      </div>
+                      <div class="pb-6 m-6">
+                        <p class="text-1xl md:text-lg font-bold mb-6">
+                          Telefonía celular
+                        </p>
+                        <p class="mb-5">
+                          Minutos y SMS ilimitados <br />
+                          a México y EUA
+                        </p>
+                        <p class="text-4xl  font-bold">3,500 MB</p>
+                        <p class="">PARA NAVEGAR</p>
+                        <p class="text-xs">(1,200 MB por promoción)</p>
+                        <p class="text-sm mt-4 md:text-base mb-6">
+                          REDES SOCIALES ILIMITADAS
+                        </p>
+                        <p class="vigencia text-grisazul">
+                          Vigencia: <strong> 1 Mes*</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <label for="carousel-esp4" class="
+                  prev
+                  control-1
+                  w-10
+                  h-10
+                  ml-2
+                  md:ml-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  left-0
+                  my-auto
+                ">‹</label>
+                <label for="carousel-esp2" class="
+                  next
+                  control-1
+                  w-10
+                  h-10
+                  mr-2
+                  md:mr-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  right-0
+                  my-auto
+                ">›</label>
+
+                <!--Slide 2-->
+                <input class="carousel-open" type="radio" id="carousel-esp2" name="carouselpack-esp" aria-hidden="true"
+                  hidden="" />
+                <div class="carousel-item absolute opacity-0">
+                  <div class="grid content-center special-packs">
+                    <div class="
+                      precio200
+                      precio-content
+                      py-2
+                      text-center
+                      justify-center
+                    ">
+                      <span class="text-white text-3xl italic font-bold">PLAN</span>
+                      <div class="grid grid-cols-3 items-center">
+                        <span class="text-white text-right text-3xl">$</span><span
+                          class="text-white text-6xl font-bold">279</span>
+                      </div>
+                    </div>
+                    <div class="bg-white text-center text-gristxt">
+                      <div class="banderas2 pb-6 m-6 flex flex-col items-center">
+                        <span class="text-sm md:text-3xl font-bold">Incluye</span>
+                        <img class="p-2" src="img/amazon-logo2.svg" alt="" />
+                        <span>Envíos gratis, videos, música y juegos</span>
+                      </div>
+                      <div class="pb-6 m-6">
+                        <p class="text-1xl md:text-lg font-bold mb-6">
+                          Telefonía celular
+                        </p>
+                        <p class="mb-5">
+                          Minutos y SMS ilimitados <br />
+                          a México y EUA
+                        </p>
+                        <p class="text-4xl  font-bold">5,000 MB</p>
+                        <p class="">PARA NAVEGAR</p>
+                        <p class="text-xs">(1,550 MB por promoción)</p>
+                        <p class="text-sm mt-4 md:text-base mb-6">
+                          REDES SOCIALES ILIMITADAS
+                        </p>
+                        <p class="vigencia text-grisazul">
+                          Vigencia: <strong> 1 Mes*</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <label for="carousel-esp1" class="
+                  prev
+                  control-2
+                  w-10
+                  h-10
+                  ml-2
+                  md:ml-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  left-0
+                  my-auto
+                ">‹</label>
+                <label for="carousel-esp3" class="
+                  next
+                  control-2
+                  w-10
+                  h-10
+                  mr-2
+                  md:mr-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  right-0
+                  my-auto
+                ">›</label>
+
+                <!--Slide 3-->
+                <input class="carousel-open" type="radio" id="carousel-esp3" name="carouselpack-esp" aria-hidden="true"
+                  hidden="" />
+                <div class="carousel-item absolute opacity-0">
+                  <div class="grid content-center special-packs">
+                    <div class="
+                      precio300
+                      precio-content
+                      py-2
+                      text-center
+                      justify-center
+                    ">
+                      <span class="text-white text-3xl italic font-bold">PLAN</span>
+                      <div class="grid grid-cols-3 items-center">
+                        <span class="text-white text-right text-3xl">$</span><span
+                          class="text-white text-6xl font-bold">369</span>
+                      </div>
+                    </div>
+                    <div class="bg-white text-center text-gristxt">
+                      <div class="banderas2 pb-6 m-6 flex flex-col items-center">
+                        <span class="text-sm md:text-3xl font-bold">Incluye</span>
+                        <img class="p-2" src="img/amazon-logo2.svg" alt="" />
+                        <span>Envíos gratis, videos, música y juegos</span>
+                      </div>
+                      <div class="pb-6 m-6">
+                        <p class="text-1xl md:text-lg font-bold mb-6">
+                          Telefonía celular
+                        </p>
+                        <p class="mb-5">
+                          Minutos y SMS ilimitados <br />
+                          a México y EUA
+                        </p>
+                        <p class="text-4xl  font-bold">7,000 MB</p>
+                        <p class="">PARA NAVEGAR</p>
+                        <p class="text-xs">(2,400 MB por promoción)</p>
+                        <p class="text-sm mt-4 md:text-base mb-6">
+                          REDES SOCIALES ILIMITADAS
+                        </p>
+                        <p class="vigencia text-grisazul">
+                          Vigencia: <strong> 1 Mes*</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <label for="carousel-esp2" class="
+                  prev
+                  control-3
+                  w-10
+                  h-10
+                  ml-2
+                  md:ml-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  left-0
+                  my-auto
+                ">‹</label>
+                <label for="carousel-esp4" class="
+                  next
+                  control-3
+                  w-10
+                  h-10
+                  mr-2
+                  md:mr-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  right-0
+                  my-auto
+                ">›</label>
+
+                <!--Slide 4-->
+                <input class="carousel-open" type="radio" id="carousel-esp4" name="carouselpack-esp" aria-hidden="true"
+                  hidden="" />
+                <div class="carousel-item absolute opacity-0">
+                  <div class="grid content-center special-packs">
+                    <div class="
+                      precio500
+                      precio-content
+                      py-2
+                      text-center
+                      justify-center
+                    ">
+                      <span class="text-white text-3xl italic font-bold">PLAN</span>
+                      <div class="grid grid-cols-3 items-center">
+                        <span class="text-white text-right text-3xl">$</span><span
+                          class="text-white text-6xl font-bold">549</span>
+                      </div>
+                    </div>
+                    <div class="bg-white text-center text-gristxt">
+                      <div class="banderas2 pb-6 m-6 flex flex-col items-center">
+                        <span class="text-sm md:text-3xl font-bold">Incluye</span>
+                        <img class="p-2" src="img/amazon-logo2.svg" alt="" />
+                        <span>Envíos gratis, videos, música y juegos</span>
+                      </div>
+                      <div class="pb-6 m-6">
+                        <p class="text-1xl md:text-lg font-bold mb-6">
+                          Telefonía celular
+                        </p>
+                        <p class="mb-5">
+                          Minutos y SMS ilimitados <br />
+                          a México y EUA
+                        </p>
+                        <p class="text-4xl  font-bold">12,000 MB</p>
+                        <p class="">PARA NAVEGAR</p>
+                        <p class="text-xs">(2,000 MB por promoción)</p>
+                        <p class="text-sm mt-4 md:text-base mb-6">
+                          REDES SOCIALES ILIMITADAS
+                        </p>
+                        <p class="vigencia text-grisazul">
+                          Vigencia: <strong> 1 Mes*</strong>
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <label for="carousel-esp3" class="
+                  prev
+                  control-4
+                  w-10
+                  h-10
+                  ml-2
+                  md:ml-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  left-0
+                  my-auto
+                ">‹</label>
+                <label for="carousel-esp1" class="
+                  next
+                  control-4
+                  w-10
+                  h-10
+                  mr-2
+                  md:mr-10
+                  absolute
+                  cursor-pointer
+                  hidden
+                  text-md
+                  font-bold
+                  text-black
+                  hover:text-white
+                  rounded-full
+                  bg-white
+                  hover:bg-none
+                  leading-tight
+                  text-center
+                  z-10
+                  inset-y-0
+                  right-0
+                  my-auto
+                ">›</label>
+              </div>
+            </div>
+          </div>
+
+          <!--MEMBRESIA AMAZON-->
+          <div class="text-center bg-fondo1 pt-8 font-display">
+            <h3 class="text-3xl md:text-3xl font-bold membresia-txt">
+              TU MEMBRESÍA AMAZON PRIME INCLUYE
+            </h3>
+            <div class="grid grid-cols-4 px-40 md:px-12 py-6 membresia-desktop membresia-txt">
+              <div class="grid text-left separador-amazon p-6">
+                <img class="place-self-center pb-3 w-52" src="img/amazoogon.svg" alt="" />
+                <div class="grid grid-flow-col gap-x-3">
+                  <img class="w-16" src="img/caja-envios.png" alt="" />
+                  <p>
+                    Envíos gratis y rápidos en millones de productos en
+                    amazon.com.mx
+                  </p>
+                </div>
+              </div>
+              <div class="grid text-left separador-amazon p-6">
+                <img class="place-self-center pb-3 w-52" src="img/prime-video.svg" alt="" />
+                <div class="grid grid-flow-col gap-x-3">
+                  <img class="w-16" src="img/player.png" alt="" />
+                  <p>
+                    Series y películas, sin limites y en cualquier lugar, en hasta
+                    3 dispositivos al mismo tiempo.
+                  </p>
+                </div>
+              </div>
+              <div class="grid text-left separador-amazon p-6">
+                <img class="place-self-center pb-3 w-52" src="img/amazon-music.svg" alt="" />
+                <div class="grid grid-flow-col gap-x-3">
+                  <img class="w-16" src="img/music.png" alt="" />
+                  <p>
+                    2 millones de canciones sin anuncios, descarga y escucha sin
+                    conexión.
+                  </p>
+                </div>
+              </div>
+              <div class="grid text-left separador-amazon p-6">
+                <img class="place-self-center pb-3 w-52" src="img/prime_gaming.png" alt="" />
+                <div class="grid grid-flow-col gap-x-3">
+                  <img class="w-16" src="img/gaming.png" alt="" />
+                  <p>
+                    Envíos gratis y rápidos en millones de productos en
+                    amazon.com.mx
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!--MEMBRESIA movil-->
+
+            <div class="pack-mov-mem mb-12 mx-4 md:mx-28">
+              <div class="carousel relative z-0">
+                <div class="carousel-inner relative overflow-hidden w-full">
+                  <!--Slide 1-->
+                  <input class="carousel-open" type="radio" id="carousel-mem1" name="carouselpack-mem"
+                    aria-hidden="true" hidden="" checked="checked" />
+                  <div class="carousel-item absolute opacity-0">
+                    <div class="grid text-left separador-amazon p-3 m-12">
+                      <img class="place-self-center pb-3 w-52" src="img/amazoogon.svg" alt="" />
+                      <div class="grid grid-flow-col gap-x-3">
+                        <img class="w-16" src="img/caja-envios.png" alt="" />
+                        <p>
+                          Envíos gratis y rápidos en millones de productos en
+                          amazon.com.mx
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <label for="carousel-mem4" class="
+                    prev
+                    control-1
+                    w-10
+                    h-10
+                    ml-2
+                    md:ml-1
+                    absolute
+                    cursor-pointer
+                    hidden
+                    text-md
+                    font-bold
+                    text-black
+                    hover:text-white
+                    rounded-full
+                    arrow-mem
+                    hover:bg-none
+                    leading-tight
+                    text-center
+                    inset-y-0
+                    left-0
+                    my-auto
+                  ">‹</label>
+                  <label for="carousel-mem2" class="
+                    next
+                    control-1
+                    w-10
+                    h-10
+                    mr-2
+                    md:mr-1
+                    absolute
+                    cursor-pointer
+                    hidden
+                    text-md
+                    font-bold
+                    text-black
+                    hover:text-white
+                    rounded-full
+                    arrow-mem
+                    hover:bg-none
+                    leading-tight
+                    text-center
+                    z-10
+                    inset-y-0
+                    right-0
+                    my-auto
+                  ">›</label>
+
+                  <!--Slide 2-->
+                  <input class="carousel-open" type="radio" id="carousel-mem2" name="carouselpack-mem"
+                    aria-hidden="true" hidden="" />
+                  <div class="carousel-item absolute opacity-0">
+                    <div class="grid text-left separador-amazon p-3 m-12">
+                      <img class="place-self-center pb-3 w-52" src="img/prime-video.svg" alt="" />
+                      <div class="grid grid-flow-col gap-x-3">
+                        <img class="w-16" src="img/player.png" alt="" />
+                        <p>
+                          Series y películas, sin limites y en cualquier lugar, en
+                          hasta 3 dispositivos al mismo tiempo.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <label for="carousel-mem1" class="
+                    prev
+                    control-2
+                    w-10
+                    h-10
+                    ml-2
+                    md:ml-1
+                    absolute
+                    cursor-pointer
+                    hidden
+                    text-md
+                    font-bold
+                    text-black
+                    hover:text-white
+                    rounded-full
+                    arrow-mem
+                    hover:bg-none
+                    leading-tight
+                    text-center
+                    z-10
+                    inset-y-0
+                    left-0
+                    my-auto
+                  ">‹</label>
+                  <label for="carousel-mem3" class="
+                    next
+                    control-2
+                    w-10
+                    h-10
+                    mr-2
+                    md:mr-1
+                    absolute
+                    cursor-pointer
+                    hidden
+                    text-md
+                    font-bold
+                    text-black
+                    hover:text-white
+                    rounded-full
+                    arrow-mem
+                    hover:bg-none
+                    leading-tight
+                    text-center
+                    z-10
+                    inset-y-0
+                    right-0
+                    my-auto
+                  ">›</label>
+
+                  <!--Slide 3-->
+                  <input class="carousel-open" type="radio" id="carousel-mem3" name="carouselpack-mem"
+                    aria-hidden="true" hidden="" />
+                  <div class="carousel-item absolute opacity-0">
+                    <div class="grid text-left separador-amazon p-3 m-12">
+                      <img class="place-self-center pb-3 w-52" src="img/amazon-music.svg" alt="" />
+                      <div class="grid grid-flow-col gap-x-3">
+                        <img class="w-16" src="img/music.png" alt="" />
+                        <p>
+                          2 millones de canciones sin anuncios, descarga y escucha
+                          sin conexión.
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <label for="carousel-mem2" class="
+                    prev
+                    control-3
+                    w-10
+                    h-10
+                    ml-2
+                    md:ml-1
+                    absolute
+                    cursor-pointer
+                    hidden
+                    text-md
+                    font-bold
+                    text-black
+                    hover:text-white
+                    rounded-full
+                    arrow-mem
+                    hover:bg-none
+                    leading-tight
+                    text-center
+                    z-10
+                    inset-y-0
+                    left-0
+                    my-auto
+                  ">‹</label>
+                  <label for="carousel-mem4" class="
+                    next
+                    control-3
+                    w-10
+                    h-10
+                    mr-2
+                    md:mr-1
+                    absolute
+                    cursor-pointer
+                    hidden
+                    text-md
+                    font-bold
+                    text-black
+                    hover:text-white
+                    rounded-full
+                    arrow-mem
+                    hover:bg-none
+                    leading-tight
+                    text-center
+                    z-10
+                    inset-y-0
+                    right-0
+                    my-auto
+                  ">›</label>
+
+                  <!--Slide 4-->
+                  <input class="carousel-open" type="radio" id="carousel-mem4" name="carouselpack-mem"
+                    aria-hidden="true" hidden="" />
+                  <div class="carousel-item absolute opacity-0">
+                    <div class="grid text-left separador-amazon p-3 m-12">
+                      <img class="place-self-center pb-3 w-52" src="img/prime_gaming.png" alt="" />
+                      <div class="grid grid-flow-col gap-x-3">
+                        <img class="w-16" src="img/gaming.png" alt="" />
+                        <p>
+                          Envíos gratis y rápidos en millones de productos en
+                          amazon.com.mx
+                        </p>
+                      </div>
+                    </div>
+                  </div>
+                  <label for="carousel-mem3" class="
+                    prev
+                    control-4
+                    w-10
+                    h-10
+                    ml-2
+                    md:ml-1
+                    absolute
+                    cursor-pointer
+                    hidden
+                    text-md
+                    font-bold
+                    text-black
+                    hover:text-white
+                    rounded-full
+                    arrow-mem
+                    hover:bg-none
+                    leading-tight
+                    text-center
+                    z-10
+                    inset-y-0
+                    left-0
+                    my-auto
+                  ">‹</label>
+                  <label for="carousel-mem1" class="
+                    next
+                    control-4
+                    w-10
+                    h-10
+                    mr-2
+                    md:mr-1
+                    absolute
+                    cursor-pointer
+                    hidden
+                    text-md
+                    font-bold
+                    text-black
+                    hover:text-white
+                    rounded-full
+                    arrow-mem
+                    hover:bg-none
+                    leading-tight
+                    text-center
+                    z-10
+                    inset-y-0
+                    right-0
+                    my-auto
+                  ">›</label>
+                </div>
+              </div>
+            </div>
+
+            <!--SIN PLAZOS-->
+            <div class="grid grid-cols-6 md:grid-cols-3 text-center items-center font-sans-serif">
+              <hr class="" style="border: 1px solid #00acec" />
+              <span class="
+                text-blue-100 text-md
+                md:text-xl
+                lg:text-2xl
+                col-span-4
+                md:col-span-1
+              ">PLANES DE TELEFONÍA CELULAR <br />
+                <strong>¡SIN PLAZOS FORZOSOS!</strong>
+              </span>
+              <hr class="" style="border: 1px solid #00acec" />
+            </div>
+
+            <!--FP + DISH-->
+            <div class="mt-12 grid lg:px-40 xl:px-72">
+              <center>
+                <img class="place-self-center " src="img/fp-dish.png" alt="" />
+              </center>
+              <div class="pack-dish mt-12">
+                <div class="bg-morado precio-content py-2 text-center justify-center">
+                  <span class="text-white text-3xl italic font-bold">PLAN</span>
+                  <div class="grid grid-cols-3 items-center">
+                    <span class="text-white text-3xl  text-right">$</span><span
+                      class="text-white text-6xl md:text-3xl font-bold">499</span>
+                  </div>
+                </div>
+                <div class="grid grid-cols-1 md:grid-cols-3 py-2 px-4 bg-white">
+                  <img class="w-full pt-16" src="img/dispositivos-plan.png" alt="dish en todos los dispositivos" />
+                  <div class="grid col-span-2">
+                    <div class="grid grid-cols-3 items-center">
+                      <hr style="border: 1px solid gray" />
+                      <span class="">Incluye</span>
+                      <hr style="border: 1px solid gray" />
+                    </div>
+                    <div class="grid grid-cols-1 md:grid-cols-2 gap-2">
+                      <div class="grid p-2">
+                        <img class="place-self-center md:w-full w-1/2" src="img/LOGOfpop.svg" alt="logo freedompop" />
+                        <div class="text-center text-gristxt">
+                          <div class="banderas pb-6 m-6 flex flex-col items-center">
+                            <span class="text-sm md:text-3xl lg:text-sm font-bold">MINUTOS Y SMS ILIMITADOS</span>
+                            <img class="p-2" src="img/Banderas-1.png" alt="" />
+                          </div>
+                          <div class="banderas pb-6 m-6">
+                            <span class="
+                              text-4xl
+                              md:text-4xl
+                              lg:text-3xl
+                              font-bold
+                              mb-recargas
+                            ">8,400 MB</span><br />
+                            <span class="text-grisrecargas"><strong>PARA NAVEGAR</strong>
+                            </span><br /><span class="text-xs">(1,400 MB por promoción)</span>
+                          </div>
+                          <div class="m-2 flex flex-col items-center">
+                            <span class="
+                              text-grisrecargas text-3xl
+                              md:text-sm
+                              lg:text-sm
+                            "><strong>REDES SOCIALES ILIMITADAS</strong>
+                            </span>
+                            <img src="img/redes-sociales.svg" alt=" redes sociales ilimitadas" />
+                            <span class="text-gray-500">(Para uso sólo en México)</span>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="p-2">
+                        <div class="banderas grid p-4">
+                          <center>
+                            <img class="place-self-center p-5" src="img/Dish Color RGB.svg" alt="dish logo" />
+                            <span>Hasta 72 Canales de TV del paquete Básico</span>
+                          </center>
+                         
+                        </div>
+                        <div class="banderas grid p-2">
+                            <center>
+                              <img class="place-self-center p-5" src="img/app_mvshub.svg" alt="MVS HUB APP" style="width: 120px;" /> 
+                              <span>Contenido exclusivo en la nueva APP MVS hub por ser suscriptor Dish</span>
+                            </center>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div class="bg-morado precio-content py-2 text-center justify-center">
+                <a class="text-white text-base md:text-xl lg:text-2xl py-2" href="tel:5555123123">
+                  CONTRATA AL <strong class="">55 55 123 123</strong>
+                </a>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+        </div>
+      </div>
+    </div>
+
+    <!--LEGALES-->
+    <div class="m-8">
+      <div class="w-full md:w-4/5 mx-auto p-2">
+        <div class="shadow-md">
+          <div class="collapse w-full overflow-hidden legales-ac mb-4">
+            <input class="absolute opacity-0" id="tab-multi-one" type="checkbox" name="tabs" />
+            <label class="
+                  block
+                  p-5
+                  leading-normal
+                  cursor-pointer
+                  lg:text-xl
+                  sm:text-sm
+                " for="tab-multi-one">CONSIDERACIONES IMPORTANTES</label>
+            <div class="
+                  collapse-content
+                  overflow-hidden
+                  border-l-2 border-blue-100
+                  leading-normal
+                ">
+              <ol class="
+                    grid grid-cols-1
+                    md:grid-rows-6
+                    list-decimal
+                    p-6
+                    md:p-8
+                    leading-12
+                    gap-5
+                  ">
+                <li>
+                  Llamadas y mensajes de texto entrantes no generan costo.
+                </li>
+                <li>
+                  Las llamadas se tarifican por minuto, es decir, se
+                  redondean minutos parciales de uso al siguiente minuto
+                  exacto.
+                </li>
+                <li>Las llamadas de emergencia son gratuitas.</li>
+                <li>
+                  El uso de mensaje de texto se mide por evento de 160
+                  caracteres, por lo que si se envía un mensaje de más
+                  caracteres, se cobrará el número de mensajes de texto
+                  (SMS) que resulte aplicable.
+                </li>
+                <li>
+                  Los mensajes de texto incluidos en el Plan no son
+                  utilizables para el envío de Mensajes Multimedia (MMS) ni
+                  a marcaciones cortas. Tampoco serán utilizables para
+                  participar en trivias y/o concursos.
+                </li>
+                <li>
+                  Cada Megabyte incluye 1,024 Kilobytes y las sesiones de
+                  datos se tarifican en Kilobytes.
+                </li>
+              </ol>
+            </div>
+          </div>
+          <div class="collapse w-full overflow-hidden legales-ac mb-4">
+            <input class="absolute opacity-0" id="tab-multi-two" type="checkbox" name="tabs" />
+            <label class="
+                  block
+                  p-5
+                  leading-normal
+                  cursor-pointer
+                  lg:text-xl
+                  sm:text-sm
+                " for="tab-multi-two">LA NAVEGACIÓN EN REDES SOCIALES INCLUYE:</label>
+            <div class="
+                  collapse-content
+                  overflow-hidden
+                  border-l-2 border-blue-100
+                  leading-normal
+                ">
+              <div class="grid grid-cols-1 md:grid-cols-3 p-5 gap-3">
+                <div>
+                  <img src="https://d58ohtx80p2sd.cloudfront.net/egov2/interiores_micro/img/whats.png" alt="" />
+                  <span class="text-green-500">APP</span>
+                  <ul class="list-disc text-sm">
+                    <li>Enviar textos (mensajear)</li>
+                    <li>Enviar notas de voz (icono de micrófono)</li>
+                    <li>Enviar o compartir fotos y videos</li>
+                    <li>Descargar o guardar fotos y videos</li>
+                    <li>
+                      Enviar o compartir contactos de la agenda y recibir
+                      notificaciones desde la aplicación oficial de
+                      WhatsApp®
+                    </li>
+                  </ul>
+                </div>
+                <div>
+                  <img src="https://d58ohtx80p2sd.cloudfront.net/egov2/interiores_micro/img/twitter.png" alt="" />
+                  <span class="text-blue-100">APP Y SITIO</span>
+                  <ul class="list-disc text-sm">
+                    <li>Visualizar el timeline personal o de terceros</li>
+                    <li>Publicar un tweet</li>
+                    <li>Comentar un tweet</li>
+                    <li>Dar favorito a un tweet</li>
+                    <li>Retwittear un tweet</li>
+                    <li>Citar un tweet</li>
+                    <li>Enviar un mensaje directo</li>
+                    <li>Recibir notificaciones</li>
+                    <li>Publicar o cargar fotos en el timeline personal</li>
+                    <li>Descargar fotos y compartir ubicación personal</li>
+                  </ul>
+                </div>
+                <div class="pb-8">
+                  <img src="https://d58ohtx80p2sd.cloudfront.net/egov2/interiores_micro/img/facebook.png" alt="" />
+                  <span class="text-blue-500 text-xs md:text-sm">APPS DE FACEBOOK®
+                  </span>
+                  <ul class="list-disc text-xs md:text-sm">
+                    <li>
+                      Visualizar el muro personal o de cualquier otra
+                      persona o grupo
+                    </li>
+                    <li>
+                      Publicar “estado” personal o comentar el “estado” de
+                      cualquier otra persona o grupo
+                    </li>
+                    <li>
+                      Publicar o cargar fotos y video en el muro utilizando
+                      las Apps oficiales de Facebook®
+                    </li>
+                    <li>
+                      Guardar fotos del muro personal o de cualquier persona
+                      o grupo
+                    </li>
+                    <li>
+                      Dar “me gusta” a alguna historia personal o de
+                      cualquier otra persona o grupo
+                    </li>
+                    <li>
+                      Comentar cualquier historia personal o de cualquier
+                      otra persona o grupo
+                    </li>
+                    <li>
+                      Compartir cualquier historia en el muro personal o de
+                      cualquier otra persona o grupo
+                    </li>
+                    <li>
+                      Mensajear (enviar textos) a través de Facebook
+                      Messenger®
+                    </li>
+                    <li>
+                      Compartir imágenes a través de Facebook Messenger®
+                    </li>
+                    <li>
+                      Recibir notificaciones desde las aplicaciones
+                      oficiales de Facebook®
+                    </li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="collapse w-full overflow-hidden legales-ac">
+            <input class="absolute opacity-0" id="tab-multi-three" type="checkbox" name="tabs" />
+            <a href="terminos_y_condiciones.html" class="
+                  block
+                  p-5
+                  leading-normal
+                  cursor-pointer
+                  lg:text-xl
+                  sm:text-sm
+                " for="tab-single-3">TÉRMINOS Y CONDICIONES</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!--FOOTER-->
+  <footer class="footer px-4 mb-24 md:mb-0 md:px-32">
+    <div class="flex flex-col md:flex-row">
+      <div class="col-span-4 md:col-span-3 w-72 md:w-96 p-5">
+        <span class="text-white text-xs place-self-center">Servicio de telefonía proporcionado por</span>
+        <a style="cursor: pointer" onclick="gotoExternal('FP')"><img class="mt-2 w-48" src="img/fp-blanco.svg"
+            alt="logo fp blanco" /></a>
+        <div class="footer-info">
+          <div class="flex grid-cols-2 my-6">
+            <div class="w-12">
+              <img class="" src="img/tel-footer.svg" alt="" />
+            </div>
+            <span class="text-white text-xs md:text-md"><strong>Atención a Clientes</strong> <br />
+              Marca al 55 5610 1010</span>
+          </div>
+          <div class="flex grid-cols-2 my-6">
+            <div class="w-12">
+              <img class="" src="img/tel-footer.svg" alt="" />
+            </div>
+            <span class="text-white text-xs md:text-md"><strong>Ventas </strong> <br />
+              Marca al 55 55 123 123</span>
+          </div>
+          <div class="flex grid-cols-2 my-6">
+            <div class="w-12">
+              <img class="" src="img/ubicacion-footer.svg" alt="" />
+            </div>
+            <span class="text-white text-xs md:text-md">Cobertura a Nivel Nacional</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex w-full mb-12 md:mb-0 md:col-span-3 ">
+        <div class="flex justify-center flex-col">
+          <a href="tarifas_IFT.html" class="text-white underline font-bold text-sm md:text-sm">Tarifas de servicio
+            autorizadas</a>
+          <br />
+          <a style="cursor: pointer" onclick="gotoExternal('FPfraudes')"
+            class="text-white underline font-bold text-sm md:text-sm">Política de prevención y detección de
+            fraude</a>
+
+            <br />
+            <a href="https://www.freedompop.mx/roboextravio" class="text-white underline font-bold text-sm md:text-sm" target="_blank">Reporte por robo o extravío</a>
+            <br />
+        </div>
+      </div>
+    </div>
+
+    <span class="text-white  TyCM">
+
+
+    </span>
+  </footer>
+
+  <!--PLECA ROJA-->
+  <a class="
+     pleca-chip
+     rounded-xl
+     fixed
+     flex-col
+     py-2
+     px-2
+     -mb-3
+     right-0
+     left-0
+     bottom-0
+     mx-16
+     md:left-auto
+     md:right-0
+     md:float-right
+     md:mx-0
+     md:w-56
+     md:-mr-3
+     md:bottom-24
+     shadow-lg
+   " href="#myModal-pidelo" rel="modal:open">
+    <p>¡Si tienes Dish!</p>
+    <p class="font-bold text-xs pb-3">TIENES TU CHIP GRATIS</p>
+    <p class="font-mono text-md md:text-xl">PÍDELO AQUÍ</p>
+  </a>
+
+  <!--FIN PLECA ROJA-->
+
+  <!--Modal chip-->
+  <div class="modal z-50 mt-20 md:m-10" id="myModal-pidelo">
+    <div class="w-auto my-6 d-flex justify-center text-center mx-auto w-3xl">
+      <!--body-->
+      <div class="modal-contentedor">
+        <div class="d-flex">
+          <img class="self-center" src="https://d58ohtx80p2sd.cloudfront.net/egov2/img/dish-header.png" />
+        </div>
+        <h3 class="font-bold text-sm md:text-3xl mt-8">PIDE TU CHIP</h3>
+        <span class="text-xs">ES UN BENEFICIO EXCLUSIVO <br />PARA SUSCRIPTORES DISH</span>
+
+        <form action="" id="formNormal" class="px-14 mt-5">
+          <input class="
+                mt-4
+                shadow
+                appearance-none
+                border-b border-red-100
+                text-center
+                rounded
+                w-full
+                py-2
+                px-3
+                text-gray-700
+                leading-tight
+                focus:outline-none focus:shadow-outline
+              " type="number" name="suscriptor" id="susc" placeholder="Número de suscriptor" />
+          <input class="
+                mt-4
+                shadow
+                appearance-none
+                border-b border-red-100
+                text-center
+                rounded
+                w-full
+                py-2
+                px-3
+                text-gray-700
+                leading-tight
+                focus:outline-none focus:shadow-outline
+              " type="number" name="suscriptor" id="tel" placeholder="Número de celular" />
+          <input class="
+                mt-4
+                shadow
+                appearance-none
+                border-b border-red-100
+                text-center
+                rounded
+                w-full
+                py-2
+                px-3
+                text-gray-700
+                leading-tight
+                focus:outline-none focus:shadow-outline
+              " type="email" name="correo" id="mail" placeholder="Correo electrónico" />
+
+          <div class="self-center mb-6 mt-8">
+            <label class="container-checkbox flex flex-row justify-center items-center gap-2">
+              <input type="checkbox" name="checkControl" id="checkControl" value="1">
+              <span class="checkmark"></span>
+              <h3 class="registro01">DESEO SIMS ADICIONALES</h3>
+            </label>
+            <span class="error-val text-red-300" id="errorC"></span>
+          </div>
+          <div id="content" class="mb-12" style="display: none;">
+            <label for="">NÚMERO DE SIMS ADICIONALES</label>
+            <select class="px-4 py-2" id="selectControl">
+              <option value="0">Seleccione la cantidad:</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+            </select>
+            <span class="error-val" id="errorP"></span>
+          </div>
+
+          <button class="bg-red-300 text-white py-3 px-8 rounded-sm" type="button" id="solicitar" onclick="login()"
+            onmousedown="_gaq.push(['_trackEvent','solicitachip', 'button', 'solicitar',100,false]);">
+            CONTINUAR
+          </button>
+        </form>
+        <img class="mt-8" src="https://d58ohtx80p2sd.cloudfront.net/egov2/img/ego.png" />
+      </div>
+    </div>
+  </div>
+
+  <!-- jQuery Modal -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+
+  <script>
+
+    createPanelGroup(".pack-content", ".pack")
+
+    function createPanelGroup(panelGroupClass, intercambiadorClass) {
+      const intercanbiadores = document.querySelectorAll(intercambiadorClass);
+      const paneles = document.querySelectorAll(panelGroupClass);
+      for (let i = 0; i < intercanbiadores.length; i++) {
+        intercanbiadores[i].addEventListener('click', onTabClick, false);
+      }
+
+      function onTabClick(event) {
+
+        // deactivate existing active tabs and panel
+
+        for (let i = 0; i < paneles.length; i++) {
+          paneles[i].classList.remove("active");
+        }
+
+
+        // activate new tabs and panel
+        event.currentTarget.classList.add('active');
+        let idString = event.currentTarget.getAttribute('data-target');
+        console.log(idString);
+        document.getElementById(idString).classList.add("active");
+
+      }
+    }
+  </script>
+
+
+  <script type="application/javascript">
+    var pedido = {
+      principal: 0,
+
+      adicional: 0,
+    };
+
+    $(document).ready(function () {
+      $.ajax({
+        url: fpConstants.fp_url + "getlegal",
+
+        contentType: "application/json",
+
+        success: function (response) {
+          $(".TyCM").html(response.legal);
+        },
+      });
+
+      $(".container-checkbox input[type=checkbox]").attr("checked", false);
+    });
+
+    var numSuscriptor = null;
+
+    function popitup(url) {
+      newwindow = window.open(url, "name", "height=250,width=650");
+
+      if (window.focus) {
+        newwindow.focus();
+      }
+
+      return false;
+    }
+
+    function popitupFull(url) {
+      newwindow = window.open(url, "name", "height=600,width=800");
+
+      if (window.focus) {
+        newwindow.focus();
+      }
+
+      return false;
+    }
+
+    function login() {
+      var strSusc = $("#susc").val();
+
+      var strTel = $("#tel").val();
+
+      var strMail = $("#mail").val();
+
+      var errorCount = 0;
+
+      $("#errorS").html("");
+
+      $("#errorT").html("");
+
+      $("#errorM").html("");
+
+      if (strSusc.length == 0) {
+        $("#errorS").html("El campo suscriptor no puede estar vacío.");
+
+        errorCount = errorCount + 1;
+      } else {
+        if (!validateNumber(strSusc)) {
+          $("#errorS").html("El valor ingresado no es válido.");
+
+          errorCount = errorCount + 1;
+        }
+      }
+
+      if (strTel.length == 0) {
+        $("#errorT").html("El campo teléfono no puede estar vacío.");
+
+        errorCount = errorCount + 1;
+      } else {
+        if (!validateNumber(strTel)) {
+          $("#errorT").html("El valor ingresado no es válido.");
+
+          errorCount = errorCount + 1;
+        } else {
+          if (strTel.length < 10) {
+            $("#errorT").html("El teléfono debe incluir la lada.");
+
+            errorCount = errorCount + 1;
+          }
+        }
+      }
+
+      if (strMail.length != 0) {
+        if (!validateEmail(strMail)) {
+          $("#errorM").html(
+            "El valor ingresado en el campo correo electrónico no es válido."
+          );
+
+          errorCount = errorCount + 1;
+        }
+      }
+
+      if (errorCount > 0) {
+        return null;
+      }
+
+      loginService(strSusc, strTel, strMail, "myModal-pidelo");
+    }
+
+    function loginService(suscriptor, telefono, email, id) {
+      $("#" + id).LoadingOverlay("show");
+
+      if (!$("#checkControl").is(":checked")) {
+        pedido.adicional = 0;
+
+        pedido.principal = 1;
+      }
+
+      $.ajax({
+        type: "POST",
+
+        url: fpConstants.fp_url + "solicitudlanding",
+
+        contentType: "application/json",
+
+        data: JSON.stringify({
+          cliente: suscriptor,
+
+          telefono: telefono,
+
+          correo: email,
+
+          pedido: {
+            principal: pedido.principal,
+
+            adicional: pedido.adicional,
+          },
+        }),
+
+        success: function (response) {
+          $("#" + id).LoadingOverlay("hide");
+
+          if (response.codigoError) {
+            var codigoerror = parseInt(response.codigoError);
+
+            switch (parseInt(response.codigoError)) {
+              case 0:
+                window.location.assign(
+                  "confirma.html?vsess=" + response.llave
+                );
+
+                break;
+
+              case 1:
+                window.location.assign(
+                  "cliente_con_chip.html?vsess=" + response.llave
+                );
+
+                break;
+
+              case 3:
+                swal({
+                  imageUrl: "https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png",
+
+                  text: "Estimado suscriptor, ya cuentas con un proceso de solicitud de SIM concluido.",
+                });
+
+                break;
+
+              case 4:
+
+              case 5:
+
+              case 6:
+                window.location.assign(
+                  "no_cobertura.html?vsess=" + response.llave
+                );
+
+                break;
+
+              case 8:
+                window.location.assign(
+                  "cliente_moroso.html?vsess=" + response.llave
+                );
+
+                break;
+
+              case 9:
+                swal({
+                  imageUrl: "https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png",
+
+                  text: "Estimado suscriptor, los datos de login son inválidos.",
+                });
+
+                break;
+
+              case 10:
+                window.location.assign(
+                  "cliente_chip_orden_abierta.html?vsess=" + response.llave
+                );
+
+                break;
+
+              case 11:
+                window.location.assign(
+                  "cliente_chip_voc.html?vsess=" + response.llave
+                );
+
+                break;
+
+              case 12:
+                swal({
+                  imageUrl: "https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png",
+
+                  text: "Estimado suscriptor, ocurrió un error: Ya cuenta con una sim principal, solo puede solicitar sims adicionales",
+                });
+
+                break;
+
+              default:
+                swal({
+                  imageUrl: "https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png",
+
+                  text: "Estimado suscriptor, ocurrió un error: " +
+                    response.mensajeError,
+                });
+            }
+          } else {
+            $("#" + id).LoadingOverlay("hide");
+
+            swal({
+              imageUrl: "https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png",
+
+              text: "Estimado suscriptor, ocurrió un error al ejecutar la petición, por favor intente nuevamente.",
+            });
+          }
+        },
+
+        error: function (xhr) {
+          $("#" + id).LoadingOverlay("hide");
+
+          swal({
+            imageUrl: "https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png",
+
+            text: "Estimado suscriptor, ocurrió un error: " +
+              xhr.status +
+              " " +
+              xhr.statusText,
+          });
+        },
+      });
+    }
+
+    function queryCustomerServiceByTalon(talon, id) {
+      $("#" + id).LoadingOverlay("show");
+
+      $.ajax({
+        type: "POST",
+
+        url: fpConstants.customer_url +
+          "queryCustomerNumber?opcion=1&talonario=" +
+          talon,
+
+        contentType: "application/json",
+
+        success: function (response) {
+          $("#" + id).LoadingOverlay("hide");
+
+          if (response.data.codigoRespuesta) {
+            switch (parseInt(response.data.codigoRespuesta)) {
+              case 0:
+                $("#susc").val(response.data.cliente);
+
+                $("#suscM").val(response.data.cliente);
+
+                $("#buscarNumero").modal("hide");
+
+                break;
+
+              default:
+                $("#muestraErrorTal").show(1000);
+
+                $("#errorPlaceHolderTal").html(response.data.descripcion);
+            }
+          } else {
+            $("#" + id).LoadingOverlay("hide");
+
+            $("#muestraErrorTal").show(1000);
+
+            $("#errorPlaceHolderTal").html(
+              "Error al ejecutar la petición, por favor intente nuevamente."
+            );
+          }
+        },
+
+        error: function (xhr) {
+          $("#" + id).LoadingOverlay("hide");
+
+          $("#muestraErrorTal").show(1000);
+
+          $("#errorPlaceHolderTal").html(xhr.status + " " + xhr.statusText);
+        },
+      });
+    }
+
+    function queryCustomerServiceByTelefono(lada, telefono, id) {
+      $("#" + id).LoadingOverlay("show");
+
+      $.ajax({
+        type: "POST",
+
+        url: fpConstants.customer_url +
+          "queryCustomerNumber?opcion=2&lada=" +
+          lada +
+          "&telefono=" +
+          telefono,
+
+        contentType: "application/json",
+
+        success: function (response) {
+          $("#" + id).LoadingOverlay("hide");
+
+          if (response.data.codigoRespuesta) {
+            switch (parseInt(response.data.codigoRespuesta)) {
+              case 0:
+                $("#susc").val(response.data.cliente);
+
+                $("#suscM").val(response.data.cliente);
+
+                $("#buscarNumero").modal("hide");
+
+                break;
+
+              default:
+                $("#muestraErrorTel").show(1000);
+
+                $("#errorPlaceHolderTel").html(response.data.descripcion);
+            }
+          } else {
+            $("#" + id).LoadingOverlay("hide");
+
+            $("#muestraErrorTel").show(1000);
+
+            $("#errorPlaceHolderTel").html(
+              "Error al ejecutar la petición, por favor intente nuevamente."
+            );
+          }
+        },
+
+        error: function (xhr) {
+          $("#" + id).LoadingOverlay("hide");
+
+          $("#muestraErrorTel").show(1000);
+
+          $("#errorPlaceHolderTel").html(xhr.status + " " + xhr.statusText);
+        },
+      });
+    }
+
+    $("#xTarjeta").on("click", function () {
+      $("#muestraErrorTal").hide(500);
+
+      $("#numXTarjeta").show(1000);
+
+      $("#seleccionX").hide(500);
+
+      $("#errorPlaceHolderTal").html("");
+    });
+
+    $("#xTelefono").on("click", function () {
+      $("#muestraErrorTel").hide(500);
+
+      $("#numXTel").show(1000);
+
+      $("#seleccionX").hide(500);
+
+      $("#errorPlaceHolderTel").html("");
+    });
+
+    $(".toSeleccion").on("click", function () {
+      $("#seleccionX").show(1000);
+
+      $("#numXTarjeta").hide(500);
+
+      $("#numXTel").hide(500);
+
+      $("#muestraSuscriptor").hide(500);
+
+      $("#muestraErrorTal").hide(500);
+
+      $("#muestraErrorTel").hide(500);
+
+      $("#errorPlaceHolderTal").html("");
+
+      $("#errorPlaceHolderTel").html("");
+
+      $("#errorModalTal").html("");
+
+      $("#errorModalLada").html("");
+
+      $("#errorModalTel").html("");
+
+      $("#queryTarjeta").val("");
+
+      $("#queryLada").val("");
+
+      $("#queryTelefono").val("");
+    });
+
+    $("#xTarjetaOK").on("click", function () {
+      var errorCount = 0;
+
+      $("#muestraErrorTal").hide(500);
+
+      $("#errorPlaceHolderTal").html("");
+
+      $("#errorModalTal").html("");
+
+      var tarjeta = $("#queryTarjeta").val();
+
+      if (tarjeta.length == 0) {
+        $("#errorModalTal").html("El talonario no puede estar vacío.");
+
+        errorCount = errorCount + 1;
+      }
+
+      if (errorCount > 0) {
+        return null;
+      }
+
+      queryCustomerServiceByTalon(tarjeta, "numXTarjeta");
+    });
+
+    $("#xTelefonoOK").on("click", function () {
+      var errorCount = 0;
+
+      $("#muestraErrorTel").hide(500);
+
+      $("#errorPlaceHolderTel").html("");
+
+      $("#errorModalLada").html("");
+
+      $("#errorModalTel").html("");
+
+      var lada = $("#queryLada").val();
+
+      var telefono = $("#queryTelefono").val();
+
+      if (lada.length == 0) {
+        $("#errorModalLada").html("La lada no puede estar vacía.");
+
+        errorCount = errorCount + 1;
+      } else {
+        if (!validateNumber(lada)) {
+          $("#errorModalLada").html("El valor ingresado no es válido.");
+
+          errorCount = errorCount + 1;
+        }
+      }
+
+      if (telefono.length == 0) {
+        $("#errorModalTel").html("El teléfono no puede estar vacío.");
+
+        errorCount = errorCount + 1;
+      } else {
+        if (!validateNumber(telefono)) {
+          $("#errorModalTel").html("El valor ingresado no es válido.");
+
+          errorCount = errorCount + 1;
+        }
+      }
+
+      if (errorCount > 0) {
+        return null;
+      }
+
+      queryCustomerServiceByTelefono(lada, telefono, "numXTel");
+    });
+
+    $("#buscarNumero").on("hidden.bs.modal", function () {
+      $(":input", this).val("");
+
+      $("#numXTarjeta").hide(500);
+
+      $("#numXTel").hide(500);
+
+      $("#muestraSuscriptor").hide(500);
+
+      $("#seleccionX").show();
+
+      $("#errorPlaceHolder").html("");
+
+      $("#errorModalTal").html("");
+
+      $("#errorModalLada").html("");
+
+      $("#errorModalTel").html("");
+    });
+
+    $(document.body)
+      .on("click", "#checkControl", function () {
+
+        $("#errorC").html("");
+
+        var strSusc = $("#susc").val();
+
+        $("#errorC").html("");
+
+        if (strSusc.length == 0) {
+          $("#errorC").html("El campo suscriptor no puede estar vacío.");
+
+          $(".container-checkbox input[type=checkbox]").attr(
+            "checked",
+            false
+          );
+
+          return false;
+        }
+      })
+      .on("change", "#checkControl", function () {
+        if ($("#checkControl").is(":checked")) {
+          pedido.principal = 0;
+
+          pedido.adicional = 0;
+
+          $("#content").show();
+
+          reseteaPedido();
+        } else {
+          pedido.principal = 1;
+
+          pedido.adicional = 0;
+
+          $("#content").hide();
+
+          $("#solicitar").prop("disabled", false);
+        }
+      });
+
+    $("#selectControl").on("change", function () {
+      $("#errorP").html("");
+
+      var suscriptor = Number($("#susc").val());
+
+      pedido.principal = 0;
+
+      pedido.adicional = 0;
+
+      var select = $(this);
+
+      $("#solicitar").prop("disabled", true);
+
+      var adicionales = Number(select.val());
+
+      if (adicionales === 0) {
+        pedido.principal = 0;
+
+        pedido.adicional = 0;
+
+        $("#solicitar").prop("disabled", true);
+      } else {
+        $("#selectControl").LoadingOverlay("show");
+
+        pedido.principal = 0;
+
+        pedido.adicional = adicionales;
+
+        $.ajax({
+          type: "POST",
+
+          url: fpConstants.fp_url + "validapedido",
+
+          contentType: "application/json",
+
+          data: JSON.stringify({
+            cCliente: suscriptor,
+
+            simAdicionales: pedido.adicional,
+          }),
+
+          success: function (response) {
+            $("#selectControl").LoadingOverlay("hide");
+
+            if (response.control) {
+              switch (response.control.errorCode) {
+                case "000":
+                  pedido = response.pedido;
+
+                  $("#solicitar").prop("disabled", false);
+
+                  break;
+
+                default:
+                  $("#errorP").html(response.control.errorMessage);
+
+                  $("#solicitar").prop("disabled", true);
+              }
+            } else {
+              $("#selectControl").LoadingOverlay("hide");
+
+              $("#errorP").html(
+                "Error al ejecutar la petición, por favor intente nuevamente."
+              );
+
+              $("#solicitar").prop("disabled", true);
+            }
+          },
+
+          error: function (xhr) {
+            $("#selectControl").LoadingOverlay("hide");
+
+            $("#muestraErrorTal").show(1000);
+
+            $("#errorPlaceHolderTal").html(xhr.status + " " + xhr.statusText);
+          },
+        });
+      }
+    });
+
+    $("#susc").on("blur", function () {
+      if ($("#checkControl").is(":checked")) {
+        reseteaPedido();
+      }
+    });
+
+    function reseteaPedido() {
+      $("#solicitar").prop("disabled", true);
+
+      $("#selectControl").val(0).change();
+    }
+
+    function gotoExternal(type) {
+      var r = confirm(
+        "El sitio al que te dirigirás es ajeno a Dish Celular."
+      );
+
+      if (r == true) {
+        if (type == "IFT") {
+          newwindow = window.open(
+            "https://tarifas.ift.org.mx/ift_visor/",
+            "name"
+          );
+        }
+
+        if (type == "FP") {
+          newwindow = window.open("https://freedompop.mx/", "name");
+        }
+
+        if (type == "FPfraudes") {
+          newwindow = window.open(
+            "https://www.freedompop.mx/usojusto.htm",
+            "name"
+          );
+        }
+
+        if (window.focus) {
+          newwindow.focus();
+        }
+      } else {
+        return false;
+      }
+    }
+
+    $(document).ready(function () {
+      $("#modal-datemasdatos").modal("toggle");
+    });
+
+    function showDialog2() {
+      $("#dialog1").removeClass("fade").modal("hide");
+
+      $("#dialog2").modal("show").addClass("fade");
+    }
+
+    $("#dialog1").modal("show");
+
+    $("#dialog-ok").on("click", function () {
+      showDialog2();
+    });
+
+    function showDialogMovil() {
+      $("#dialog1").removeClass("fade").modal("hide");
+
+      $("#dialog2").modal("show").addClass("fade");
+    }
+
+    $("#dialog1").modal("show");
+
+    $("#dialog-ok-2").on("click", function () {
+      showDialog2();
+    });
+  </script>
+
+  <script>(function (d) { var s = d.createElement("script"); s.setAttribute("data-account", "k3LFlBnoHW"); s.setAttribute("src", "https://cdn.userway.org/widget.js"); (d.body || d.head).appendChild(s); })(document)</script>
+  <noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website
+      accessibility</a></noscript>
+
+
+
+</body>
+
+</html>

@@ -1,0 +1,897 @@
+<html lang="es">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>FreedomPop</title>
+  <link rel="shortcut icon" type="image/png" href="img/favicon.png" />
+
+  <link rel="stylesheet" href="main.css" />
+  <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+  <link rel="stylesheet" href="main.css" />
+  <script src="https://kit.fontawesome.com/987edafa85.js" crossorigin="anonymous"></script>
+  <link href="http://db.onlinewebfonts.com/c/0fecedcc2f33a0880b3f56b9290da4d5?family=Akzidenz+Grotesk+BE+Bold"
+    rel="stylesheet" type="text/css" />
+  <script src="https://d58ohtx80p2sd.cloudfront.net/egov2/js/scriptsv2.js"></script>
+  <script src="https://d58ohtx80p2sd.cloudfront.net/egov2/js/jquery.min.js"></script>
+  <script
+    src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@1.5.4/src/loadingoverlay.min.js"></script>
+  <script src="https://d1pt5ohyflo74l.cloudfront.net/js/constants.js"></script>
+  <script src="https://d1pt5ohyflo74l.cloudfront.net/js/utils.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.7/sweetalert2.all.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+  <script>(function (d) { var s = d.createElement("script"); s.setAttribute("data-account", "k3LFlBnoHW"); s.setAttribute("src", "https://cdn.userway.org/widget.js"); (d.body || d.head).appendChild(s); })(document)</script>
+  <noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website
+      accessibility</a></noscript>
+
+      <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-P9FTRST');</script>
+  <!-- End Google Tag Manager -->
+  
+  
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9FTRST"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+
+  
+  <style>
+    .TyCM {
+      font-size: 0.6rem;
+    }
+  </style>
+
+</head>
+
+<body>
+  <div class="w-full text-center font-sans-serif sticky top-0 z-50 bg-blue-100">
+    <a class="text-white text-xl md:text-xl lg:text-2xl py-2" href="tel:5555123123">
+      CONTRATA AL <br class="md:hidden block"> <strong class="">55 55 123 123</strong>
+    </a>
+  </div>
+  <header x-data="{ mobileMenuOpen : false }" class="
+        font-serif
+        text-sm
+        md:text-xl
+        flex flex-wrap
+        z-10
+        md:z-0
+        flex-row
+        justify-between
+        md:items-center md:space-x-4
+        bg-white
+        py-6
+        px-6
+        relative
+      ">
+    <a href="index.html" class="block">
+      <img class="h-8 md:h-8 lg:h-12 " src="img/LOGOfpop.svg" alt="freedompop Logo" title="" />
+    </a>
+    <button @click="mobileMenuOpen = !mobileMenuOpen" class="inline-block sm:hidden w-8 h-8 bg-white text-gray-600 p-1">
+      <svg fill="currentColor" viewBox="0 0 20 20" xmlns="">
+        <path fill-rule="evenodd"
+          d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+          clip-rule="evenodd"></path>
+      </svg>
+    </button>
+    <nav class="
+          absolute
+          flex
+          items-center
+          md:relative
+          top-16
+          left-0
+          md:top-0
+          z-20
+          md:flex
+          flex-col
+          md:flex-row md:space-x-6
+          w-full
+          md:w-auto
+          bg-white
+          shadow-md
+          rounded-lg
+          md:rounded-none md:shadow-none md:bg-transparent
+          p-6
+          pt-0
+          md:p-0
+        " :class="{ 'flex' : mobileMenuOpen , 'hidden' : !mobileMenuOpen}" @click.away="mobileMenuOpen = false">
+      <div class="options-menu flex flex-col md:flex-row self-end">
+        <a href="index.html"
+          class="text-sm md:text-xs lg:text-md xl:text-xl text-blue-100 hover:underline pr-5">Inicio</a>
+        <a href="promociones.html"
+          class="text-sm md:text-xs lg:text-md xl:text-xl text-blue-100 hover:underline pr-5">Promociones</a>
+        <a href="ayuda.html"
+          class="text-sm md:text-xs lg:text-md xl:text-xl text-blue-100 hover:underline pr-5">Ayuda</a>
+        <a href="lugares-pago.html"
+          class="text-sm md:text-xs lg:text-md xl:text-xl text-blue-100 hover:underline pr-5">Lugares de pago</a>
+        <a href="contacto.html"
+          class="text-sm md:text-xs lg:text-md xl:text-xl text-blue-100 hover:underline md:hidden block">Contacto</a>
+      </div>
+      <div class=" flex-col justify-center hidden md:block">
+        <img class="w-8 md:w-5 lg:w-7 2xl:w-6 mx-auto" src="img/contacto.svg" alt="" />
+        <a href="contacto.html" class="text-sm md:text-xs lg:text-md  xl:text-xl text-blue-100 hover:underline">
+          Contacto
+        </a>
+      </div>
+    </nav>
+  </header>
+
+  <div class="bg-fondogris py-12 grid h-5/6">
+    <div class="justify-center place-self-center text-center">
+      <h3 class="text-blue-100 font-bold text-2xl">GRACIAS</h3>
+      <h3 class="font-bold text-1xl">
+        LA INFORMACION HA SIDO ENVIADA <br />
+        DE MANERA CORRECTA
+      </h3>
+
+      <a class="mt-8 bg-red-300 text-white py-3 px-8 rounded-sm" type="button" id="solicitar"
+        href="index.html">REGRESAR</a>
+    </div>
+  </div>
+
+  <!--FOOTER-->
+  <footer class="footer px-4 mb-24 md:mb-0 md:px-32">
+    <div class="flex flex-col md:flex-row">
+      <div class="col-span-4 md:col-span-3 w-72 md:w-96 p-5">
+        <span class="text-white text-xs place-self-center">Servicio de telefonía proporcionado por</span>
+        <a style="cursor: pointer" onclick="gotoExternal('FP')"><img class="mt-2 w-48" src="img/fp-blanco.svg"
+            alt="logo fp blanco" /></a>
+        <div class="footer-info">
+          <div class="flex grid-cols-2 my-6">
+            <div class="w-12">
+              <img class="" src="img/tel-footer.svg" alt="" />
+            </div>
+            <span class="text-white text-xs md:text-md"><strong>Atención a Clientes</strong> <br />
+              Marca al 55 5610 1010</span>
+          </div>
+          <div class="flex grid-cols-2 my-6">
+            <div class="w-12">
+              <img class="" src="img/tel-footer.svg" alt="" />
+            </div>
+            <span class="text-white text-xs md:text-md"><strong>Ventas </strong> <br />
+              Marca al 55 55 123 123</span>
+          </div>
+          <div class="flex grid-cols-2 my-6">
+            <div class="w-12">
+              <img class="" src="img/ubicacion-footer.svg" alt="" />
+            </div>
+            <span class="text-white text-xs md:text-md">Cobertura a Nivel Nacional</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex w-full mb-12 md:mb-0 md:col-span-3 ">
+        <div class="flex justify-center flex-col">
+          <a href="tarifas_IFT.html" class="text-white underline font-bold text-sm md:text-sm">Tarifas de servicio
+            autorizadas</a>
+          <br />
+          <a href="https://my.freedompop.mx/tarifas" target="_blank" class="text-white underline font-bold text-sm md:text-sm">Formatos Simplificados</a>
+          <br />
+          <a style="cursor: pointer" onclick="gotoExternal('FPfraudes')"
+            class="text-white underline font-bold text-sm md:text-sm">Política de prevención y detección de
+            fraude</a>
+
+            <br />
+            <a href="https://www.freedompop.mx/roboextravio" class="text-white underline font-bold text-sm md:text-sm" target="_blank">Reporte por robo o extravío</a>
+            <br />
+            <a href="terminos_y_condiciones_mvshub.html" class="text-white underline font-bold text-sm md:text-sm" target="_blank">Términos y condiciones de mvshub</a>
+            <br />
+        </div>
+      </div>
+    </div>
+   
+       <nav class="footer-links page no-padding">
+      <a href="{{tab.url}}" class="{% if tab.tab_type == current_tab %}active{% endif %}">¿Tienes dudas?</a>
+     </nav>
+ 
+
+    <span class="text-white  TyCM"></span>
+  </footer>
+  
+  <script type="application/javascript">
+    var pedido = {
+      principal: 0,
+
+      adicional: 0,
+    };
+
+    $(document).ready(function () {
+      $.ajax({
+        url: fpConstants.fp_url + "getlegal",
+
+        contentType: "application/json",
+
+        success: function (response) {
+          $(".TyCM").html(response.legal);
+        },
+      });
+
+      $(".container-checkbox input[type=checkbox]").attr("checked", false);
+    });
+
+    var numSuscriptor = null;
+
+    function popitup(url) {
+      newwindow = window.open(url, "name", "height=250,width=650");
+
+      if (window.focus) {
+        newwindow.focus();
+      }
+
+      return false;
+    }
+
+    function popitupFull(url) {
+      newwindow = window.open(url, "name", "height=600,width=800");
+
+      if (window.focus) {
+        newwindow.focus();
+      }
+
+      return false;
+    }
+
+    function login() {
+      var strSusc = $("#susc").val();
+
+      var strTel = $("#tel").val();
+
+      var strMail = $("#mail").val();
+
+      var errorCount = 0;
+
+      $("#errorS").html("");
+
+      $("#errorT").html("");
+
+      $("#errorM").html("");
+
+      if (strSusc.length == 0) {
+        $("#errorS").html("El campo suscriptor no puede estar vacío.");
+
+        errorCount = errorCount + 1;
+      } else {
+        if (!validateNumber(strSusc)) {
+          $("#errorS").html("El valor ingresado no es válido.");
+
+          errorCount = errorCount + 1;
+        }
+      }
+
+      if (strTel.length == 0) {
+        $("#errorT").html("El campo teléfono no puede estar vacío.");
+
+        errorCount = errorCount + 1;
+      } else {
+        if (!validateNumber(strTel)) {
+          $("#errorT").html("El valor ingresado no es válido.");
+
+          errorCount = errorCount + 1;
+        } else {
+          if (strTel.length < 10) {
+            $("#errorT").html("El teléfono debe incluir la lada.");
+
+            errorCount = errorCount + 1;
+          }
+        }
+      }
+
+      if (strMail.length != 0) {
+        if (!validateEmail(strMail)) {
+          $("#errorM").html(
+            "El valor ingresado en el campo correo electrónico no es válido."
+          );
+
+          errorCount = errorCount + 1;
+        }
+      }
+
+      if (errorCount > 0) {
+        return null;
+      }
+
+      loginService(strSusc, strTel, strMail, "myModal-pidelo");
+    }
+
+    function loginService(suscriptor, telefono, email, id) {
+      $("#" + id).LoadingOverlay("show");
+
+      if (!$("#checkControl").is(":checked")) {
+        pedido.adicional = 0;
+
+        pedido.principal = 1;
+      }
+
+      $.ajax({
+        type: "POST",
+
+        url: fpConstants.fp_url + "solicitudlanding",
+
+        contentType: "application/json",
+
+        data: JSON.stringify({
+          cliente: suscriptor,
+
+          telefono: telefono,
+
+          correo: email,
+
+          pedido: {
+            principal: pedido.principal,
+
+            adicional: pedido.adicional,
+          },
+        }),
+
+        success: function (response) {
+          $("#" + id).LoadingOverlay("hide");
+
+          if (response.codigoError) {
+            var codigoerror = parseInt(response.codigoError);
+
+            switch (parseInt(response.codigoError)) {
+              case 0:
+                window.location.assign(
+                  "confirma.html?vsess=" + response.llave
+                );
+
+                break;
+
+              case 1:
+                window.location.assign(
+                  "cliente_con_chip.html?vsess=" + response.llave
+                );
+
+                break;
+
+              case 3:
+                swal({
+                  imageUrl:
+                    "https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png",
+
+                  text: "Estimado suscriptor, ya cuentas con un proceso de solicitud de SIM concluido.",
+                });
+
+                break;
+
+              case 4:
+
+              case 5:
+
+              case 6:
+                window.location.assign(
+                  "no_cobertura.html?vsess=" + response.llave
+                );
+
+                break;
+
+              case 8:
+                window.location.assign(
+                  "cliente_moroso.html?vsess=" + response.llave
+                );
+
+                break;
+
+              case 9:
+                swal({
+                  imageUrl:
+                    "https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png",
+
+                  text: "Estimado suscriptor, los datos de login son inválidos.",
+                });
+
+                break;
+
+              case 10:
+                window.location.assign(
+                  "cliente_chip_orden_abierta.html?vsess=" + response.llave
+                );
+
+                break;
+
+              case 11:
+                window.location.assign(
+                  "cliente_chip_voc.html?vsess=" + response.llave
+                );
+
+                break;
+
+              case 12:
+                swal({
+                  imageUrl:
+                    "https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png",
+
+                  text: "Estimado suscriptor, ocurrió un error: Ya cuenta con una sim principal, solo puede solicitar sims adicionales",
+                });
+
+                break;
+
+              default:
+                swal({
+                  imageUrl:
+                    "https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png",
+
+                  text:
+                    "Estimado suscriptor, ocurrió un error: " +
+                    response.mensajeError,
+                });
+            }
+          } else {
+            $("#" + id).LoadingOverlay("hide");
+
+            swal({
+              imageUrl:
+                "https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png",
+
+              text: "Estimado suscriptor, ocurrió un error al ejecutar la petición, por favor intente nuevamente.",
+            });
+          }
+        },
+
+        error: function (xhr) {
+          $("#" + id).LoadingOverlay("hide");
+
+          swal({
+            imageUrl:
+              "https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png",
+
+            text:
+              "Estimado suscriptor, ocurrió un error: " +
+              xhr.status +
+              " " +
+              xhr.statusText,
+          });
+        },
+      });
+    }
+
+    function queryCustomerServiceByTalon(talon, id) {
+      $("#" + id).LoadingOverlay("show");
+
+      $.ajax({
+        type: "POST",
+
+        url:
+          fpConstants.customer_url +
+          "queryCustomerNumber?opcion=1&talonario=" +
+          talon,
+
+        contentType: "application/json",
+
+        success: function (response) {
+          $("#" + id).LoadingOverlay("hide");
+
+          if (response.data.codigoRespuesta) {
+            switch (parseInt(response.data.codigoRespuesta)) {
+              case 0:
+                $("#susc").val(response.data.cliente);
+
+                $("#suscM").val(response.data.cliente);
+
+                $("#buscarNumero").modal("hide");
+
+                break;
+
+              default:
+                $("#muestraErrorTal").show(1000);
+
+                $("#errorPlaceHolderTal").html(response.data.descripcion);
+            }
+          } else {
+            $("#" + id).LoadingOverlay("hide");
+
+            $("#muestraErrorTal").show(1000);
+
+            $("#errorPlaceHolderTal").html(
+              "Error al ejecutar la petición, por favor intente nuevamente."
+            );
+          }
+        },
+
+        error: function (xhr) {
+          $("#" + id).LoadingOverlay("hide");
+
+          $("#muestraErrorTal").show(1000);
+
+          $("#errorPlaceHolderTal").html(xhr.status + " " + xhr.statusText);
+        },
+      });
+    }
+
+    function queryCustomerServiceByTelefono(lada, telefono, id) {
+      $("#" + id).LoadingOverlay("show");
+
+      $.ajax({
+        type: "POST",
+
+        url:
+          fpConstants.customer_url +
+          "queryCustomerNumber?opcion=2&lada=" +
+          lada +
+          "&telefono=" +
+          telefono,
+
+        contentType: "application/json",
+
+        success: function (response) {
+          $("#" + id).LoadingOverlay("hide");
+
+          if (response.data.codigoRespuesta) {
+            switch (parseInt(response.data.codigoRespuesta)) {
+              case 0:
+                $("#susc").val(response.data.cliente);
+
+                $("#suscM").val(response.data.cliente);
+
+                $("#buscarNumero").modal("hide");
+
+                break;
+
+              default:
+                $("#muestraErrorTel").show(1000);
+
+                $("#errorPlaceHolderTel").html(response.data.descripcion);
+            }
+          } else {
+            $("#" + id).LoadingOverlay("hide");
+
+            $("#muestraErrorTel").show(1000);
+
+            $("#errorPlaceHolderTel").html(
+              "Error al ejecutar la petición, por favor intente nuevamente."
+            );
+          }
+        },
+
+        error: function (xhr) {
+          $("#" + id).LoadingOverlay("hide");
+
+          $("#muestraErrorTel").show(1000);
+
+          $("#errorPlaceHolderTel").html(xhr.status + " " + xhr.statusText);
+        },
+      });
+    }
+
+    $("#xTarjeta").on("click", function () {
+      $("#muestraErrorTal").hide(500);
+
+      $("#numXTarjeta").show(1000);
+
+      $("#seleccionX").hide(500);
+
+      $("#errorPlaceHolderTal").html("");
+    });
+
+    $("#xTelefono").on("click", function () {
+      $("#muestraErrorTel").hide(500);
+
+      $("#numXTel").show(1000);
+
+      $("#seleccionX").hide(500);
+
+      $("#errorPlaceHolderTel").html("");
+    });
+
+    $(".toSeleccion").on("click", function () {
+      $("#seleccionX").show(1000);
+
+      $("#numXTarjeta").hide(500);
+
+      $("#numXTel").hide(500);
+
+      $("#muestraSuscriptor").hide(500);
+
+      $("#muestraErrorTal").hide(500);
+
+      $("#muestraErrorTel").hide(500);
+
+      $("#errorPlaceHolderTal").html("");
+
+      $("#errorPlaceHolderTel").html("");
+
+      $("#errorModalTal").html("");
+
+      $("#errorModalLada").html("");
+
+      $("#errorModalTel").html("");
+
+      $("#queryTarjeta").val("");
+
+      $("#queryLada").val("");
+
+      $("#queryTelefono").val("");
+    });
+
+    $("#xTarjetaOK").on("click", function () {
+      var errorCount = 0;
+
+      $("#muestraErrorTal").hide(500);
+
+      $("#errorPlaceHolderTal").html("");
+
+      $("#errorModalTal").html("");
+
+      var tarjeta = $("#queryTarjeta").val();
+
+      if (tarjeta.length == 0) {
+        $("#errorModalTal").html("El talonario no puede estar vacío.");
+
+        errorCount = errorCount + 1;
+      }
+
+      if (errorCount > 0) {
+        return null;
+      }
+
+      queryCustomerServiceByTalon(tarjeta, "numXTarjeta");
+    });
+
+    $("#xTelefonoOK").on("click", function () {
+      var errorCount = 0;
+
+      $("#muestraErrorTel").hide(500);
+
+      $("#errorPlaceHolderTel").html("");
+
+      $("#errorModalLada").html("");
+
+      $("#errorModalTel").html("");
+
+      var lada = $("#queryLada").val();
+
+      var telefono = $("#queryTelefono").val();
+
+      if (lada.length == 0) {
+        $("#errorModalLada").html("La lada no puede estar vacía.");
+
+        errorCount = errorCount + 1;
+      } else {
+        if (!validateNumber(lada)) {
+          $("#errorModalLada").html("El valor ingresado no es válido.");
+
+          errorCount = errorCount + 1;
+        }
+      }
+
+      if (telefono.length == 0) {
+        $("#errorModalTel").html("El teléfono no puede estar vacío.");
+
+        errorCount = errorCount + 1;
+      } else {
+        if (!validateNumber(telefono)) {
+          $("#errorModalTel").html("El valor ingresado no es válido.");
+
+          errorCount = errorCount + 1;
+        }
+      }
+
+      if (errorCount > 0) {
+        return null;
+      }
+
+      queryCustomerServiceByTelefono(lada, telefono, "numXTel");
+    });
+
+    $("#buscarNumero").on("hidden.bs.modal", function () {
+      $(":input", this).val("");
+
+      $("#numXTarjeta").hide(500);
+
+      $("#numXTel").hide(500);
+
+      $("#muestraSuscriptor").hide(500);
+
+      $("#seleccionX").show();
+
+      $("#errorPlaceHolder").html("");
+
+      $("#errorModalTal").html("");
+
+      $("#errorModalLada").html("");
+
+      $("#errorModalTel").html("");
+    });
+
+    $(document.body)
+      .on("click", "#checkControl", function () {
+
+        $("#errorC").html("");
+
+        var strSusc = $("#susc").val();
+
+        $("#errorC").html("");
+
+        if (strSusc.length == 0) {
+          $("#errorC").html("El campo suscriptor no puede estar vacío.");
+
+          $(".container-checkbox input[type=checkbox]").attr(
+            "checked",
+            false
+          );
+
+          return false;
+        }
+      })
+      .on("change", "#checkControl", function () {
+        if ($("#checkControl").is(":checked")) {
+          pedido.principal = 0;
+
+          pedido.adicional = 0;
+
+          $("#content").show();
+
+          reseteaPedido();
+        } else {
+          pedido.principal = 1;
+
+          pedido.adicional = 0;
+
+          $("#content").hide();
+
+          $("#solicitar").prop("disabled", false);
+        }
+      });
+
+    $("#selectControl").on("change", function () {
+      $("#errorP").html("");
+
+      var suscriptor = Number($("#susc").val());
+
+      pedido.principal = 0;
+
+      pedido.adicional = 0;
+
+      var select = $(this);
+
+      $("#solicitar").prop("disabled", true);
+
+      var adicionales = Number(select.val());
+
+      if (adicionales === 0) {
+        pedido.principal = 0;
+
+        pedido.adicional = 0;
+
+        $("#solicitar").prop("disabled", true);
+      } else {
+        $("#selectControl").LoadingOverlay("show");
+
+        pedido.principal = 0;
+
+        pedido.adicional = adicionales;
+
+        $.ajax({
+          type: "POST",
+
+          url: fpConstants.fp_url + "validapedido",
+
+          contentType: "application/json",
+
+          data: JSON.stringify({
+            cCliente: suscriptor,
+
+            simAdicionales: pedido.adicional,
+          }),
+
+          success: function (response) {
+            $("#selectControl").LoadingOverlay("hide");
+
+            if (response.control) {
+              switch (response.control.errorCode) {
+                case "000":
+                  pedido = response.pedido;
+
+                  $("#solicitar").prop("disabled", false);
+
+                  break;
+
+                default:
+                  $("#errorP").html(response.control.errorMessage);
+
+                  $("#solicitar").prop("disabled", true);
+              }
+            } else {
+              $("#selectControl").LoadingOverlay("hide");
+
+              $("#errorP").html(
+                "Error al ejecutar la petición, por favor intente nuevamente."
+              );
+
+              $("#solicitar").prop("disabled", true);
+            }
+          },
+
+          error: function (xhr) {
+            $("#selectControl").LoadingOverlay("hide");
+
+            $("#muestraErrorTal").show(1000);
+
+            $("#errorPlaceHolderTal").html(xhr.status + " " + xhr.statusText);
+          },
+        });
+      }
+    });
+
+    $("#susc").on("blur", function () {
+      if ($("#checkControl").is(":checked")) {
+        reseteaPedido();
+      }
+    });
+
+    function reseteaPedido() {
+      $("#solicitar").prop("disabled", true);
+
+      $("#selectControl").val(0).change();
+    }
+
+    function gotoExternal(type) {
+      var r = confirm(
+        "El sitio al que te dirigirás es ajeno a Dish Celular."
+      );
+
+      if (r == true) {
+        if (type == "IFT") {
+          newwindow = window.open(
+            "https://tarifas.ift.org.mx/ift_visor/",
+            "name"
+          );
+        }
+
+        if (type == "FP") {
+          newwindow = window.open("https://freedompop.mx/", "name");
+        }
+
+        if (type == "FPfraudes") {
+          newwindow = window.open(
+            "https://www.freedompop.mx/usojusto.htm",
+            "name"
+          );
+        }
+
+        if (window.focus) {
+          newwindow.focus();
+        }
+      } else {
+        return false;
+      }
+    }
+
+    $(document).ready(function () {
+      $("#modal-datemasdatos").modal("toggle");
+    });
+
+    function showDialog2() {
+      $("#dialog1").removeClass("fade").modal("hide");
+
+      $("#dialog2").modal("show").addClass("fade");
+    }
+
+    $("#dialog1").modal("show");
+
+    $("#dialog-ok").on("click", function () {
+      showDialog2();
+    });
+
+    function showDialogMovil() {
+      $("#dialog1").removeClass("fade").modal("hide");
+
+      $("#dialog2").modal("show").addClass("fade");
+    }
+
+    $("#dialog1").modal("show");
+
+    $("#dialog-ok-2").on("click", function () {
+      showDialog2();
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>FreedomPop</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+    <meta name="description" content="Ego por Freedompop">
+    <meta name="author" content="Dish México">
+    <link rel="icon" type="image/png" href="../Unknown.png" />
+    <link href="https://d58ohtx80p2sd.cloudfront.net/egov2/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://d58ohtx80p2sd.cloudfront.net/egov2/css/style_confirma.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Roboto:100,300,400,500,700,900" rel="stylesheet">
+    <link href="https://d58ohtx80p2sd.cloudfront.net/egov2/css/status/status.css" rel="stylesheet">
+    <script src="https://d58ohtx80p2sd.cloudfront.net/egov2/js/jquery.min.js"></script>
+    <script src="https://d58ohtx80p2sd.cloudfront.net/egov2/js/bootstrap.min.js"></script>
+    <script src="https://d58ohtx80p2sd.cloudfront.net/egov2/js/scriptsv2.js"></script>
+    <script
+        src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@1.5.4/src/loadingoverlay.min.js"></script>
+    <script src="https://d1pt5ohyflo74l.cloudfront.net/js/constants.js"></script>
+    <script src="https://d1pt5ohyflo74l.cloudfront.net/js/utils.js"></script>
+
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-P9FTRST');</script>
+    <!-- End Google Tag Manager -->
+    
+    
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9FTRST"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+</head>
+
+<body id="datosPaquetefull">
+
+    <header class="row head">
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-4"></div>
+                <div class="col-md-4">
+                    <span style="display:block;text-align:center;">
+                        <img src="https://d58ohtx80p2sd.cloudfront.net/egov2/img/dish-header.png">
+                    </span>
+                </div>
+                <div class="col-md-4"></div>
+            </div>
+
+
+
+        </div>
+
+
+        <!--termina triangulo-->
+        <span style="display:block;text-align:center;">
+            <img src="https://d58ohtx80p2sd.cloudfront.net/egov2/img/triangulo.png" alt="flecha" class="img_triangulo">
+        </span>
+
+
+    </header>
+
+    <div class="container">
+
+        <div class="row">
+            <div class="col-sm-12">
+                <br>
+                <br>
+                <h3 class="titulo_confirmacionTP">
+                    <center>
+                        <strong id="nombrePlaceHolder"></strong>
+                    </center>
+                </h3>
+                <p>
+                    <center>
+                        <strong>AÚN NO HAS SOLICITADO TU CHIP.</strong>
+                    </center>
+                </p>
+                <br>
+                <center>
+                    <span style="display:block;text-align:center;">
+                        <a href="https://dishcelular.com.mx" class="btn btn-block">PÍDELO AQUÍ</a>
+                    </span>
+                </center>
+
+            </div>
+        </div>
+
+
+
+        <div class="row">
+            <div class="col-sm-12">
+
+
+            </div>
+        </div>
+        <span style="display:block;text-align:center;">
+            <img src="https://d58ohtx80p2sd.cloudfront.net/egov2/img/ego.png" alt="flecha" class="img_triangulo">
+        </span>
+    </div>
+    <script>
+        $.holdReady(true);
+        $.LoadingOverlay("show");
+        var remoteJSONContent = null;
+        dataFetch();
+
+        function dataFetch() {
+            if (GetParameterValues('conf') && GetParameterValues('conf') !== 'undefined') {
+                $.ajax({
+                    type: "POST",
+                    url: fpConstants.fp_url + "consultaconfirmacion",
+                    contentType: "application/json",
+                    data: JSON.stringify({
+                        "c_cliente": "",
+                        "folio": GetParameterValues('conf')
+                    }),
+                    success: function (response) {
+                        if (!response.errorMessage) {
+                            if (parseInt(response.codigoError) === 1) {
+                                $('#nombrePlaceHolder').html('!HOLA ' + response.nombre_suscriptor + '!');
+                            }
+                        }
+                        $.holdReady(false);
+                    }
+                });
+            } else {
+                $('#nombrePlaceHolder').html('!HOLA!');
+                $.holdReady(false);
+            }
+        }
+
+        $(document).ready(function () {
+            $.LoadingOverlay("hide");
+        });
+    </script>
+</body>
+
+</html>

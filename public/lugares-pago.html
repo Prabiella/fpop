@@ -1,0 +1,2132 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreedomPop</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <script src="https://unpkg.com/vue"></script>
+    <script src="https://unpkg.com/vueperslides"></script>
+    <link href="https://unpkg.com/vueperslides/dist/vueperslides.css" rel="stylesheet" />
+    <script src="https://kit.fontawesome.com/987edafa85.js" crossorigin="anonymous"></script>
+
+    <script src="https://d58ohtx80p2sd.cloudfront.net/egov2/js/scriptsv2.js"></script>
+    <script src="https://d58ohtx80p2sd.cloudfront.net/egov2/js/jquery.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@1.5.4/src/loadingoverlay.min.js">
+    </script>
+    <script src="https://d1pt5ohyflo74l.cloudfront.net/js/constants.js"></script>
+    <script src="https://d1pt5ohyflo74l.cloudfront.net/js/utils.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.7/sweetalert2.all.min.js"></script>
+    <script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "k3LFlBnoHW");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
+
+    <!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-P9FTRST');</script>
+  <!-- End Google Tag Manager -->
+  
+  
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9FTRST"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+    <style>
+      .TyCM {
+      font-size: 0.6rem;
+
+      
+    }
+    </style>
+  </head>
+  <body>
+    <div class="w-full text-center font-sans-serif sticky top-0 z-50 bg-blue-100">
+      <a class="text-white text-base md:text-xl lg:text-2xl py-2" href="tel:5555123123">
+        CONTRATA AL <strong class="">55 55 123 123</strong>
+      </a>
+    </div>
+    <header x-data="{ mobileMenuOpen : false }" class="
+          font-serif
+          text-sm
+          md:text-xl
+          flex flex-wrap
+          z-10
+          md:z-0
+          flex-row
+          justify-between
+          md:items-center md:space-x-4
+          bg-white
+          py-6
+          px-6
+          relative
+        ">
+      <a href="index.html" class="block">
+        <img class="h-8 md:h-8 lg:h-12 " src="img/LOGOfpop.svg" alt="freedompop Logo" title="" />
+      </a>
+      <button @click="mobileMenuOpen = !mobileMenuOpen" class="inline-block sm:hidden w-8 h-8 bg-white text-gray-600 p-1">
+        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="">
+          <path fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+      <nav class="
+            absolute
+            flex
+            items-center
+            md:relative
+            top-16
+            left-0
+            md:top-0
+            z-20
+            md:flex
+            flex-col
+            md:flex-row md:space-x-6
+            w-full
+            md:w-auto
+            bg-white
+            shadow-md
+            rounded-lg
+            md:rounded-none md:shadow-none md:bg-transparent
+            p-6
+            pt-0
+            md:p-0
+          " :class="{ 'flex' : mobileMenuOpen , 'hidden' : !mobileMenuOpen}" @click.away="mobileMenuOpen = false">
+        <div class="options-menu flex flex-col md:flex-row self-end">
+          <a href="index.html"         class="text-sm md:text-xs lg:text-md xl:text-xl text-blue-100 hover:underline pr-5">Inicio</a>
+          <a href="promociones.html"   class="text-sm md:text-xs lg:text-md xl:text-xl text-blue-100 hover:underline pr-5">Promociones</a>
+          <a href="ayuda.html"         class="text-sm md:text-xs lg:text-md xl:text-xl text-blue-100 hover:underline pr-5">Ayuda</a>
+          <a href="lugares-pago.html"  class="text-sm md:text-xs lg:text-md xl:text-xl text-blue-100 hover:underline pr-5">Lugares de pago</a>
+          <a href="contacto.html"      class="text-sm md:text-xs lg:text-md xl:text-xl text-blue-100 hover:underline md:hidden block">Contacto</a>
+        </div>
+        <div class=" flex-col justify-center hidden md:block">
+          <img class="w-8 md:w-5 lg:w-7 2xl:w-6 mx-auto" src="img/contacto.svg" alt="" />
+          <a href="contacto.html" class="text-sm md:text-xs lg:text-md  xl:text-xl text-blue-100 hover:underline">
+            Contacto
+          </a>
+        </div>
+      </nav>
+    </header>
+  
+  
+    <!--conoce lugares de pago-->
+    <div class="h-doble">
+      <div class="py-6 md:py-12 px-12 md:px-24 bg-fondogris">
+        <h1 class="text-blue-100 font-mono font-bold text-lg md:text-3xl mb-2">
+          CONOCE LOS LUGARES DE PAGO
+        </h1>
+        <p class="font-serif">
+          A continuación encontrarás los lugares de pago para realizar tus
+          <br />
+          recargas o pagar tu plan FreedomPop
+        </p>
+      </div>
+      <nav
+        class="
+          grid
+          tabs
+          grid-cols-2
+          justify-center
+          gap-0
+          md:gap-4
+          -mt-5
+          md:-mt-12 md:px-32
+          lg:px-56
+          mb-6
+          font-serif
+        "
+      >
+        <button
+          data-target="panel-1"
+          id="btn1"
+          class="
+            tab
+            text-blue-100
+            my-3
+            mx-4
+            py-3
+            px-3
+            shadow-lg
+            text-sm
+            md:text-lg
+            btn-plan
+            active
+          "
+        >
+          PAGA TU PLAN
+        </button>
+        <button
+          data-target="panel-2"
+          id="btn2"
+          class="
+            tab
+            text-blue-100
+            my-3
+            mx-4
+            py-3
+            px-3
+            shadow-lg
+            text-sm
+            md:text-lg
+            bg-white
+            btn-recarga
+          "
+        >
+          REALIZA RECARGA
+        </button>
+      </nav>
+
+      <!--FORMAS DE PAGO-->
+
+      <div id="panels">
+        <!--PANEL PLAN-->
+        <div class="panel-1 tab-content active">
+          <div
+            class="
+              grid
+              auto-cols-max
+              grid-flow-row
+              md:grid-flow-col
+              gap-0
+              md:gap-10
+              justify-center
+              m-5
+              md:px-32
+              lg:px-56
+            "
+          >
+            <div>
+              <div class="grid grid-flow-col text-center auto-cols-max">
+                <h4 class="font-bold text-lg md:text-sm text-blue-100">
+                  PAGA CON TU TARJETA DE <br />
+                  CRÉDITO / DÉBITO
+                </h4>
+                <img src="img/pago-tarjeta.svg" alt="" />
+              </div>
+            </div>
+            <div class="separador-pago flex justify-center">
+              <img
+                class="transform rotate-90 md:rotate-0"
+                src="img/Linea.svg"
+                alt="separador"
+              />
+            </div>
+            <div>
+              <div class="grid grid-flow-col text-center">
+                <div class="px-4">
+                  <h4 class="font-bold text-lg md:text-lg text-blue-100">
+                    PAGA EN EFECTIVO
+                  </h4>
+                  <span class="text-gray-400 text-xs"
+                    >(Establecimientos de recarga)</span
+                  >
+                </div>
+                <img src="img/pago-efec.svg" alt="" />
+              </div>
+            </div>
+          </div>
+
+          <!--LUGARES DE PAGO-->
+          <div>
+            <div
+              class="title-logos text-center bg-fondogris py-4 mx-0 md:mx-12"
+            >
+              <h3 class="text-blue-100 font-mono font-bold text-2xl">
+                REFLEJAN TU PAGO DE INMEDIATO
+              </h3>
+            </div>
+            <ul
+            class="
+              flex flex-wrap
+              mt-4
+              cont_lp_logos_inner
+              justify-center
+              gap-4
+              md:gap-4
+              lg:gap-10
+            "
+          >
+          <li class="justify-content-center">
+            <img src="img/FP_75x75/hsbc.png" alt="hsbc" />
+          </li>
+
+          <li class="">
+            <a href="#" class="" rel="external">
+              <img src="img/FP_75x75/bbva.png" alt="bbva" />
+            </a>
+          </li>
+
+          <li class="">
+            <a href="#" class="" rel="external">
+              <img src="img/FP_75x75/telecomm.png" alt="telecomm" />
+            </a>
+          </li>
+          <li class="">
+            <a href="#" class="" rel="external">
+              <img src="img/FP_75x75/ley.png" alt="ley" />
+            </a>
+          </li>
+             </ul>
+            <div class="border-2 ml-4 mr-4 mt-4 mb-4">
+              <div class="md:px-16 lg:px-32 pb-14">
+                <ul
+                  class="
+                    flex flex-wrap
+                    mt-4 
+                    ml-8
+                    cont_lp_logos_inner
+                    justify-left
+                    gap-4
+                    md:gap-4
+                    lg:gap-10
+                  "
+                >
+               
+                  
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img
+                        src="img/FP_75x75/soriana_super.png"
+                        alt="soriana super"
+                      />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img
+                        src="img/FP_75x75/soriana_express.png"
+                        alt="soriana express"
+                      />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img
+                        src="img/FP_75x75/soriana_mercado.png"
+                        alt="soriana mercado"
+                      />
+                    </a>
+                  </li>
+  
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/aurrera.png" alt="aurrera" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/walmart.png" alt="walmart" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/walmart_express.png" alt="walmart" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/sams.png" alt="sams" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/suburbia.png" alt="suburbia" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/connecta.png" alt="connecta" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/extra.png" alt="extra" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/benavides.png" alt="benavides" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/intercam.png" alt="intercam" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/netpay.png" alt="netpay" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img
+                        src="img/FP_75x75/red_efectiva.png"
+                        alt="red efectiva"
+                      />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/f_donde.png" alt="fundacion donde" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/bbb.png" alt="BBB" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/kiosko.png" alt="kiosko" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/woolworth.png" alt="woolworth" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/neto.png" alt="neto" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/al_super.png" alt="al super" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/yastas.png" alt="yastas" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/waldo.png" alt="waldo" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img
+                        src="img/FP_75x75/punto_recarga.png"
+                        alt="punto recarga"
+                      />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/fasti.png" alt="fasti" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/airpack.png" alt="airpack" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/six.png" alt="six" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/LDI.png" alt="LDI" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/san pablo.png" alt="san pablo" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/farmapronto.png" alt="farmapronto" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/mtc.png" alt="mtc" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/oxxo.png" alt="oxxo" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img
+                        src="img/FP_75x75/el_asturiano.png"
+                        alt="El asturiano"
+                      />
+                    </a>
+                  </li>
+  
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/7_eleven.png" alt="7 eleven" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/ganamas.png" alt="gana mas" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/yomp.png" alt="yomp!" />
+                    </a>
+                  </li>
+  
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img
+                        src="img/FP_75x75/intercambio_express.png"
+                        alt="intercambio express"
+                      />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/maxi.png" alt="maxi" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/circulok.png" alt="circle K" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/cecom.png" alt="cecom cruz" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img
+                        src="img/FP_75x75/super_kompras.png"
+                        alt="super kompras"
+                      />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/rappi.jpeg" alt="rappi" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/gestopago.png" alt="gesto pago" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/ahorro.png" alt="ahorro" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img
+                        src="img/FP_75x75/super_iberia.png"
+                        alt="super iberia"
+                      />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/albo.png" alt="Albo" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/hi_bye.png" alt="hi bye" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/aki.png" alt="aki" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/merza.png" alt="merza" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/Grupo_movil_mexico.png" alt="G" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/willy_bara.png" alt="willy" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/de_sol.png" alt="sol" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/ya_ganaste.png" alt="ya ganaste" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img
+                        src="img/FP_75x75/boticacentral.png"
+                        alt="botica central"
+                      />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/pagaaqui.png" alt="paga aqui" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/cash.png" alt="cash" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/systienda.png" alt="SysTienda" />
+                    </a>
+                  </li>
+  
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/actinver.png" alt="actinver" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/yza.png" alt="yza" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/farmacon.png" alt="farmacon" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img
+                        src="img/FP_75x75/farmacia_moderna.png"
+                        alt="farmacias moderna"
+                      />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/mispagos.png" alt="mispagoscom" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/cuenca.png" alt="cuenca" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/123.png" alt="123" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/bx_mas.png" alt="bx+" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/bancoppel.png" alt="bancoppel" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/superred.jpeg" alt="super red" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/solucion_asea.jpeg" alt="asea" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/cash_apoyo.jpeg" alt="cash apoyo" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/la_ferre.jpeg" alt="ferre" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img
+                        src="img/FP_75x75/mercado_pago.jpeg"
+                        alt="mercado pago"
+                      />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/rico.jpeg" alt="rico" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/la_mas_barata.png" alt="barata" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/lacomer.png" alt="LaComer" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/fresko.png" alt="Fresco" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/sumesa.png" alt="Sumesa" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/city_market.png" alt="City-Market" />
+                    </a>
+                  </li>
+  
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/via.png " alt="Via" />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/GARIS.png " alt="garis" />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/EL_FLORIDO.png " alt="florido" />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/CASHI.png " alt="cashi" />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/ACEROS_MURILLO.png " alt="murillo" />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/BANCA_MIFEL.png " alt="banca mifel" />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/DISENSA.png " alt="Disensa" />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/CREDI_CONFIA.png " alt="Credi Confia" />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/ML.png " alt="mercado libre" />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/MEXPEI.png " alt="mexpei" />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/PAGA_FON.png " alt="pagafon" />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/Santandreu.png " alt="Santandreu" />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/Logrand.png " alt="Logrand" />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/super_city.png " alt="super_city" />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/MERCADIA1.png " alt="MERCADIA" />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/7_24.png " alt="7_24" />
+                    </a>
+                  </li>
+                  <li class="">
+                    <a href="#" class="" rel="external">
+                      <img src="img/FP_75x75/SUMATE1.png " alt="sumate" />
+                    </a>
+                  </li>
+                </ul>
+                <div class="text-center mt-4">ESTOS ESTABLECIMIENTOS TE COBRAN COMISIÓN POR EL PAGO DE TU SERVICIO</div>
+              </div>
+            </div>
+            
+            <div
+              class="title-logos text-center bg-fondogris py-4 mx-0 md:mx-12"
+            >
+              <h3 class="text-blue-100 font-mono font-bold text-2xl">
+                REFLEJAN TU PAGO AL DÍA SIGUIENTE
+              </h3>
+            </div>
+            <div
+              class="
+                grid-flow-col
+                flex
+                justify-center
+                border-gray-500 border
+                mx-11
+                md:mx-28
+                lg:mx-72
+                py-6
+                my-8
+              "
+            >
+              <h5 class="text-sm font-serif md:text-sm m-3">
+                ESTE ESTABLECIMIENTO TE COBRA COMISIÓN POR EL PAGO DE TU
+                SERVICIO
+              </h5>
+              <img src="img/FP_75x75/chedraui.png" alt="chedraui" />
+            </div>
+          </div>
+        </div>
+
+        <!--PANEL RECARGA-->
+        <div class="panel-2 tab-content">
+          <div
+            class="
+              grid grid-flow-row
+              md:grid-flow-col
+              gap-0
+              md:gap-10
+              justify-center
+              m-5
+              md:px-2
+            "
+          >
+            <div class="w-6/6 text-center">
+              <h4 class="font-bold text-lg md:text-sm text-blue-100">
+                DESDE TU LÍNEA FREEDOMPOP
+              </h4>
+              <h2>MARCA AL *333</h2>
+            </div>
+            <div class="separador-pago flex justify-center">
+              <img
+                class="transform rotate-90 md:rotate-0"
+                src="img/Linea.svg"
+                alt="separador"
+              />
+            </div>
+            <div class="grid text-center">
+              <h4 class="font-bold text-lg md:text-sm text-blue-100">
+                O MARCA AL
+              </h4>
+              <h2>55 91 28 57 70</h2>
+            </div>
+            <div class="separador-pago flex justify-center">
+              <img
+                class="transform rotate-90 md:rotate-0"
+                src="img/Linea.svg"
+                alt="separador"
+              />
+            </div>
+            <div class="grid grid-flow-col text-center">
+              <div class="px-4">
+                <h4 class="font-bold text-lg md:text-lg text-blue-100">
+                  PAGA EN EFECTIVO
+                </h4>
+                <span class="text-gray-400 text-xs"
+                  >(Establecimientos de recarga)</span
+                >
+              </div>
+              <img src="img/pago-efec.svg" alt="" />
+            </div>
+          </div>
+
+          <!--LUGARES DE PAGO-->
+          <div>
+            <div
+              class="title-logos text-center bg-fondogris py-4 mx-0 md:mx-12"
+            >
+              <h3 class="text-blue-100 font-mono font-bold text-2xl">
+                ESTOS ESTABLECIMIENTOS REFLEJAN TU RECARGA DE INMEDIATO
+              </h3>
+            </div>
+            <div class="sm:px-20 md:px-20 lg:px-32 xl:px-52 pb-14">
+              <ul
+                class="
+                  flex flex-wrap
+                  mt-4  ml-4 sm:ml-16
+                  cont_lp_logos_inner
+                  justify-left
+                  items-center
+                  gap-4
+                  sm:gap-3
+                  md:gap-4
+                  lg:gap-5
+                  xl:gap-4
+                "
+              >
+              <li class="justify-content-center border-none">
+                <img src="img/FP_75x75/anfora.svg" alt="anfora" />
+              </li>
+
+                <li class="justify-content-center border-none">
+                  <img src="img/FP_75x75/Grupo 6512.svg" alt="oxxo" />
+                </li>
+
+                <li class="justify-content-center">
+                  <img src="img/FP_75x75/recarga_connecta.png" alt="connecta" />
+                </li>
+                <li class="justify-content-center" style="border:1px solid #c1c1c1; padding: 0.95em">
+                  <img src="img/FP_75x75/walmart_express.png" alt="walmart" />
+                </li>
+                
+                <li class="justify-content-center" style="border:1px solid #c1c1c1; padding: 0.95em;">
+                  <img src="img/FP_75x75/sams.png" alt="sams" />
+                </li>
+                
+                <li class="justify-content-center" style="border:1px solid #c1c1c1; padding: 0.95em">
+                  <img src="img/FP_75x75/walmart.png" alt="walmart" />
+                </li>
+                
+
+                <li class="justify-content-center">
+                  <img src="img/FP_75x75/Grupo 6518.png" alt="bodega aurrera" />
+                </li>
+
+                <li class="justify-content-center">
+                  <img src="img/FP_75x75/Grupo 6534.png" alt="gesto pago" />
+                </li>
+
+                <li class="justify-content-center">
+                  <img src="img/FP_75x75/Grupo 6552.png" alt="gana ahorro" />
+                </li>
+
+                <li class="justify-content-center">
+                  <img
+                    src="img/FP_75x75/Grupo 6539.png"
+                    alt="botica central"
+                  />
+                </li>
+
+                <li class="justify-content-center">
+                  <img src="img/FP_75x75/Grupo 6536.png" alt="cash" />
+                </li>
+
+                <li class="justify-content-center">
+                  <img src="img/FP_75x75/Grupo 6535.png" alt="paga aqui" />
+                </li>
+
+                <li class="justify-content-center">
+                  <img src="img/FP_75x75/Grupo 6559.png" alt="garis" />
+                </li>
+
+                <li class="justify-content-center">
+                  <img
+                    src="img/FP_75x75/Grupo 6560.png"
+                    alt="financiera sustentable"
+                  />
+                </li>
+
+                <li class="justify-content-center">
+                  <img src="img/FP_75x75/Grupo 6488.png" alt="promocom" />
+                </li>
+
+                <li class="justify-content-center">
+                  <img src="img/FP_75x75/Grupo 6485.png" alt="super papelera" />
+                </li>
+
+                <li class="justify-content-center">
+                  <img src="img/FP_75x75/Grupo 6483.png" alt="pagofon" />
+                </li>
+
+                <li class="justify-content-center">
+                  <img src="img/FP_75x75/Grupo 6484.png" alt="sumate" />
+                </li>
+
+                <li class="justify-content-center">
+                  <img
+                    src="img/FP_75x75/Grupo 6493.png"
+                    alt="caja solidatia tamaulipas"
+                  />
+                </li>
+
+                <li class="justify-content-center">
+                  <img
+                    src="img/FP_75x75/Grupo 6494.svg"
+                    alt="caja cristobal"
+                  />
+                </li>
+ 
+                <li class="justify-content-center">
+                  <img
+                    src="img/FP_75x75/Grupo 6495.png"
+                    alt="meta financiera"
+                  />
+                </li>
+
+                <li class="justify-content-center">
+                  <img
+                    src="img/FP_75x75/Grupo 6498.png"
+                    alt="mercado pago"
+                  />
+                </li>
+
+                <li class="justify-content-center">
+                  <img src="img/FP_75x75/Grupo 6561.png" alt="albo" />
+                </li>
+
+                <li class="justify-content-center" style="border:1px solid #c1c1c1; padding: 0.1rem;">
+                  <img src="img/FP_75x75/systienda.svg" alt="systienda" />
+                </li>
+
+                <li class="justify-content-center" style="border:1px solid #c1c1c1; padding: 0.95rem;">
+                  <img src="img/FP_75x75/ya_ganaste.svg" alt="ya ganaste" />
+                </li>
+          
+                <li class="justify-content-center" style="border:1px solid #c1c1c1; padding: 0.95rem;">
+                  <img src="img/FP_75x75/meda.svg" alt="Meda" />
+                </li>
+
+                <li class="justify-content-center" style="border:1px solid #c1c1c1; padding: 0.95rem;">
+                  <img src="img/FP_75x75/ML_SIN_CONTORNO.png" alt="mercado libre" />
+                </li>
+
+                <li class="justify-content-center" style="border:1px solid #c1c1c1; padding: 0.95rem;">
+                  <img src="img/FP_75x75/ACEROS_MURILLO_SIN_CONTORNO.png" alt="aceros murillo" />
+                </li>
+
+                <li class="justify-content-center" style="border:1px solid #c1c1c1; padding: 0.95rem;">
+                  <img src="img/FP_75x75/BANCA_MIFEL.png" alt="Banca Mifel" />
+                </li>
+
+                <li class="justify-content-center" style="border:1px solid #c1c1c1; padding: 0.95rem;">
+                  <img src="img/FP_75x75/DISENSA_SIN_CONTORNO.png" alt="Disensa" />
+                </li>
+
+                <li class="justify-content-center" style="border:1px solid #c1c1c1; padding: 0.95rem;">
+                  <img src="img/FP_75x75/CREDI_CONFIA.png" alt="Credi Confía" />
+                </li>
+
+                <li class="justify-content-center" style="border:1px solid #c1c1c1; padding: 0.95rem;">
+                  <img src="img/FP_75x75/MEXPEI.png" alt="MexPei" />
+                </li>
+
+                <li class="justify-content-center" style="border:1px solid #c1c1c1; padding: 0.95rem;">
+                  <img src="img/FP_75x75/Santandreu.png" alt="Santandreu" />
+                </li>
+
+                <li class="justify-content-center" style="border:1px solid #c1c1c1; padding: 0.95rem;">
+                  <img src="img/FP_75x75/la_ferre.jpeg" alt="La Ferre" />
+                </li>
+
+                <li class="justify-content-center" style="border:1px solid #c1c1c1; padding: 0.95rem;">
+                  <img src="img/FP_75x75/superred.jpeg" alt="Super Red" />
+                </li>
+
+                <li class="justify-content-center" style="border:1px solid #c1c1c1; padding: 0.95rem;">
+                  <img src="img/FP_75x75/solucion_asea.jpeg" alt="Solución Asea" />
+                </li>
+
+                <li class="justify-content-center" style="border:1px solid #c1c1c1; padding: 0.95rem;">
+                  <img src="img/FP_75x75/CA$H-APOYO_SIN_CONTORNO-01.png" alt="Cash-apoyo" />
+                </li>
+
+                <li class="justify-content-center" style="border:1px solid #c1c1c1; padding: 0.95rem;">
+                  <img src="img/FP_75x75/ENSO_SIN_CONTORNO-01.png" alt="Enso" />
+                </li>
+
+                <li class="justify-content-center" >
+                  <img src="img/FP_75x75/MINU.png" alt="MINU" />
+                </li>
+
+                <li class="justify-content-center">
+                  <img src="img/FP_75x75/QUICK.png" alt="QUICK" />
+                </li>
+
+                <li class="justify-content-center">
+                  <img src="img/FP_75x75/VIA_CONTORNO.png" alt="VIA" />
+                </li>
+
+                <li class="justify-content-center">
+                  <img src="img/FP_75x75/UALA.png" alt="UALA" />
+                </li>
+
+                <li class="justify-content-center" >
+                  <img src="img/FP_75x75/TAMEX.png" alt="TAMEX" />
+                </li>
+
+                <li class="justify-content-center" >
+                  <img src="img/FP_75x75/DLI.png" alt="DLI" />
+                </li>
+
+                <li class="justify-content-center" >
+                  <img src="img/FP_75x75/BIGSMART.png" alt="BIGSMART" />
+                </li>
+
+                <li class="justify-content-center" >
+                  <img src="img/FP_75x75/CONSTRURAMA_CONTORNO.png" alt="construrama" />
+                </li>
+
+                <li class="justify-content-center" >
+                  <img src="img/FP_75x75/BANKAYA1.png" alt="Bancaya" />
+                </li>
+
+                <li class="justify-content-center" >
+                  <img src="img/FP_75x75/fama_y_mas.png" alt="fama y mas" />
+                </li>
+
+                <li class="justify-content-center" >
+                  <img src="img/FP_75x75/caja_hipodromo.png" alt="caja hipodromo" />
+                </li>
+
+                <li class="justify-content-center" >
+                  <img src="img/FP_75x75/SUME-MAS.png" alt="Sume mas" />
+                </li>
+
+                <li class="justify-content-center" >
+                  <img src="img/FP_75x75/Farmacia_GI.png" alt="farmacia_GI" />
+                </li>
+
+                <li class="justify-content-center" >
+                  <img src="img/FP_75x75/CAJA-VALLADOLID_CONTORNO.png" alt="Morelia Valladolid" />
+                </li>
+
+                <li class="justify-content-center" >
+                  <img src="img/FP_75x75/MERCADO_DE_IMPORTACIONES.png" alt="Mercado de importaciones" />
+                </li>
+
+                <li class="justify-content-center" >
+                  <img src="img/FP_75x75/PAGOS-DIGITALES.png" alt="Pagos digitales" />
+                </li>
+
+                <li class="justify-content-center" >
+                  <img src="img/FP_75x75/Nelo.png" alt="Nelo" />
+                </li>
+
+                <li class="justify-content-center" >
+                  <img src="img/FP_75x75/Paga_todo.png" alt="Paga Todo" />
+                </li>
+
+
+
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  <!--FOOTER-->
+  <footer class="footer px-4 mb-24 md:mb-0 md:px-32">
+    <div class="flex flex-col md:flex-row">
+      <div class="col-span-4 md:col-span-3 w-72 md:w-96 p-5">
+        <span class="text-white text-xs place-self-center">Servicio de telefonía proporcionado por</span>
+        <a style="cursor: pointer" onclick="gotoExternal('FP')"><img class="mt-2 w-48" src="img/fp-blanco.svg"
+            alt="logo fp blanco" /></a>
+        <div class="footer-info">
+          <div class="flex grid-cols-2 my-6">
+            <div class="w-12">
+              <img class="" src="img/tel-footer.svg" alt="" />
+            </div>
+            <span class="text-white text-xs md:text-md"><strong>Atención a Clientes</strong> <br />
+              Marca al 55 5610 1010</span>
+          </div>
+          <div class="flex grid-cols-2 my-6">
+            <div class="w-12">
+              <img class="" src="img/tel-footer.svg" alt="" />
+            </div>
+            <span class="text-white text-xs md:text-md"><strong>Ventas </strong> <br />
+              Marca al 55 55 123 123</span>
+          </div>
+          <div class="flex grid-cols-2 my-6">
+            <div class="w-12">
+              <img class="" src="img/ubicacion-footer.svg" alt="" />
+            </div>
+            <span class="text-white text-xs md:text-md">Cobertura a Nivel Nacional</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex w-full mb-12 md:mb-0 md:col-span-3 ">
+        <div class="flex justify-center flex-col">
+          <a href="tarifas_IFT.html" class="text-white underline font-bold text-sm md:text-sm">Tarifas de servicio
+            autorizadas</a>
+          <br />
+          <a href="https://my.freedompop.mx/tarifas" target="_blank" class="text-white underline font-bold text-sm md:text-sm">Formatos Simplificados</a>
+          <br />
+          <a style="cursor: pointer" onclick="gotoExternal('FPfraudes')"
+            class="text-white underline font-bold text-sm md:text-sm">Política de prevención y detección de
+            fraude</a>
+
+            <br />
+            <a href="https://www.freedompop.mx/roboextravio" class="text-white underline font-bold text-sm md:text-sm" target="_blank">Reporte por robo o extravío</a>
+            <br />
+            <a href="terminos_y_condiciones_mvshub.html" class="text-white underline font-bold text-sm md:text-sm" target="_blank">Términos y condiciones de mvshub</a>
+            <br />
+        </div>
+      </div>
+    </div>
+   
+       <nav class="footer-links page no-padding">
+      <a href="{{tab.url}}" class="{% if tab.tab_type == current_tab %}active{% endif %}">¿Tienes dudas?</a>
+     </nav>
+ 
+
+    <span class="text-white  TyCM"></span>
+  </footer>
+
+     <!--PLECA ROJA-->
+     <a class="
+     pleca-chip
+     rounded-xl
+     fixed
+     flex-col
+     py-2
+     px-2
+     -mb-3
+     right-0
+     left-0
+     bottom-0
+     mx-16
+     md:left-auto
+     md:right-0
+     md:float-right
+     md:mx-0
+     md:w-56
+     md:-mr-3
+     md:bottom-24
+     shadow-lg
+   "
+   href="#myModal-pidelo"
+   rel="modal:open"
+   >
+   <p>¡Si tienes Dish!</p>
+   <p class="font-bold text-xs pb-3">TIENES TU CHIP GRATIS</p>
+   <p class="font-mono text-md md:text-xl"  >PÍDELO AQUÍ</p>
+   </a>
+   
+     <!--FIN PLECA ROJA-->
+     
+     <!--Modal chip-->
+     <div class="modal z-50  mt-20 md:m-10" id="myModal-pidelo">
+     <div class="w-auto my-6 d-flex justify-center text-center mx-auto max-w-3xl">
+     <!--body-->
+     <div class="modal-contentedor">
+       <div class="d-flex">
+         <img class="self-center" src="https://d58ohtx80p2sd.cloudfront.net/egov2/img/dish-header.png" />
+       </div>
+       <h3 class="font-bold text-sm md:text-3xl mt-8">PIDE TU CHIP</h3>
+       <span class="text-xs">ES UN BENEFICIO EXCLUSIVO <br />PARA SUSCRIPTORES DISH</span>
+     
+       <form action="" id="formNormal" class="px-14 mt-5">
+         <input class="
+               mt-4
+               shadow
+               appearance-none
+               border-b border-red-100
+               text-center
+               rounded
+               w-full
+               py-2
+               px-3
+               text-gray-700
+               leading-tight
+               focus:outline-none focus:shadow-outline
+             " type="number" name="suscriptor" id="susc" placeholder="Número de suscriptor" />
+         <input class="
+               mt-4
+               shadow
+               appearance-none
+               border-b border-red-100
+               text-center
+               rounded
+               w-full
+               py-2
+               px-3
+               text-gray-700
+               leading-tight
+               focus:outline-none focus:shadow-outline
+             " type="number" name="suscriptor" id="tel" placeholder="Número de celular" />
+         <input class="
+               mt-4
+               shadow
+               appearance-none
+               border-b border-red-100
+               text-center
+               rounded
+               w-full
+               py-2
+               px-3
+               text-gray-700
+               leading-tight
+               focus:outline-none focus:shadow-outline
+             " type="email" name="correo" id="mail" placeholder="Correo electrónico" />
+     
+         <div class="self-center mb-6 mt-8">
+          <label class="container-checkbox flex flex-row justify-center items-center gap-2">
+             <input type="checkbox" name="checkControl" id="checkControl" value="1">
+             <span class="checkmark"></span>
+             <h3 class="registro01">DESEO SIMS ADICIONALES</h3>
+           </label>
+           <span class="error-val text-red-300" id="errorC"></span>
+         </div>
+         <div id="content" class="mb-12" style="display: none;">
+           <label for="">NÚMERO DE SIMS ADICIONALES</label>
+           <select class="px-4 py-2" id="selectControl">
+             <option value="0">Seleccione la cantidad:</option>
+             <option value="1">1</option>
+             <option value="2">2</option>
+             <option value="3">3</option>
+             <option value="4">4</option>
+           </select>
+           <span class="error-val" id="errorP"></span>
+         </div>
+     
+         <button class="bg-red-300 text-white py-3 px-8 rounded-sm" type="button" id="solicitar" onclick="login()"
+           onmousedown="_gaq.push(['_trackEvent','solicitachip', 'button', 'solicitar',100,false]);">
+           CONTINUAR
+         </button>
+       </form>
+       <img class="mt-8" src="https://d58ohtx80p2sd.cloudfront.net/egov2/img/ego.png" />
+     </div>
+     </div>
+     </div>
+
+  <!-- Jquery Modal -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+
+  <script>
+    const tabs = document.querySelectorAll(".tabs");
+    const tab = document.querySelectorAll(".tab");
+    const panel = document.querySelectorAll(".tab-content");
+
+    function onTabClick(event) {
+      // deactivate existing active tabs and panel
+
+      for (let i = 0; i < tab.length; i++) {
+        tab[i].classList.remove("active");
+      }
+
+      for (let i = 0; i < panel.length; i++) {
+        panel[i].classList.remove("active");
+      }
+
+      // activate new tabs and panel
+      event.target.classList.add("active");
+      let classString = event.target.getAttribute("data-target");
+      console.log(classString);
+      document
+        .getElementById("panels")
+        .getElementsByClassName(classString)[0]
+        .classList.add("active");
+    }
+
+    for (let i = 0; i < tab.length; i++) {
+      tab[i].addEventListener("click", onTabClick, true);
+    }
+  </script>
+  <script type="application/javascript">
+    var pedido = {
+      principal: 0,
+
+      adicional: 0,
+    };
+
+    $(document).ready(function () {
+      $.ajax({
+        url: fpConstants.fp_url + "getlegal",
+
+        contentType: "application/json",
+
+        success: function (response) {
+          $(".TyCM").html(response.legal);
+        },
+      });
+
+      $(".container-checkbox input[type=checkbox]").attr("checked", false);
+    });
+
+    var numSuscriptor = null;
+
+    function popitup(url) {
+      newwindow = window.open(url, "name", "height=250,width=650");
+
+      if (window.focus) {
+        newwindow.focus();
+      }
+
+      return false;
+    }
+
+    function popitupFull(url) {
+      newwindow = window.open(url, "name", "height=600,width=800");
+
+      if (window.focus) {
+        newwindow.focus();
+      }
+
+      return false;
+    }
+
+    function login() {
+      var strSusc = $("#susc").val();
+
+      var strTel = $("#tel").val();
+
+      var strMail = $("#mail").val();
+
+      var errorCount = 0;
+
+      $("#errorS").html("");
+
+      $("#errorT").html("");
+
+      $("#errorM").html("");
+
+      if (strSusc.length == 0) {
+        $("#errorS").html("El campo suscriptor no puede estar vacío.");
+
+        errorCount = errorCount + 1;
+      } else {
+        if (!validateNumber(strSusc)) {
+          $("#errorS").html("El valor ingresado no es válido.");
+
+          errorCount = errorCount + 1;
+        }
+      }
+
+      if (strTel.length == 0) {
+        $("#errorT").html("El campo teléfono no puede estar vacío.");
+
+        errorCount = errorCount + 1;
+      } else {
+        if (!validateNumber(strTel)) {
+          $("#errorT").html("El valor ingresado no es válido.");
+
+          errorCount = errorCount + 1;
+        } else {
+          if (strTel.length < 10) {
+            $("#errorT").html("El teléfono debe incluir la lada.");
+
+            errorCount = errorCount + 1;
+          }
+        }
+      }
+
+      if (strMail.length != 0) {
+        if (!validateEmail(strMail)) {
+          $("#errorM").html(
+            "El valor ingresado en el campo correo electrónico no es válido."
+          );
+
+          errorCount = errorCount + 1;
+        }
+      }
+
+      if (errorCount > 0) {
+        return null;
+      }
+
+      loginService(strSusc, strTel, strMail, "myModal-pidelo");
+    }
+
+    function loginService(suscriptor, telefono, email, id) {
+      $("#" + id).LoadingOverlay("show");
+
+      if (!$("#checkControl").is(":checked")) {
+        pedido.adicional = 0;
+
+        pedido.principal = 1;
+      }
+
+      $.ajax({
+        type: "POST",
+
+        url: fpConstants.fp_url + "solicitudlanding",
+
+        contentType: "application/json",
+
+        data: JSON.stringify({
+          cliente: suscriptor,
+
+          telefono: telefono,
+
+          correo: email,
+
+          pedido: {
+            principal: pedido.principal,
+
+            adicional: pedido.adicional,
+          },
+        }),
+
+        success: function (response) {
+          $("#" + id).LoadingOverlay("hide");
+
+          if (response.codigoError) {
+            var codigoerror = parseInt(response.codigoError);
+
+            switch (parseInt(response.codigoError)) {
+              case 0:
+                window.location.assign(
+                  "confirma.html?vsess=" + response.llave
+                );
+
+                break;
+
+              case 1:
+                window.location.assign(
+                  "cliente_con_chip.html?vsess=" + response.llave
+                );
+
+                break;
+
+              case 3:
+                swal({
+                  imageUrl: "https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png",
+
+                  text: "Estimado suscriptor, ya cuentas con un proceso de solicitud de SIM concluido.",
+                });
+
+                break;
+
+              case 4:
+
+              case 5:
+
+              case 6:
+                window.location.assign(
+                  "no_cobertura.html?vsess=" + response.llave
+                );
+
+                break;
+
+              case 8:
+                window.location.assign(
+                  "cliente_moroso.html?vsess=" + response.llave
+                );
+
+                break;
+
+              case 9:
+                swal({
+                  imageUrl: "https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png",
+
+                  text: "Estimado suscriptor, los datos de login son inválidos.",
+                });
+
+                break;
+
+              case 10:
+                window.location.assign(
+                  "cliente_chip_orden_abierta.html?vsess=" + response.llave
+                );
+
+                break;
+
+              case 11:
+                window.location.assign(
+                  "cliente_chip_voc.html?vsess=" + response.llave
+                );
+
+                break;
+
+              case 12:
+                swal({
+                  imageUrl: "https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png",
+
+                  text: "Estimado suscriptor, ocurrió un error: Ya cuenta con una sim principal, solo puede solicitar sims adicionales",
+                });
+
+                break;
+
+              default:
+                swal({
+                  imageUrl: "https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png",
+
+                  text: "Estimado suscriptor, ocurrió un error: " +
+                    response.mensajeError,
+                });
+            }
+          } else {
+            $("#" + id).LoadingOverlay("hide");
+
+            swal({
+              imageUrl: "https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png",
+
+              text: "Estimado suscriptor, ocurrió un error al ejecutar la petición, por favor intente nuevamente.",
+            });
+          }
+        },
+
+        error: function (xhr) {
+          $("#" + id).LoadingOverlay("hide");
+
+          swal({
+            imageUrl: "https://d58ohtx80p2sd.cloudfront.net/egov2/img/alertas/warning02.png",
+
+            text: "Estimado suscriptor, ocurrió un error: " +
+              xhr.status +
+              " " +
+              xhr.statusText,
+          });
+        },
+      });
+    }
+
+    function queryCustomerServiceByTalon(talon, id) {
+      $("#" + id).LoadingOverlay("show");
+
+      $.ajax({
+        type: "POST",
+
+        url: fpConstants.customer_url +
+          "queryCustomerNumber?opcion=1&talonario=" +
+          talon,
+
+        contentType: "application/json",
+
+        success: function (response) {
+          $("#" + id).LoadingOverlay("hide");
+
+          if (response.data.codigoRespuesta) {
+            switch (parseInt(response.data.codigoRespuesta)) {
+              case 0:
+                $("#susc").val(response.data.cliente);
+
+                $("#suscM").val(response.data.cliente);
+
+                $("#buscarNumero").modal("hide");
+
+                break;
+
+              default:
+                $("#muestraErrorTal").show(1000);
+
+                $("#errorPlaceHolderTal").html(response.data.descripcion);
+            }
+          } else {
+            $("#" + id).LoadingOverlay("hide");
+
+            $("#muestraErrorTal").show(1000);
+
+            $("#errorPlaceHolderTal").html(
+              "Error al ejecutar la petición, por favor intente nuevamente."
+            );
+          }
+        },
+
+        error: function (xhr) {
+          $("#" + id).LoadingOverlay("hide");
+
+          $("#muestraErrorTal").show(1000);
+
+          $("#errorPlaceHolderTal").html(xhr.status + " " + xhr.statusText);
+        },
+      });
+    }
+
+    function queryCustomerServiceByTelefono(lada, telefono, id) {
+      $("#" + id).LoadingOverlay("show");
+
+      $.ajax({
+        type: "POST",
+
+        url: fpConstants.customer_url +
+          "queryCustomerNumber?opcion=2&lada=" +
+          lada +
+          "&telefono=" +
+          telefono,
+
+        contentType: "application/json",
+
+        success: function (response) {
+          $("#" + id).LoadingOverlay("hide");
+
+          if (response.data.codigoRespuesta) {
+            switch (parseInt(response.data.codigoRespuesta)) {
+              case 0:
+                $("#susc").val(response.data.cliente);
+
+                $("#suscM").val(response.data.cliente);
+
+                $("#buscarNumero").modal("hide");
+
+                break;
+
+              default:
+                $("#muestraErrorTel").show(1000);
+
+                $("#errorPlaceHolderTel").html(response.data.descripcion);
+            }
+          } else {
+            $("#" + id).LoadingOverlay("hide");
+
+            $("#muestraErrorTel").show(1000);
+
+            $("#errorPlaceHolderTel").html(
+              "Error al ejecutar la petición, por favor intente nuevamente."
+            );
+          }
+        },
+
+        error: function (xhr) {
+          $("#" + id).LoadingOverlay("hide");
+
+          $("#muestraErrorTel").show(1000);
+
+          $("#errorPlaceHolderTel").html(xhr.status + " " + xhr.statusText);
+        },
+      });
+    }
+
+    $("#xTarjeta").on("click", function () {
+      $("#muestraErrorTal").hide(500);
+
+      $("#numXTarjeta").show(1000);
+
+      $("#seleccionX").hide(500);
+
+      $("#errorPlaceHolderTal").html("");
+    });
+
+    $("#xTelefono").on("click", function () {
+      $("#muestraErrorTel").hide(500);
+
+      $("#numXTel").show(1000);
+
+      $("#seleccionX").hide(500);
+
+      $("#errorPlaceHolderTel").html("");
+    });
+
+    $(".toSeleccion").on("click", function () {
+      $("#seleccionX").show(1000);
+
+      $("#numXTarjeta").hide(500);
+
+      $("#numXTel").hide(500);
+
+      $("#muestraSuscriptor").hide(500);
+
+      $("#muestraErrorTal").hide(500);
+
+      $("#muestraErrorTel").hide(500);
+
+      $("#errorPlaceHolderTal").html("");
+
+      $("#errorPlaceHolderTel").html("");
+
+      $("#errorModalTal").html("");
+
+      $("#errorModalLada").html("");
+
+      $("#errorModalTel").html("");
+
+      $("#queryTarjeta").val("");
+
+      $("#queryLada").val("");
+
+      $("#queryTelefono").val("");
+    });
+
+    $("#xTarjetaOK").on("click", function () {
+      var errorCount = 0;
+
+      $("#muestraErrorTal").hide(500);
+
+      $("#errorPlaceHolderTal").html("");
+
+      $("#errorModalTal").html("");
+
+      var tarjeta = $("#queryTarjeta").val();
+
+      if (tarjeta.length == 0) {
+        $("#errorModalTal").html("El talonario no puede estar vacío.");
+
+        errorCount = errorCount + 1;
+      }
+
+      if (errorCount > 0) {
+        return null;
+      }
+
+      queryCustomerServiceByTalon(tarjeta, "numXTarjeta");
+    });
+
+    $("#xTelefonoOK").on("click", function () {
+      var errorCount = 0;
+
+      $("#muestraErrorTel").hide(500);
+
+      $("#errorPlaceHolderTel").html("");
+
+      $("#errorModalLada").html("");
+
+      $("#errorModalTel").html("");
+
+      var lada = $("#queryLada").val();
+
+      var telefono = $("#queryTelefono").val();
+
+      if (lada.length == 0) {
+        $("#errorModalLada").html("La lada no puede estar vacía.");
+
+        errorCount = errorCount + 1;
+      } else {
+        if (!validateNumber(lada)) {
+          $("#errorModalLada").html("El valor ingresado no es válido.");
+
+          errorCount = errorCount + 1;
+        }
+      }
+
+      if (telefono.length == 0) {
+        $("#errorModalTel").html("El teléfono no puede estar vacío.");
+
+        errorCount = errorCount + 1;
+      } else {
+        if (!validateNumber(telefono)) {
+          $("#errorModalTel").html("El valor ingresado no es válido.");
+
+          errorCount = errorCount + 1;
+        }
+      }
+
+      if (errorCount > 0) {
+        return null;
+      }
+
+      queryCustomerServiceByTelefono(lada, telefono, "numXTel");
+    });
+
+    $("#buscarNumero").on("hidden.bs.modal", function () {
+      $(":input", this).val("");
+
+      $("#numXTarjeta").hide(500);
+
+      $("#numXTel").hide(500);
+
+      $("#muestraSuscriptor").hide(500);
+
+      $("#seleccionX").show();
+
+      $("#errorPlaceHolder").html("");
+
+      $("#errorModalTal").html("");
+
+      $("#errorModalLada").html("");
+
+      $("#errorModalTel").html("");
+    });
+
+    $(document.body)
+      .on("click", "#checkControl", function () {
+
+        $("#errorC").html("");
+
+        var strSusc = $("#susc").val();
+
+        $("#errorC").html("");
+
+        if (strSusc.length == 0) {
+          $("#errorC").html("El campo suscriptor no puede estar vacío.");
+
+          $(".container-checkbox input[type=checkbox]").attr(
+            "checked",
+            false
+          );
+
+          return false;
+        }
+      })
+      .on("change", "#checkControl", function () {
+        if ($("#checkControl").is(":checked")) {
+          pedido.principal = 0;
+
+          pedido.adicional = 0;
+
+          $("#content").show();
+
+          reseteaPedido();
+        } else {
+          pedido.principal = 1;
+
+          pedido.adicional = 0;
+
+          $("#content").hide();
+
+          $("#solicitar").prop("disabled", false);
+        }
+      });
+
+    $("#selectControl").on("change", function () {
+      $("#errorP").html("");
+
+      var suscriptor = Number($("#susc").val());
+
+      pedido.principal = 0;
+
+      pedido.adicional = 0;
+
+      var select = $(this);
+
+      $("#solicitar").prop("disabled", true);
+
+      var adicionales = Number(select.val());
+
+      if (adicionales === 0) {
+        pedido.principal = 0;
+
+        pedido.adicional = 0;
+
+        $("#solicitar").prop("disabled", true);
+      } else {
+        $("#selectControl").LoadingOverlay("show");
+
+        pedido.principal = 0;
+
+        pedido.adicional = adicionales;
+
+        $.ajax({
+          type: "POST",
+
+          url: fpConstants.fp_url + "validapedido",
+
+          contentType: "application/json",
+
+          data: JSON.stringify({
+            cCliente: suscriptor,
+
+            simAdicionales: pedido.adicional,
+          }),
+
+          success: function (response) {
+            $("#selectControl").LoadingOverlay("hide");
+
+            if (response.control) {
+              switch (response.control.errorCode) {
+                case "000":
+                  pedido = response.pedido;
+
+                  $("#solicitar").prop("disabled", false);
+
+                  break;
+
+                default:
+                  $("#errorP").html(response.control.errorMessage);
+
+                  $("#solicitar").prop("disabled", true);
+              }
+            } else {
+              $("#selectControl").LoadingOverlay("hide");
+
+              $("#errorP").html(
+                "Error al ejecutar la petición, por favor intente nuevamente."
+              );
+
+              $("#solicitar").prop("disabled", true);
+            }
+          },
+
+          error: function (xhr) {
+            $("#selectControl").LoadingOverlay("hide");
+
+            $("#muestraErrorTal").show(1000);
+
+            $("#errorPlaceHolderTal").html(xhr.status + " " + xhr.statusText);
+          },
+        });
+      }
+    });
+
+    $("#susc").on("blur", function () {
+      if ($("#checkControl").is(":checked")) {
+        reseteaPedido();
+      }
+    });
+
+    function reseteaPedido() {
+      $("#solicitar").prop("disabled", true);
+
+      $("#selectControl").val(0).change();
+    }
+
+    function gotoExternal(type) {
+      var r = confirm(
+        "El sitio al que te dirigirás es ajeno a Dish Celular."
+      );
+
+      if (r == true) {
+        if (type == "IFT") {
+          newwindow = window.open(
+            "https://tarifas.ift.org.mx/ift_visor/",
+            "name"
+          );
+        }
+
+        if (type == "FP") {
+          newwindow = window.open("https://freedompop.mx/", "name");
+        }
+
+        if (type == "FPfraudes") {
+          newwindow = window.open(
+            "https://www.freedompop.mx/usojusto.htm",
+            "name"
+          );
+        }
+
+        if (window.focus) {
+          newwindow.focus();
+        }
+      } else {
+        return false;
+      }
+    }
+
+    $(document).ready(function () {
+      $("#modal-datemasdatos").modal("toggle");
+    });
+
+    function showDialog2() {
+      $("#dialog1").removeClass("fade").modal("hide");
+
+      $("#dialog2").modal("show").addClass("fade");
+    }
+
+    $("#dialog1").modal("show");
+
+    $("#dialog-ok").on("click", function () {
+      showDialog2();
+    });
+
+    function showDialogMovil() {
+      $("#dialog1").removeClass("fade").modal("hide");
+
+      $("#dialog2").modal("show").addClass("fade");
+    }
+
+    $("#dialog1").modal("show");
+
+    $("#dialog-ok-2").on("click", function () {
+      showDialog2();
+    });
+  </script>
+  </body>
+</html>

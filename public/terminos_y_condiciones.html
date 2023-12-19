@@ -1,0 +1,315 @@
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>FreedomPop</title>
+    <link rel="shortcut icon" type="image/png" href="img/favicon.png"/>
+
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://cdn.jsdelivr.net/gh/alpinejs/alpine@v2.x.x/dist/alpine.min.js" defer></script>
+    <link rel="stylesheet" href="main.css" />
+    <script src="https://kit.fontawesome.com/987edafa85.js" crossorigin="anonymous"></script>
+    <link href="http://db.onlinewebfonts.com/c/0fecedcc2f33a0880b3f56b9290da4d5?family=Akzidenz+Grotesk+BE+Bold"
+      rel="stylesheet" type="text/css" />
+    <script src="https://d58ohtx80p2sd.cloudfront.net/egov2/js/scriptsv2.js"></script>
+    <script src="https://d58ohtx80p2sd.cloudfront.net/egov2/js/jquery.min.js"></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/gasparesganga-jquery-loading-overlay@1.5.4/src/loadingoverlay.min.js"></script>
+    <script src="https://d1pt5ohyflo74l.cloudfront.net/js/constants.js"></script>
+    <script src="https://d1pt5ohyflo74l.cloudfront.net/js/utils.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/core-js/2.4.1/core.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/limonte-sweetalert2/7.0.7/sweetalert2.all.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-modal/0.9.1/jquery.modal.min.css" />
+    <script>(function(d){var s = d.createElement("script");s.setAttribute("data-account", "k3LFlBnoHW");s.setAttribute("src", "https://cdn.userway.org/widget.js");(d.body || d.head).appendChild(s);})(document)</script><noscript>Please ensure Javascript is enabled for purposes of <a href="https://userway.org">website accessibility</a></noscript>
+    <style>
+      .TyCM {
+      font-size: 0.6rem;
+    }
+    </style>
+
+<!-- Google Tag Manager -->
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+  new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+  j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+  'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+  })(window,document,'script','dataLayer','GTM-P9FTRST');</script>
+  <!-- End Google Tag Manager -->
+  
+  
+  <!-- Google Tag Manager (noscript) -->
+  <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-P9FTRST"
+  height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+  <!-- End Google Tag Manager (noscript) -->
+  
+  </head>
+  <body class="bg-gray-900">
+    <div class="w-full text-center font-sans-serif sticky top-0 z-50 bg-blue-100">
+      <a class="text-white text-base md:text-xl lg:text-2xl py-2" href="tel:5555123123">
+        CONTRATA AL <strong class="">55 55 123 123</strong>
+      </a>
+    </div>
+    <header x-data="{ mobileMenuOpen : false }" class="
+          font-serif
+          text-sm
+          md:text-xl
+          flex flex-wrap
+          z-10
+          md:z-0
+          flex-row
+          justify-between
+          md:items-center md:space-x-4
+          bg-white
+          py-6
+          px-6
+          relative
+        ">
+      <a href="index.html" class="block">
+        <img class="h-8 md:h-8 lg:h-12 " src="img/LOGOfpop.svg" alt="freedompop Logo" title="" />
+      </a>
+      <button @click="mobileMenuOpen = !mobileMenuOpen" class="inline-block sm:hidden w-8 h-8 bg-white text-gray-600 p-1">
+        <svg fill="currentColor" viewBox="0 0 20 20" xmlns="">
+          <path fill-rule="evenodd"
+            d="M3 5a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 10a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1zM3 15a1 1 0 011-1h12a1 1 0 110 2H4a1 1 0 01-1-1z"
+            clip-rule="evenodd"></path>
+        </svg>
+      </button>
+      <nav class="
+            absolute
+            flex
+            items-center
+            md:relative
+            top-16
+            left-0
+            md:top-0
+            z-20
+            md:flex
+            flex-col
+            md:flex-row md:space-x-6
+            w-full
+            md:w-auto
+            bg-white
+            shadow-md
+            rounded-lg
+            md:rounded-none md:shadow-none md:bg-transparent
+            p-6
+            pt-0
+            md:p-0
+          " :class="{ 'flex' : mobileMenuOpen , 'hidden' : !mobileMenuOpen}" @click.away="mobileMenuOpen = false">
+        <div class="options-menu flex flex-col md:flex-row self-end">
+          <a href="index.html"         class="text-sm md:text-xs lg:text-md xl:text-xl text-blue-100 hover:underline pr-5">Inicio</a>
+          <a href="promociones.html"   class="text-sm md:text-xs lg:text-md xl:text-xl text-blue-100 hover:underline pr-5">Promociones</a>
+          <a href="ayuda.html"         class="text-sm md:text-xs lg:text-md xl:text-xl text-blue-100 hover:underline pr-5">Ayuda</a>
+          <a href="lugares-pago.html"  class="text-sm md:text-xs lg:text-md xl:text-xl text-blue-100 hover:underline pr-5">Lugares de pago</a>
+          <a href="contacto.html"      class="text-sm md:text-xs lg:text-md xl:text-xl text-blue-100 hover:underline md:hidden block">Contacto</a>
+        </div>
+        <div class=" flex-col justify-center hidden md:block">
+          <img class="w-8 md:w-5 lg:w-7 2xl:w-6 mx-auto" src="img/contacto.svg" alt="" />
+          <a href="contacto.html" class="text-sm md:text-xs lg:text-md  xl:text-xl text-blue-100 hover:underline">
+            Contacto
+          </a>
+        </div>
+      </nav>
+    </header>
+  
+  
+
+    <div class=" text-justify flex justify-center ">
+      <p class="w-3/4 my-12 text-lg">
+        PROMOCIÓN RECARGA SUPERIOR <br>
+La promocion es realizada por Freedompop México, S.A. de C.V (en lo sucesivo FREEDOMPOP) y   otorga los beneficios de la recarga superior a la originalmente adquirida, de conformidad con la oferta comercial vigente que podrá consultarse en <a class="text-blue-100" href="https://www.dishcelular.com.mx/">https://www.dishcelular.com.mx/</a> . Los montos de recarga participantes de la promoción son $30.00, $50.00, $80.00, $100.00, $150.00 y $200.00. El beneficio promocional tendrá la misma vigencia de la recarga realizada.
+<br> CARACTERÍSTICAS DE LA PROMOCIÓN 
+
+	<br> En la compra de una recarga de $30.00 en una sola exhibición recibe por promoción los beneficios de un paquete de $50.00 consistente en: Minutos y SMS Ilimitados, 800 MB (400 MB por promoción) de Internet y 500 MB de Redes Sociales y WhatsApp ilimitado.
+	<br> En la compra de una recarga de $50.00 en una sola exhibición recibe por promoción los beneficios de un paquete de $80.00 consistente en: Minutos y SMS Ilimitados, 1,000 MB (500 MB por promoción) de Internet, 1,000 MB de Redes Sociales y WhatsApp ilimitado. 
+	<br> En la compra de una recarga de $80.00 en una sola exhibición recibe por promoción los beneficios de un paquete de $100.00 consistente en: Minutos y SMS Ilimitados, 2,000 MB (700 MB por promoción) de Internet y Redes Sociales Ilimitadas.
+	<br> En la compra de una recarga de $100.00 en una sola exhibición recibe por promoción los beneficios de un paquete de $150.00 consistente en: Minutos y SMS Ilimitados, 3,000 MB (1,000 MB por promoción) de Internet y Redes Sociales Ilimitadas.
+	<br> En la compra de una recarga de $150.00 en una sola exhibición recibe por promoción los beneficios de un paquete de $200.00 consistente en: Minutos y SMS Ilimitados, 5,000 MB (2,000 MB por promoción) de Internet y Redes Sociales Ilimitadas. 
+	<br> En la compra de una recarga de $200.00 en una sola exhibición recibe por promoción 1 GB adicional para navegar.</li>
+
+<br> LEGALES <br>
+Promoción válida a partir del 09 de agosto de 2021 hasta nuevo aviso o agotar existencia. <br>
+Promoción disponible en toda la República Mexicana. <br>
+Promoción válida para nuevas activaciones y/o líneas de usuarios en prepago FREEDOMPOP a partir de la segunda recarga consecutiva dentro de un periodo de 30 días naturales. 
+La duración de la promoción es por 6 meses a partir de que el cliente recibe la primera recarga con beneficio, una vez transcurrido este período, el usuario reiniciaría la cuenta de las recargas consecutivas para seguir recibiendo el beneficio, en caso de que la promoción siga vigente. 
+FREEDOMPOP no será responsable, ni estará obligado a cualquier devolución o reembolso en caso de que el Cliente no utilice el beneficio de la promoción. FREEDOMPOP se reserva el derecho discrecional de cancelar o invalidar los beneficios y de modificar, cancelar o suspender la presente promoción en cualquier momento.
+La promoción es personal e intransferible, y no es acumulable con otras ofertas y promociones; quedando expresamente prohibida su comercialización. Los beneficios de la Promoción no serán susceptibles de cambio, alteración o compensación a petición de los participantes de la Promoción, ni tampoco se le ofrecerá Promoción alterna.
+No podrán participar en la Promoción las personas que hayan intervenido en su organización, ni empleados de FREEDOMPOP, de cualquiera de sus filiales, de cualquier sociedad que tenga participación en FREEDOMPOP o de cualquier sociedad vinculada a FREEDOMPOP, de las agencias publicitarias organizadoras de la Promoción en su caso, ni sus familiares, ascendientes, descendientes, cónyuges o parejas de hecho.
+Al participar en nuestra promoción, acepta Usted (en lo sucesivo “el CLIENTE”), los términos y condiciones de uso contenidas en la presente y en <a  onclick="gotoExternal('FPterms')" class="text-blue-100">https://www.freedompop.mx/terms.html</a> y <a onclick="gotoExternal('FPfraudes')" class="text-blue-100" >https://www.freedompop.mx/usojusto.html</a>  . En caso de que el CLIENTE no acepte la totalidad de los términos y condiciones de uso, deberá abstenerse de realizar cualquier actividad o participar en esta promoción. 
+Para cualquier información o aclaración derivada con esta promoción favor de comunicarse al número de contacto que está en la página <a onclick="gotoExternal('FP')" class="text-blue-100" >https://www.freedompop.mx </a> en el horario de atención especificado. <br>
+Consulta restricciones de servicios ilimitados en <a class="text-blue-100"  onclick="gotoExternal('FPfraudes')"">https://www.freedompop.mx/usojusto.html</a>  <br>
+
+Si realizas una recarga adicional, antes de agotar tu beneficio promocional o antes de la vigencia del beneficio incluido de esta promoción, la RECARGA se abonará íntegramente a tu línea FREEDOMPOP y dispondrás de sus beneficios en forma inmediata. 
+Folios de Registro en el Portal del IFT: 422911, 422914, 422919, 422922, 422924, 422926. Para consultar los folios de registro, visita: https://tarifas.ift.org.mx/ift_visor/
+
+<br/><br><br>
+
+VENTA DE CELULARES <br>
+
+La promoción es aplicable para suscriptores Dish, que se encuentren activos y al corriente en sus pagos.
+El Precio señalado es de carácter informativo, en moneda nacional e impuestos incluidos del 16%, es independiente al pago mensual de su servicio Dish. Para asistencia en la contratación, formas de pago, términos, condiciones, así como costos, características y contenidos de los paquetes en <a href="www.dishcelular.com.mx" class="text-blue-100">www.dishcelular.com.mx</a> La autorización de venta de equipo celular aquí anunciados están sujetos a disponibilidad. El servicio de telefonía celular es responsabilidad única y exclusivamente de FREEDOMPOP MÉXICO, S.A. DE C.V. Todo material, incluyendo imágenes, texto, diseños, íconos, programas, vídeos y cualquier otro elemento, constituyen derechos de autor y propiedad intelectual usada bajo autorización y protegidos por leyes mexicanas e internacionales. Vigencia al 31 de agosto del 2022. Servicio de telefonía móvil otorgado por FREEDOMPOP MÉXICO, S.A. DE C.V. Consulta términos y condiciones del servicio de telefonía en <a href="https://www.freedompop.mx/terms.html" class="text-blue-100">https://www.freedompop.mx/terms.html</a> Consulta restricciones para servicios ilimitados en <a href="https://www.freedompop.mx/usojusto.html" class="text-blue-100">https://www.freedompop.mx/usojusto.html</a> Los datos personales del Cliente que sea recabado por FREEDOMPOP serán tratados de conformidad con el Aviso de Privacidad publicado en <a href="https://www.freedompop.mx/privacy.html" class="text-blue-100">https://www.freedompop.mx/privacy.html</a>
+
+
+
+
+      </p>
+    </div>
+
+
+  <!--FOOTER-->
+  <footer class="footer px-4 mb-24 md:mb-0 md:px-32">
+    <div class="flex flex-col md:flex-row">
+      <div class="col-span-4 md:col-span-3 w-72 md:w-96 p-5">
+        <span class="text-white text-xs place-self-center">Servicio de telefonía proporcionado por</span>
+        <a style="cursor: pointer" onclick="gotoExternal('FP')"><img class="mt-2 w-48" src="img/fp-blanco.svg"
+            alt="logo fp blanco" /></a>
+        <div class="footer-info">
+          <div class="flex grid-cols-2 my-6">
+            <div class="w-12">
+              <img class="" src="img/tel-footer.svg" alt="" />
+            </div>
+            <span class="text-white text-xs md:text-md"><strong>Atención a Clientes</strong> <br />
+              Marca al 55 5610 1010</span>
+          </div>
+          <div class="flex grid-cols-2 my-6">
+            <div class="w-12">
+              <img class="" src="img/tel-footer.svg" alt="" />
+            </div>
+            <span class="text-white text-xs md:text-md"><strong>Ventas </strong> <br />
+              Marca al 55 55 123 123</span>
+          </div>
+          <div class="flex grid-cols-2 my-6">
+            <div class="w-12">
+              <img class="" src="img/ubicacion-footer.svg" alt="" />
+            </div>
+            <span class="text-white text-xs md:text-md">Cobertura a Nivel Nacional</span>
+          </div>
+        </div>
+      </div>
+      <div class="flex w-full mb-12 md:mb-0 md:col-span-3 ">
+        <div class="flex justify-center flex-col">
+          <a href="tarifas_IFT.html" class="text-white underline font-bold text-sm md:text-sm">Tarifas de servicio
+            autorizadas</a>
+          <br />
+          <a href="https://my.freedompop.mx/tarifas" target="_blank" class="text-white underline font-bold text-sm md:text-sm">Formatos Simplificados</a>
+          <br />
+          <a style="cursor: pointer" onclick="gotoExternal('FPfraudes')"
+            class="text-white underline font-bold text-sm md:text-sm">Política de prevención y detección de
+            fraude</a>
+
+            <br />
+            <a href="https://www.freedompop.mx/roboextravio" class="text-white underline font-bold text-sm md:text-sm" target="_blank">Reporte por robo o extravío</a>
+            <br />
+            <a href="terminos_y_condiciones_mvshub.html" class="text-white underline font-bold text-sm md:text-sm" target="_blank">Términos y condiciones de mvshub</a>
+            <br />
+        </div>
+      </div>
+    </div>
+   
+       <nav class="footer-links page no-padding">
+      <a href="{{tab.url}}" class="{% if tab.tab_type == current_tab %}active{% endif %}">¿Tienes dudas?</a>
+     </nav>
+ 
+
+    <span class="text-white  TyCM"></span>
+  </footer>
+
+     <!--PLECA ROJA-->
+     <a class="
+     pleca-chip
+     rounded-xl
+     fixed
+     flex-col
+     py-2
+     px-2
+     -mb-3
+     right-0
+     left-0
+     bottom-0
+     mx-16
+     md:left-auto
+     md:right-0
+     md:float-right
+     md:mx-0
+     md:w-56
+     md:-mr-3
+     md:bottom-24
+     shadow-lg
+   "
+   href="#myModal-pidelo"
+   rel="modal:open"
+   >
+   <p>¡Si tienes Dish!</p>
+   <p class="font-bold text-xs pb-3">TIENES TU CHIP GRATIS</p>
+   <p class="font-mono text-md md:text-xl"  >PÍDELO AQUÍ</p>
+   </a>
+   
+    <script>
+
+    function gotoExternal(type) {
+      var r = confirm(
+        "El sitio al que te dirigirás es ajeno a Dish Celular."
+      );
+
+      if (r == true) {
+        if (type == "IFT") {
+          newwindow = window.open(
+            "https://tarifas.ift.org.mx/ift_visor/",
+            "name"
+          );
+        }
+
+        if (type == "FP") {
+          newwindow = window.open("https://freedompop.mx/", "name");
+        }
+
+        if (type == "FPfraudes") {
+          newwindow = window.open(
+            "https://www.freedompop.mx/usojusto.html",
+            "name"
+          );
+        }
+
+        if (type == "FPterms") {
+          newwindow = window.open(
+            "https://www.freedompop.mx/terms.html",
+            "name"
+          );
+        }
+
+        if (window.focus) {
+          newwindow.focus();
+        }
+      } else {
+        return false;
+      }
+    }
+
+    </script>
+
+
+    <script type="application/javascript">
+      var pedido = {
+        principal: 0,
+  
+        adicional: 0,
+      };
+  
+      $(document).ready(function () {
+        $.ajax({
+          url: fpConstants.fp_url + "getlegal",
+  
+          contentType: "application/json",
+  
+          success: function (response) {
+            $(".TyCM").html(response.legal);
+          },
+        });
+  
+        $(".container-checkbox input[type=checkbox]").attr("checked", false);
+      });
+  
+    </script>
+  </body>
+</html>
